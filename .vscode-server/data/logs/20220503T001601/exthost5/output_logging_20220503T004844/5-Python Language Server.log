@@ -1,0 +1,42 @@
+[Info  - 12:48:55 AM] (37502) Pylance language server 2022.4.3 (pyright 88f2a424) starting
+[Info  - 12:48:56 AM] (37502) Server root directory: /home/ubuntu/.vscode-server/extensions/ms-python.vscode-pylance-2022.4.3/dist
+[Info  - 12:48:56 AM] (37502) No configuration file found.
+[Info  - 12:48:56 AM] (37502) No pyproject.toml file found.
+[Info  - 12:48:56 AM] (37502) Setting pythonPath for service "buenComensalProject": "/usr/bin/python3"
+[Warn  - 12:48:56 AM] (37502) stubPath /home/ubuntu/buenComensalProject/typings is not a valid directory.
+[Info  - 12:48:56 AM] (37502) Assuming Python version 3.8
+[Info  - 12:48:56 AM] (37502) Assuming Python platform Linux
+[Info  - 12:48:58 AM] (37502) Searching for source files
+[Info  - 12:48:58 AM] (37502) Found 51 source files
+[Info  - 12:48:59 AM] (37502) Background analysis(1) root directory: /home/ubuntu/.vscode-server/extensions/ms-python.vscode-pylance-2022.4.3/dist
+[Info  - 12:48:59 AM] (37502) Background analysis(1) started
+[Info  - 12:49:04 AM] (37502) Indexer background runner(2) root directory: /home/ubuntu/.vscode-server/extensions/ms-python.vscode-pylance-2022.4.3/dist (index)
+[Info  - 12:49:14 AM] (37502) Indexing(2) started
+[Info  - 12:49:17 AM] (37502) [FG] Long operation: parsing: /home/ubuntu/.vscode-server/extensions/ms-python.vscode-pylance-2022.4.3/dist/typeshed-fallback/stdlib/typing.pyi (7185ms)
+[Info  - 12:49:19 AM] (37502) [FG] Long operation: binding: /home/ubuntu/.vscode-server/extensions/ms-python.vscode-pylance-2022.4.3/dist/typeshed-fallback/stdlib/typing.pyi (4281ms)
+[Info  - 12:49:20 AM] (37502) [FG] Long operation: parsing: /home/ubuntu/.vscode-server/extensions/ms-python.vscode-pylance-2022.4.3/dist/typeshed-fallback/stdlib/_typeshed/__init__.pyi (3236ms)
+[Info  - 12:49:22 AM] (37502) [BG(1)] Long operation: parsing: /home/ubuntu/buenComensalProject/restaurants/views.py (19708ms)
+[Info  - 12:49:25 AM] (37502) [IDX(2)] Long operation: read stdlib indices (16617ms)
+[Info  - 12:49:25 AM] (37502) [BG(1)] Long operation: parsing: /home/ubuntu/.vscode-server/extensions/ms-python.vscode-pylance-2022.4.3/dist/typeshed-fallback/stdlib/builtins.pyi (2708ms)
+[Info  - 12:49:54 AM] (37502) [BG(1)] Long operation: binding: /home/ubuntu/.vscode-server/extensions/ms-python.vscode-pylance-2022.4.3/dist/typeshed-fallback/stdlib/builtins.pyi (29786ms)
+[Info  - 1:01:21 AM] (37502) [BG(1)] Long operation: parsing: /home/ubuntu/.vscode-server/extensions/ms-python.vscode-pylance-2022.4.3/dist/typeshed-fallback/stdlib/typing_extensions.pyi (599629ms)
+[Info  - 1:01:28 AM] (37502) [BG(1)] Long operation: parsing: /home/ubuntu/.vscode-server/extensions/ms-python.vscode-pylance-2022.4.3/dist/typeshed-fallback/stdlib/_typeshed/__init__.pyi (3391ms)
+[Info  - 1:01:35 AM] (37502) [BG(1)] Long operation: parsing: /home/ubuntu/.local/lib/python3.8/site-packages/rest_framework/views.py (5299ms)
+[Info  - 1:01:43 AM] (37502) [IDX(2)] Long operation: scan packages (739006ms)
+[Info  - 1:01:47 AM] (37502) [IDX(2)] Long operation: parsing: /home/ubuntu/.vscode-server/extensions/ms-python.vscode-pylance-2022.4.3/dist/typeshed-fallback/stubs/PyYAML/yaml/__init__.pyi (3485ms)
+[Info  - 1:02:00 AM] (37502) [IDX(2)] Long operation: indexing: /home/ubuntu/.vscode-server/extensions/ms-python.vscode-pylance-2022.4.3/dist/bundled/stubs/django/db/__init__.pyi (2105ms)
+[Info  - 1:02:07 AM] (37502) [IDX(2)] Long operation: parsing: /home/ubuntu/.vscode-server/extensions/ms-python.vscode-pylance-2022.4.3/dist/bundled/stubs/django/template/base.pyi (2112ms)
+[Info  - 1:02:34 AM] (37502) [IDX(2)] Long operation: parsing: /home/ubuntu/.vscode-server/extensions/ms-python.vscode-pylance-2022.4.3/dist/bundled/stubs/django/template/context.pyi (24347ms)
+[Info  - 1:04:28 AM] (37502) [IDX(2)] Long operation: binding: /home/ubuntu/.vscode-server/extensions/ms-python.vscode-pylance-2022.4.3/dist/bundled/stubs/django/template/context.pyi (116649ms)
+[Info  - 1:04:30 AM] (37502) [IDX(2)] Long operation: indexing: /home/ubuntu/.vscode-server/extensions/ms-python.vscode-pylance-2022.4.3/dist/bundled/stubs/django/template/__init__.pyi (145921ms)
+[Info  - 1:04:31 AM] (37502) [BG(1)] Long operation: checking: /home/ubuntu/buenComensalProject/restaurants/views.py (868691ms)
+[Info  - 1:04:31 AM] (37502) [BG(1)] Long operation: analyzing: /home/ubuntu/buenComensalProject/restaurants/views.py (928935ms)
+[Info  - 1:04:38 AM] (37502) [BG(1)] Long operation: getSemanticTokens full at /home/ubuntu/buenComensalProject/restaurants/views.py (5079ms)
+[Info  - 1:04:44 AM] (37502) [IDX(2)] Long operation: parsing: /home/ubuntu/.vscode-server/extensions/ms-python.vscode-pylance-2022.4.3/dist/bundled/stubs/django/test/testcases.pyi (13379ms)
+[Info  - 1:04:52 AM] (37502) [IDX(2)] Long operation: binding: /home/ubuntu/.vscode-server/extensions/ms-python.vscode-pylance-2022.4.3/dist/bundled/stubs/django/test/testcases.pyi (4359ms)
+[Info  - 1:05:00 AM] (37502) [BG(1)] Long operation: getSemanticTokens range 0:0 - 32:66 at /home/ubuntu/buenComensalProject/restaurants/views.py (14809ms)
+[Info  - 1:05:02 AM] (37502) [IDX(2)] Long operation: parsing: /home/ubuntu/.vscode-server/extensions/ms-python.vscode-pylance-2022.4.3/dist/bundled/stubs/django/test/utils.pyi (12060ms)
+[Info  - 1:05:02 AM] (37502) [IDX(2)] Long operation: indexing: /home/ubuntu/.vscode-server/extensions/ms-python.vscode-pylance-2022.4.3/dist/bundled/stubs/django/test/__init__.pyi (31781ms)
+[Info  - 1:05:12 AM] (37502) [IDX(2)] Long operation: index execution environment /home/ubuntu/buenComensalProject (208025ms)
+[Info  - 1:05:12 AM] (37502) [IDX(2)] Long operation: index libraries /home/ubuntu/buenComensalProject (963753ms)
+[Info  - 1:05:12 AM] (37502) Indexer done(2). indexed 468 files

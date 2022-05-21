@@ -1,0 +1,18 @@
+Visual Studio Code (1.66.2, ssh-remote, desktop)
+Jupyter Extension Version: 2022.3.1000901801.
+Python Extension Version: 2022.4.1.
+Workspace folder ~/buenComensalProject
+Info 00:27:46: ZMQ install verified.
+User belongs to experiment group 'jupyterTestcf'
+User belongs to experiment group 'jupyterEnhancedDataViewer'
+Info 00:27:51: Experiment status for python is {"enabled":true,"optInto":[],"optOutFrom":[]}
+Info 00:27:51: Getting activation commands for /usr/bin/python3 are not cached. May take a while.
+Info 00:27:52: Process Execution: > /usr/bin/python3 -m pip list
+> /usr/bin/python3 -m pip list
+Info 00:41:05: Shutting down notebooks for a4615947-bc91-4074-b2c7-ce71eaf6a91a
+Info 00:42:29: Disposing HostJupyterExecution 538a59b1-8b05-4181-903c-f683c1664251
+Info 00:43:04: Disposing super HostJupyterExecution 538a59b1-8b05-4181-903c-f683c1664251
+Info 00:44:05: Disposing HostJupyterExecution 538a59b1-8b05-4181-903c-f683c1664251
+Info 00:44:05: Finished disposing HostJupyterExecution  538a59b1-8b05-4181-903c-f683c1664251
+Info 00:44:07: Cleaning up server cache 538a59b1-8b05-4181-903c-f683c1664251
+Info 00:45:29: Finished disposing HostJupyterExecution  538a59b1-8b05-4181-903c-f683c1664251

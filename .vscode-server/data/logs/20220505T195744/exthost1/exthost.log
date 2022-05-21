@@ -1,0 +1,12 @@
+[2022-05-05 19:57:50.426] [exthost] [info] Extension host with pid 51199 started
+[2022-05-05 19:57:50.928] [exthost] [info] ExtensionService#_doActivateExtension vscode.debug-auto-launch, startup: true, activationEvent: '*'
+[2022-05-05 19:57:50.935] [exthost] [info] ExtensionService#_doActivateExtension vscode.git-base, startup: true, activationEvent: '*', root cause: vscode.git
+[2022-05-05 19:57:50.945] [exthost] [info] ExtensionService#_doActivateExtension vscode.ipynb, startup: true, activationEvent: '*'
+[2022-05-05 19:57:51.332] [exthost] [info] ExtensionService#_doActivateExtension vscode.git, startup: true, activationEvent: '*'
+[2022-05-05 19:57:51.745] [exthost] [info] ExtensionService#_doActivateExtension vscode.github, startup: true, activationEvent: '*'
+[2022-05-05 19:57:52.030] [exthost] [info] ExtensionService#_doActivateExtension vscode.emmet, startup: false, activationEvent: 'onStartupFinished'
+[2022-05-05 19:57:52.051] [exthost] [info] ExtensionService#_doActivateExtension vscode.merge-conflict, startup: false, activationEvent: 'onStartupFinished'
+[2022-05-05 19:57:52.056] [exthost] [info] ExtensionService#_doActivateExtension ritwickdey.LiveServer, startup: false, activationEvent: 'onStartupFinished'
+[2022-05-05 19:57:52.440] [exthost] [info] Eager extensions activated
+[2022-05-05 19:57:57.129] [exthost] [info] extension host terminating: received terminate message from renderer
+[2022-05-05 19:57:57.138] [exthost] [info] Extension host with pid 51199 exiting with code 0

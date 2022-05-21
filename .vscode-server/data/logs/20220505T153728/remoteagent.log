@@ -1,0 +1,9 @@
+[2022-05-05 15:37:29.231] [remoteagent] [info] Extension host agent started.
+[2022-05-05 15:37:30.356] [remoteagent] [info] [127.0.0.1][198a9ee6][ManagementConnection] New connection established.
+[2022-05-05 15:37:30.363] [remoteagent] [info] Deleted from disk ms-vscode.js-debug-companion /home/ubuntu/.vscode-server/extensions/ms-vscode.js-debug-companion-1.0.17
+[2022-05-05 15:37:30.536] [remoteagent] [info] [127.0.0.1][e19cda9d][ExtensionHostConnection] New connection established.
+[2022-05-05 15:37:30.552] [remoteagent] [info] [127.0.0.1][e19cda9d][ExtensionHostConnection] <50403> Launched Extension Host Process.
+[2022-05-05 15:37:40.082] [remoteagent] [info] [127.0.0.1][198a9ee6][ManagementConnection] The client has disconnected gracefully, so the connection will be disposed.
+[2022-05-05 15:37:40.104] [remoteagent] [info] [127.0.0.1][e19cda9d][ExtensionHostConnection] <50403> Extension Host Process exited with code: 0, signal: null.
+[2022-05-05 15:37:40.104] [remoteagent] [info] Last EH closed, waiting before shutting down
+[2022-05-05 15:42:40.105] [remoteagent] [info] Last EH closed, shutting down

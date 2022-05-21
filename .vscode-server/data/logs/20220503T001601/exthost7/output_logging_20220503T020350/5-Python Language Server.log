@@ -1,0 +1,71 @@
+[Info  - 2:04:00 AM] (38209) Pylance language server 2022.4.3 (pyright 88f2a424) starting
+[Info  - 2:04:00 AM] (38209) Server root directory: /home/ubuntu/.vscode-server/extensions/ms-python.vscode-pylance-2022.4.3/dist
+[Info  - 2:04:00 AM] (38209) No configuration file found.
+[Info  - 2:04:00 AM] (38209) No pyproject.toml file found.
+[Info  - 2:04:00 AM] (38209) Setting pythonPath for service "buenComensalProject": "/usr/bin/python3"
+[Warn  - 2:04:00 AM] (38209) stubPath /home/ubuntu/buenComensalProject/typings is not a valid directory.
+[Info  - 2:04:01 AM] (38209) Assuming Python version 3.8
+[Info  - 2:04:01 AM] (38209) Assuming Python platform Linux
+[Info  - 2:04:02 AM] (38209) Searching for source files
+[Info  - 2:04:03 AM] (38209) Found 51 source files
+[Info  - 2:04:06 AM] (38209) Background analysis(1) root directory: /home/ubuntu/.vscode-server/extensions/ms-python.vscode-pylance-2022.4.3/dist
+[Info  - 2:04:06 AM] (38209) Background analysis(1) started
+[Info  - 2:04:07 AM] (38209) Indexer background runner(2) root directory: /home/ubuntu/.vscode-server/extensions/ms-python.vscode-pylance-2022.4.3/dist (index)
+[Info  - 2:04:07 AM] (38209) Indexing(2) started
+[Info  - 2:04:12 AM] (38209) [IDX(2)] Long operation: scan packages (4900ms)
+[Info  - 2:04:16 AM] (38209) [BG(1)] Long operation: checking: /home/ubuntu/buenComensalProject/restaurants/models.py (7397ms)
+[Info  - 2:04:16 AM] (38209) [BG(1)] Long operation: analyzing: /home/ubuntu/buenComensalProject/restaurants/models.py (9620ms)
+[Info  - 2:04:21 AM] (38209) [IDX(2)] Long operation: index execution environment /home/ubuntu/buenComensalProject (8818ms)
+[Info  - 2:04:21 AM] (38209) [IDX(2)] Long operation: index libraries /home/ubuntu/buenComensalProject (14596ms)
+[Info  - 2:04:21 AM] (38209) Indexer done(2). indexed 468 files
+[Info  - 2:04:49 AM] (38209) No configuration file found.
+[Info  - 2:04:49 AM] (38209) No pyproject.toml file found.
+[Info  - 2:04:49 AM] (38209) Setting pythonPath for service "buenComensalProject": "/bin/python3"
+[Warn  - 2:04:49 AM] (38209) stubPath /home/ubuntu/buenComensalProject/typings is not a valid directory.
+[Info  - 2:04:49 AM] (38209) Assuming Python version 3.8
+[Info  - 2:04:49 AM] (38209) Assuming Python platform Linux
+[Info  - 2:04:49 AM] (38209) Searching for source files
+[Info  - 2:04:49 AM] (38209) Found 51 source files
+[Info  - 2:04:52 AM] (38209) Indexer background runner(3) root directory: /home/ubuntu/.vscode-server/extensions/ms-python.vscode-pylance-2022.4.3/dist (index)
+[Info  - 2:04:52 AM] (38209) Indexing(3) started
+[Info  - 2:04:55 AM] (38209) [BG(1)] Long operation: getSemanticTokens delta previousResultId:1651543456149 at /home/ubuntu/buenComensalProject/restaurants/models.py (5293ms)
+[Info  - 2:04:57 AM] (38209) [IDX(3)] Long operation: scan packages (3320ms)
+[Info  - 2:05:03 AM] (38209) [IDX(3)] Long operation: index execution environment /home/ubuntu/buenComensalProject (6406ms)
+[Info  - 2:05:03 AM] (38209) [IDX(3)] Long operation: index libraries /home/ubuntu/buenComensalProject (10705ms)
+[Info  - 2:05:03 AM] (38209) Indexer done(3). indexed 468 files
+[Info  - 2:16:23 AM] (38209) No configuration file found.
+[Info  - 2:16:23 AM] (38209) No pyproject.toml file found.
+[Info  - 2:16:23 AM] (38209) Setting pythonPath for service "buenComensalProject": "/usr/bin/python3"
+[Warn  - 2:16:23 AM] (38209) stubPath /home/ubuntu/buenComensalProject/typings is not a valid directory.
+[Info  - 2:16:23 AM] (38209) Assuming Python version 3.8
+[Info  - 2:16:23 AM] (38209) Assuming Python platform Linux
+[Info  - 2:16:23 AM] (38209) Searching for source files
+[Info  - 2:16:23 AM] (38209) Found 51 source files
+[Info  - 2:16:28 AM] (38209) Indexer background runner(4) root directory: /home/ubuntu/.vscode-server/extensions/ms-python.vscode-pylance-2022.4.3/dist (index)
+[Info  - 2:16:28 AM] (38209) Indexing(4) started
+[Info  - 2:16:31 AM] (38209) [BG(1)] Long operation: getSemanticTokens delta previousResultId:1651543491037 at /home/ubuntu/buenComensalProject/restaurants/models.py (8086ms)
+[Info  - 2:16:33 AM] (38209) [IDX(4)] Long operation: scan packages (3892ms)
+[Info  - 2:16:39 AM] (38209) [IDX(4)] Long operation: index execution environment /home/ubuntu/buenComensalProject (6110ms)
+[Info  - 2:16:39 AM] (38209) [IDX(4)] Long operation: index libraries /home/ubuntu/buenComensalProject (10916ms)
+[Info  - 2:16:39 AM] (38209) Indexer done(4). indexed 468 files
+[Info  - 2:18:53 AM] (38209) No configuration file found.
+[Info  - 2:18:53 AM] (38209) No pyproject.toml file found.
+[Info  - 2:18:53 AM] (38209) Setting pythonPath for service "buenComensalProject": "/home/ubuntu/env/bin/python"
+[Warn  - 2:18:53 AM] (38209) stubPath /home/ubuntu/buenComensalProject/typings is not a valid directory.
+[Info  - 2:18:53 AM] (38209) Assuming Python version 3.8
+[Info  - 2:18:53 AM] (38209) Assuming Python platform Linux
+[Info  - 2:18:53 AM] (38209) Searching for source files
+[Info  - 2:18:53 AM] (38209) Found 51 source files
+[Info  - 2:18:56 AM] (38209) Indexer background runner(5) root directory: /home/ubuntu/.vscode-server/extensions/ms-python.vscode-pylance-2022.4.3/dist (index)
+[Info  - 2:18:56 AM] (38209) Indexing(5) started
+[Info  - 2:19:01 AM] (38209) [IDX(5)] Long operation: scan packages (3995ms)
+[Info  - 2:19:02 AM] (38209) [BG(1)] Long operation: getSemanticTokens delta previousResultId:1651544218556 at /home/ubuntu/buenComensalProject/restaurants/models.py (8515ms)
+[Info  - 2:19:10 AM] (38209) [IDX(5)] Long operation: index execution environment /home/ubuntu/buenComensalProject (8135ms)
+[Info  - 2:19:10 AM] (38209) [IDX(5)] Long operation: index libraries /home/ubuntu/buenComensalProject (13221ms)
+[Info  - 2:19:10 AM] (38209) Indexer done(5). indexed 460 files
+[Info  - 3:15:16 AM] (38209) [BG(1)] Long operation: getSemanticTokens full at /home/ubuntu/buenComensalProject/restaurants/views.py (3886ms)
+[Info  - 3:16:34 AM] (38209) Searching for source files
+[Info  - 3:16:34 AM] (38209) Found 52 source files
+[Info  - 3:16:39 AM] (38209) [BG(1)] Long operation: checking: /home/ubuntu/buenComensalProject/restaurants/api/api.py (2186ms)
+[Info  - 3:16:39 AM] (38209) [BG(1)] Long operation: analyzing: /home/ubuntu/buenComensalProject/restaurants/api/api.py (2192ms)
+[Info  - 3:26:09 AM] (38209) [BG(1)] Long operation: getSemanticTokens full at /home/ubuntu/buenComensalProject/restaurants/views.py (2205ms)

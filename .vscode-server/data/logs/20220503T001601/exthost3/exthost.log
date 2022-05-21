@@ -1,0 +1,41 @@
+[2022-05-03 00:27:39.449] [exthost] [info] Extension host with pid 36460 started
+[2022-05-03 00:27:39.450] [exthost] [error] Error: EEXIST: file already exists, open '/home/ubuntu/.vscode-server/data/User/workspaceStorage/33db89fc36b95e274c7f9ccda8cc4b3f/vscode.lock'
+[2022-05-03 00:27:39.451] [exthost] [info] Lock '/home/ubuntu/.vscode-server/data/User/workspaceStorage/33db89fc36b95e274c7f9ccda8cc4b3f/vscode.lock': Could not acquire lock, checking if the file is stale.
+[2022-05-03 00:27:39.453] [exthost] [info] Lock '/home/ubuntu/.vscode-server/data/User/workspaceStorage/33db89fc36b95e274c7f9ccda8cc4b3f/vscode.lock': The lock does not look stale, elapsed: 323 ms, giving up.
+[2022-05-03 00:27:39.462] [exthost] [info] Lock '/home/ubuntu/.vscode-server/data/User/workspaceStorage/33db89fc36b95e274c7f9ccda8cc4b3f-1/vscode.lock': Lock acquired.
+[2022-05-03 00:27:43.355] [exthost] [info] ExtensionService#_doActivateExtension ms-python.python, startup: false, activationEvent: 'onLanguage:python'
+[2022-05-03 00:27:44.736] [exthost] [info] ExtensionService#_doActivateExtension ms-toolsai.jupyter, startup: false, activationEvent: 'onLanguage:python'
+[2022-05-03 00:27:46.347] [exthost] [info] ExtensionService#_doActivateExtension vscode.debug-auto-launch, startup: true, activationEvent: '*'
+[2022-05-03 00:27:46.430] [exthost] [info] ExtensionService#_doActivateExtension vscode.git-base, startup: true, activationEvent: '*', root cause: vscode.git
+[2022-05-03 00:27:46.438] [exthost] [info] ExtensionService#_doActivateExtension vscode.ipynb, startup: true, activationEvent: '*'
+[2022-05-03 00:27:46.871] [exthost] [info] ExtensionService#_doActivateExtension vscode.git, startup: true, activationEvent: '*'
+[2022-05-03 00:27:47.135] [exthost] [info] ExtensionService#_doActivateExtension vscode.github, startup: true, activationEvent: '*'
+[2022-05-03 00:27:48.538] [exthost] [info] ExtensionService#_doActivateExtension ms-toolsai.jupyter-renderers, startup: false, activationEvent: 'api', root cause: ms-toolsai.jupyter
+[2022-05-03 00:27:48.865] [exthost] [info] ExtensionService#_doActivateExtension ms-python.vscode-pylance, startup: false, activationEvent: 'onLanguage:python'
+[2022-05-03 00:27:49.756] [exthost] [info] ExtensionService#_doActivateExtension vscode.emmet, startup: false, activationEvent: 'onStartupFinished'
+[2022-05-03 00:27:49.839] [exthost] [info] ExtensionService#_doActivateExtension vscode.merge-conflict, startup: false, activationEvent: 'onStartupFinished'
+[2022-05-03 00:27:49.847] [exthost] [info] ExtensionService#_doActivateExtension ritwickdey.LiveServer, startup: false, activationEvent: 'onStartupFinished'
+[2022-05-03 00:27:50.530] [exthost] [info] Eager extensions activated
+[2022-05-03 00:39:54.080] [exthost] [info] extension host terminating: received terminate message from renderer
+[2022-05-03 00:39:54.722] [exthost] [info] Lock '/home/ubuntu/.vscode-server/data/User/workspaceStorage/33db89fc36b95e274c7f9ccda8cc4b3f-1/vscode.lock': Marking the lockfile as scheduled to be released in 6000 ms.
+[2022-05-03 00:45:54.463] [exthost] [error] Canceled: Canceled
+	at Object.O [as canceled] (/home/ubuntu/.vscode-server/bin/dfd34e8260c270da74b5c2d86d61aee4b6d56977/out/vs/workbench/api/node/extensionHostProcess.js:5:1172)
+	at /home/ubuntu/.vscode-server/bin/dfd34e8260c270da74b5c2d86d61aee4b6d56977/out/vs/workbench/api/node/extensionHostProcess.js:89:9089
+	at Array.forEach (<anonymous>)
+	at i.dispose (/home/ubuntu/.vscode-server/bin/dfd34e8260c270da74b5c2d86d61aee4b6d56977/out/vs/workbench/api/node/extensionHostProcess.js:89:9037)
+	at E.terminate (/home/ubuntu/.vscode-server/bin/dfd34e8260c270da74b5c2d86d61aee4b6d56977/out/vs/workbench/api/node/extensionHostProcess.js:94:839)
+	at d (/home/ubuntu/.vscode-server/bin/dfd34e8260c270da74b5c2d86d61aee4b6d56977/out/vs/workbench/api/node/extensionHostProcess.js:104:36250)
+	at /home/ubuntu/.vscode-server/bin/dfd34e8260c270da74b5c2d86d61aee4b6d56977/out/vs/workbench/api/node/extensionHostProcess.js:104:34212
+	at u.invoke (/home/ubuntu/.vscode-server/bin/dfd34e8260c270da74b5c2d86d61aee4b6d56977/out/vs/workbench/api/node/extensionHostProcess.js:58:145)
+	at v.fire (/home/ubuntu/.vscode-server/bin/dfd34e8260c270da74b5c2d86d61aee4b6d56977/out/vs/workbench/api/node/extensionHostProcess.js:58:1856)
+	at d.fire (/home/ubuntu/.vscode-server/bin/dfd34e8260c270da74b5c2d86d61aee4b6d56977/out/vs/workbench/api/node/extensionHostProcess.js:66:19034)
+	at o._receiveMessage (/home/ubuntu/.vscode-server/bin/dfd34e8260c270da74b5c2d86d61aee4b6d56977/out/vs/workbench/api/node/extensionHostProcess.js:66:23615)
+	at /home/ubuntu/.vscode-server/bin/dfd34e8260c270da74b5c2d86d61aee4b6d56977/out/vs/workbench/api/node/extensionHostProcess.js:66:21149
+	at u.invoke (/home/ubuntu/.vscode-server/bin/dfd34e8260c270da74b5c2d86d61aee4b6d56977/out/vs/workbench/api/node/extensionHostProcess.js:58:145)
+	at v.fire (/home/ubuntu/.vscode-server/bin/dfd34e8260c270da74b5c2d86d61aee4b6d56977/out/vs/workbench/api/node/extensionHostProcess.js:58:1856)
+	at v.acceptChunk (/home/ubuntu/.vscode-server/bin/dfd34e8260c270da74b5c2d86d61aee4b6d56977/out/vs/workbench/api/node/extensionHostProcess.js:66:15865)
+	at /home/ubuntu/.vscode-server/bin/dfd34e8260c270da74b5c2d86d61aee4b6d56977/out/vs/workbench/api/node/extensionHostProcess.js:66:14995
+	at u.invoke (/home/ubuntu/.vscode-server/bin/dfd34e8260c270da74b5c2d86d61aee4b6d56977/out/vs/workbench/api/node/extensionHostProcess.js:58:145)
+	at v.fire (/home/ubuntu/.vscode-server/bin/dfd34e8260c270da74b5c2d86d61aee4b6d56977/out/vs/workbench/api/node/extensionHostProcess.js:58:1856)
+	at l._processReadQueue (/home/ubuntu/.vscode-server/bin/dfd34e8260c270da74b5c2d86d61aee4b6d56977/out/vs/workbench/api/node/extensionHostProcess.js:104:21279) python.setInterpreter {"value":"ms-python.python","_lower":"ms-python.python"}
+[2022-05-03 00:45:54.778] [exthost] [info] Extension host with pid 36460 exiting with code 0

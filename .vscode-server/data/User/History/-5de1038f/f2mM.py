@@ -1,0 +1,27 @@
+from django.db import models
+from users.models import User
+# Create your models here.
+
+class Restaurant(models.Model):
+    
+    def nameFile(instance, filename):
+     return '/'.join(['menus/', str(instance.user_id), filename])
+
+    user = models.OneToOneField(User,related_name="restaurant",on_delete=models.CASCADE)
+    id_restaurant = models.AutoField(primary_key=True, unique = True)
+    name_representative = models.CharField('Nombre del representante', max_length = 50, blank = True, null = True)
+    last_name_representative = models.CharField('Apellido del representante', max_length = 50, blank = True, null = True)
+    phone_number= models.CharField("Número de teléfono del restaurante", max_length=10, null = True)
+    phone_number_representative = models.CharField("Número de teléfono del representante", max_length=10, null = True)
+    address = models.CharField("Dirección", max_length=100, null = True)
+    neighborhood = models.CharField("Barrio", max_length=100, null = True)
+    description = models.CharField("Descripción", max_length=254, null = True)
+    menu = models.FileField("Menú",upload_to=nameFile, blank=True,  null = True)
+    prices = models.DecimalField('Precios', max_digits=10, decimal_places=3, blank = True, null = True)
+    
+
+    class Meta:
+        verbose_name = 'Restaurante'
+        verbose_name_plural = 'Restaurantes'
+
+  

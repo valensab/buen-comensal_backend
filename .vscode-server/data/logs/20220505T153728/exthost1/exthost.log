@@ -1,0 +1,12 @@
+[2022-05-05 15:37:34.934] [exthost] [info] Extension host with pid 50403 started
+[2022-05-05 15:37:35.325] [exthost] [info] ExtensionService#_doActivateExtension vscode.debug-auto-launch, startup: true, activationEvent: '*'
+[2022-05-05 15:37:35.426] [exthost] [info] ExtensionService#_doActivateExtension vscode.git-base, startup: true, activationEvent: '*', root cause: vscode.git
+[2022-05-05 15:37:35.450] [exthost] [info] ExtensionService#_doActivateExtension vscode.ipynb, startup: true, activationEvent: '*'
+[2022-05-05 15:37:35.833] [exthost] [info] ExtensionService#_doActivateExtension vscode.git, startup: true, activationEvent: '*'
+[2022-05-05 15:37:36.127] [exthost] [info] ExtensionService#_doActivateExtension vscode.github, startup: true, activationEvent: '*'
+[2022-05-05 15:37:36.434] [exthost] [info] ExtensionService#_doActivateExtension vscode.emmet, startup: false, activationEvent: 'onStartupFinished'
+[2022-05-05 15:37:36.460] [exthost] [info] ExtensionService#_doActivateExtension vscode.merge-conflict, startup: false, activationEvent: 'onStartupFinished'
+[2022-05-05 15:37:36.467] [exthost] [info] ExtensionService#_doActivateExtension ritwickdey.LiveServer, startup: false, activationEvent: 'onStartupFinished'
+[2022-05-05 15:37:37.159] [exthost] [info] Eager extensions activated
+[2022-05-05 15:37:40.086] [exthost] [info] extension host terminating: received terminate message from renderer
+[2022-05-05 15:37:40.094] [exthost] [info] Extension host with pid 50403 exiting with code 0

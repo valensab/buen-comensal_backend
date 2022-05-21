@@ -1,0 +1,58 @@
+*
+* Visual Studio Code Server
+*
+* By using the software, you agree to
+* the Visual Studio Code Server License Terms (https://aka.ms/vscode-server-license) and
+* the Microsoft Privacy Statement (https://privacy.microsoft.com/en-US/privacystatement).
+*
+Server bound to 127.0.0.1:39087 (IPv4)
+Extension host agent listening on 39087
+
+[15:34:57] Extension host agent started.
+[15:34:58] [127.0.0.1][38fea2fa][ManagementConnection] New connection established.
+[15:34:59] [127.0.0.1][ee1ac732][ExtensionHostConnection] New connection established.
+[15:34:59] [127.0.0.1][ee1ac732][ExtensionHostConnection] <160290> Launched Extension Host Process.
+[15:35:00] [127.0.0.1][38fea2fa][ManagementConnection] The client has disconnected gracefully, so the connection will be disposed.
+Overwriting extension /home/ubuntu/.vscode-server/bin/c3511e6c69bb39013c4a4b7b9566ec1ca73fc4d5/extensions/ms-vscode.js-debug-companion with /home/ubuntu/.vscode-server/extensions/ms-vscode.js-debug-companion-1.0.18.
+Overwriting extension /home/ubuntu/.vscode-server/bin/c3511e6c69bb39013c4a4b7b9566ec1ca73fc4d5/extensions/ms-vscode.references-view with /home/ubuntu/.vscode-server/extensions/ms-vscode.references-view-0.0.89.
+[15:35:08] [127.0.0.1][4cb96d70][ManagementConnection] New connection established.
+[15:35:08] [127.0.0.1][b03117ce][ExtensionHostConnection] New connection established.
+[15:35:08] [127.0.0.1][b03117ce][ExtensionHostConnection] <160426> Launched Extension Host Process.
+Overwriting extension /home/ubuntu/.vscode-server/bin/c3511e6c69bb39013c4a4b7b9566ec1ca73fc4d5/extensions/ms-vscode.js-debug-companion with /home/ubuntu/.vscode-server/extensions/ms-vscode.js-debug-companion-1.0.18.
+Overwriting extension /home/ubuntu/.vscode-server/bin/c3511e6c69bb39013c4a4b7b9566ec1ca73fc4d5/extensions/ms-vscode.references-view with /home/ubuntu/.vscode-server/extensions/ms-vscode.references-view-0.0.89.
+[15:35:20] Getting Manifest... ms-python.vscode-pylance
+[15:35:20] Installing extension: ms-python.vscode-pylance
+[15:35:23] Downloaded extension: ms-python.vscode-pylance /home/ubuntu/.vscode-server/data/CachedExtensionVSIXs/ms-python.vscode-pylance-2022.5.2
+[15:35:48] Extracted extension to /home/ubuntu/.vscode-server/extensions/.17bc8f04-27d8-4cfc-b701-d806ec8b6d44: ms-python.vscode-pylance
+[15:35:48] Renamed to /home/ubuntu/.vscode-server/extensions/ms-python.vscode-pylance-2022.5.2
+[15:35:48] Extracting completed. ms-python.vscode-pylance
+[15:35:48] Extension installed successfully: ms-python.vscode-pylance
+[15:40:08] [127.0.0.1][ee1ac732][ExtensionHostConnection] <160290> Extension Host Process exited with code: 0, signal: null.
+[19:02:26] [127.0.0.1][b75a62db][ManagementConnection] New connection established.
+[19:02:26] [127.0.0.1][37d99d4c][ExtensionHostConnection] New connection established.
+[19:02:26] [127.0.0.1][37d99d4c][ExtensionHostConnection] <163898> Launched Extension Host Process.
+Overwriting extension /home/ubuntu/.vscode-server/bin/c3511e6c69bb39013c4a4b7b9566ec1ca73fc4d5/extensions/ms-vscode.js-debug-companion with /home/ubuntu/.vscode-server/extensions/ms-vscode.js-debug-companion-1.0.18.
+Overwriting extension /home/ubuntu/.vscode-server/bin/c3511e6c69bb39013c4a4b7b9566ec1ca73fc4d5/extensions/ms-vscode.references-view with /home/ubuntu/.vscode-server/extensions/ms-vscode.references-view-0.0.89.
+[19:07:21] [127.0.0.1][b75a62db][ManagementConnection] The client has disconnected gracefully, so the connection will be disposed.
+[19:07:21] [127.0.0.1][37d99d4c][ExtensionHostConnection] <163898> Extension Host Process exited with code: 0, signal: null.
+[19:07:50] [127.0.0.1][77b61f2b][ManagementConnection] New connection established.
+[19:07:50] [127.0.0.1][8700c5b7][ExtensionHostConnection] New connection established.
+[19:07:50] [127.0.0.1][8700c5b7][ExtensionHostConnection] <164392> Launched Extension Host Process.
+Overwriting extension /home/ubuntu/.vscode-server/bin/c3511e6c69bb39013c4a4b7b9566ec1ca73fc4d5/extensions/ms-vscode.js-debug-companion with /home/ubuntu/.vscode-server/extensions/ms-vscode.js-debug-companion-1.0.18.
+Overwriting extension /home/ubuntu/.vscode-server/bin/c3511e6c69bb39013c4a4b7b9566ec1ca73fc4d5/extensions/ms-vscode.references-view with /home/ubuntu/.vscode-server/extensions/ms-vscode.references-view-0.0.89.
+[19:09:10] [File Watcher (parcel)] Unexpected error: std::bad_alloc (EUNKNOWN) (path: /home/ubuntu/env/lib/python3.8/site-packages)
+[19:09:10] [File Watcher (universal)] restarting watcher after error: std::bad_alloc
+[19:19:38] [File Watcher (parcel)] Unexpected error: std::bad_alloc (EUNKNOWN) (path: /home/ubuntu/env/lib/python3.8/site-packages)
+[19:19:38] [File Watcher (universal)] restarting watcher after error: std::bad_alloc
+[19:19:39] [File Watcher (parcel)] Unexpected error: No such file or directory (EUNKNOWN) (path: /home/ubuntu/env/lib/python3.8/site-packages)
+[19:19:39] [File Watcher (universal)] restarting watcher after error: No such file or directory
+[19:20:22] [File Watcher (parcel)] Unexpected error: std::bad_alloc (EUNKNOWN) (path: /home/ubuntu/env/lib/python3.8/site-packages)
+[19:20:22] [File Watcher (universal)] restarting watcher after error: std::bad_alloc
+[19:20:23] [File Watcher (parcel)] Unexpected error: inotify_add_watch on '/home/ubuntu/env/lib/python3.8/site-packages/~jango/conf/locale/ca' failed: No such file or directory (EUNKNOWN) (path: /home/ubuntu/env/lib/python3.8/site-packages)
+[19:20:23] [File Watcher (universal)] restarting watcher after error: inotify_add_watch on '/home/ubuntu/env/lib/python3.8/site-packages/~jango/conf/locale/ca' failed: No such file or directory
+[20:18:12] [File Watcher (parcel)] Unexpected error: std::bad_alloc (EUNKNOWN) (path: /home/ubuntu/buenComensalProject)
+[20:18:12] [File Watcher (universal)] restarting watcher after error: std::bad_alloc
+IPC "File Watcher" crashed with exit code null and signal SIGSEGV
+[20:18:23] [File Watcher (universal)] restarting watcher after error: terminated by itself with code null, signal: SIGSEGV
+[20:46:06] [127.0.0.1][77b61f2b][ManagementConnection] The client has disconnected gracefully, so the connection will be disposed.
+[20:46:06] [127.0.0.1][8700c5b7][ExtensionHostConnection] <164392> Extension Host Process exited with code: 0, signal: null.
