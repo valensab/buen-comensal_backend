@@ -145,3 +145,5 @@ Cancelling previous shutdown timeout
     'exit 0'
 ]
 [00:31:56] [File Watcher (parcel)] Inotify limit reached (ENOSPC) (path: /home/ubuntu)
+New EH opened, aborting shutdown
+[00:36:37] New EH opened, aborting shutdown

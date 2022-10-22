@@ -12,3 +12,4 @@
 [2022-10-22 00:31:38.708] [remoteagent] [info] [127.0.0.1][7c49c2a9][ExtensionHostConnection] New connection established.
 [2022-10-22 00:31:38.714] [remoteagent] [info] [127.0.0.1][7c49c2a9][ExtensionHostConnection] <16015> Launched Extension Host Process.
 [2022-10-22 00:31:56.048] [remoteagent] [error] [File Watcher (parcel)] Inotify limit reached (ENOSPC) (path: /home/ubuntu)
+[2022-10-22 00:36:37.350] [remoteagent] [info] New EH opened, aborting shutdown
