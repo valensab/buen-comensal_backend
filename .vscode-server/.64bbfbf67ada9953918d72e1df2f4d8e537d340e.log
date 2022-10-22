@@ -1,0 +1,96 @@
+*
+* Visual Studio Code Server
+*
+* By using the software, you agree to
+* the Visual Studio Code Server License Terms (https://aka.ms/vscode-server-license) and
+* the Microsoft Privacy Statement (https://privacy.microsoft.com/en-US/privacystatement).
+*
+Server bound to 127.0.0.1:36323 (IPv4)
+Extension host agent listening on 36323
+
+[23:16:10] Extension host agent started.
+[23:16:11] [127.0.0.1][46bcdf58][ManagementConnection] New connection established.
+[23:16:11] [127.0.0.1][72108934][ExtensionHostConnection] New connection established.
+[23:16:11] [127.0.0.1][72108934][ExtensionHostConnection] <884847> Launched Extension Host Process.
+[23:16:11] Deleted from disk ms-toolsai.jupyter-renderers /home/ubuntu/.vscode-server/extensions/ms-toolsai.jupyter-renderers-1.0.9
+[23:16:12] Deleted from disk ms-toolsai.jupyter /home/ubuntu/.vscode-server/extensions/ms-toolsai.jupyter-2022.8.1002431955
+[23:16:16] No ptyHost heartbeat after 6 seconds
+[IPC Library: Pty Host]  WARN Shell integration cannot be enabled for executable "/bin/sh" and args [
+  '-c',
+  'wget --version > /dev/null\n' +
+    'if [ $? -eq 0 ]\n' +
+    'then\n' +
+    "\twget --connect-timeout=7 --tries=1 --dns-timeout=7 -q --header='Metadata:true' -O - http://169.254.169.254/metadata/instance?api-version=2019-03-11\n" +
+    'else\n' +
+    '\tcurl --version > /dev/null\n' +
+    '\tif [ $? -eq 0 ]\n' +
+    '\tthen\n' +
+    "\t\tcurl --connect-timeout 7 -s --header='Metadata:true' http://169.254.169.254/metadata/instance?api-version=2019-03-11\n" +
+    '\tfi\n' +
+    'fi\n' +
+    'exit 0'
+]
+[IPC Library: Pty Host]  WARN Shell integration cannot be enabled for executable "/bin/sh" and args [
+  '-c',
+  'wget --version > /dev/null\n' +
+    'if [ $? -eq 0 ]\n' +
+    'then\n' +
+    '\twget --connect-timeout=7 --tries=1 --dns-timeout=7 -q  -O - http://169.254.169.254/latest/meta-data/instance-id\n' +
+    'else\n' +
+    '\tcurl --version > /dev/null\n' +
+    '\tif [ $? -eq 0 ]\n' +
+    '\tthen\n' +
+    '\t\tcurl --connect-timeout 7 -s  http://169.254.169.254/latest/meta-data/instance-id\n' +
+    '\tfi\n' +
+    'fi\n' +
+    'exit 0'
+]
+[IPC Library: Pty Host]  WARN Shell integration cannot be enabled for executable "/bin/sh" and args [
+  '-c',
+  'wget --version > /dev/null\n' +
+    'if [ $? -eq 0 ]\n' +
+    'then\n' +
+    '\twget --connect-timeout=7 --tries=1 --dns-timeout=7 -q  -O - http://169.254.169.254/metadata/v1/id\n' +
+    'else\n' +
+    '\tcurl --version > /dev/null\n' +
+    '\tif [ $? -eq 0 ]\n' +
+    '\tthen\n' +
+    '\t\tcurl --connect-timeout 7 -s  http://169.254.169.254/metadata/v1/id\n' +
+    '\tfi\n' +
+    'fi\n' +
+    'exit 0'
+]
+[IPC Library: Pty Host]  WARN Shell integration cannot be enabled for executable "/bin/sh" and args [
+  '-c',
+  'wget --version > /dev/null\n' +
+    'if [ $? -eq 0 ]\n' +
+    'then\n' +
+    "\twget --connect-timeout=7 --tries=1 --dns-timeout=7 -q --header='Metadata-Flavor:Google' -O - http://metadata.google.internal/computeMetadata/v1/instance/id\n" +
+    'else\n' +
+    '\tcurl --version > /dev/null\n' +
+    '\tif [ $? -eq 0 ]\n' +
+    '\tthen\n' +
+    "\t\tcurl --connect-timeout 7 -s --header='Metadata-Flavor:Google' http://metadata.google.internal/computeMetadata/v1/instance/id\n" +
+    '\tfi\n' +
+    'fi\n' +
+    'exit 0'
+]
+[23:16:22] Getting Manifest... ms-toolsai.jupyter
+[23:16:22] Installing extension: ms-toolsai.jupyter
+rejected promise not handled within 1 second: CodeExpectedError: Could not find pty on pty host
+stack trace: CodeExpectedError: Could not find pty on pty host,    at a._throwIfNoPty (/home/ubuntu/.vscode-server/bin/64bbfbf67ada9953918d72e1df2f4d8e537d340e/out/vs/platform/terminal/node/ptyHostMain.js:27:7252),    at a.updateIcon (/home/ubuntu/.vscode-server/bin/64bbfbf67ada9953918d72e1df2f4d8e537d340e/out/vs/platform/terminal/node/ptyHostMain.js:27:3046),    at Object.call (/home/ubuntu/.vscode-server/bin/64bbfbf67ada9953918d72e1df2f4d8e537d340e/out/vs/platform/terminal/node/ptyHostMain.js:16:8386),    at c.onPromise (/home/ubuntu/.vscode-server/bin/64bbfbf67ada9953918d72e1df2f4d8e537d340e/out/vs/platform/terminal/node/ptyHostMain.js:15:5833),    at c.onRawMessage (/home/ubuntu/.vscode-server/bin/64bbfbf67ada9953918d72e1df2f4d8e537d340e/out/vs/platform/terminal/node/ptyHostMain.js:15:5216),    at /home/ubuntu/.vscode-server/bin/64bbfbf67ada9953918d72e1df2f4d8e537d340e/out/vs/platform/terminal/node/ptyHostMain.js:15:4502,    at m.invoke (/home/ubuntu/.vscode-server/bin/64bbfbf67ada9953918d72e1df2f4d8e537d340e/out/vs/platform/terminal/node/ptyHostMain.js:11:145),    at D.deliver (/home/ubuntu/.vscode-server/bin/64bbfbf67ada9953918d72e1df2f4d8e537d340e/out/vs/platform/terminal/node/ptyHostMain.js:11:2275),    at O.fire (/home/ubuntu/.vscode-server/bin/64bbfbf67ada9953918d72e1df2f4d8e537d340e/out/vs/platform/terminal/node/ptyHostMain.js:11:1853),    at process.X (/home/ubuntu/.vscode-server/bin/64bbfbf67ada9953918d72e1df2f4d8e537d340e/out/vs/platform/terminal/node/ptyHostMain.js:9:20837),    at process.emit (node:events:526:28),    at emit (node:internal/child_process:938:14),    at processTicksAndRejections (node:internal/process/task_queues:84:21)
+[23:16:23] [Error [CodeExpectedError]: Could not find pty on pty host,    at a._throwIfNoPty (/home/ubuntu/.vscode-server/bin/64bbfbf67ada9953918d72e1df2f4d8e537d340e/out/vs/platform/terminal/node/ptyHostMain.js:27:7252),    at a.updateIcon (/home/ubuntu/.vscode-server/bin/64bbfbf67ada9953918d72e1df2f4d8e537d340e/out/vs/platform/terminal/node/ptyHostMain.js:27:3046),    at Object.call (/home/ubuntu/.vscode-server/bin/64bbfbf67ada9953918d72e1df2f4d8e537d340e/out/vs/platform/terminal/node/ptyHostMain.js:16:8386),    at c.onPromise (/home/ubuntu/.vscode-server/bin/64bbfbf67ada9953918d72e1df2f4d8e537d340e/out/vs/platform/terminal/node/ptyHostMain.js:15:5833),    at c.onRawMessage (/home/ubuntu/.vscode-server/bin/64bbfbf67ada9953918d72e1df2f4d8e537d340e/out/vs/platform/terminal/node/ptyHostMain.js:15:5216),    at /home/ubuntu/.vscode-server/bin/64bbfbf67ada9953918d72e1df2f4d8e537d340e/out/vs/platform/terminal/node/ptyHostMain.js:15:4502,    at m.invoke (/home/ubuntu/.vscode-server/bin/64bbfbf67ada9953918d72e1df2f4d8e537d340e/out/vs/platform/terminal/node/ptyHostMain.js:11:145),    at D.deliver (/home/ubuntu/.vscode-server/bin/64bbfbf67ada9953918d72e1df2f4d8e537d340e/out/vs/platform/terminal/node/ptyHostMain.js:11:2275),    at O.fire (/home/ubuntu/.vscode-server/bin/64bbfbf67ada9953918d72e1df2f4d8e537d340e/out/vs/platform/terminal/node/ptyHostMain.js:11:1853),    at process.X (/home/ubuntu/.vscode-server/bin/64bbfbf67ada9953918d72e1df2f4d8e537d340e/out/vs/platform/terminal/node/ptyHostMain.js:9:20837),    at process.emit (node:events:526:28),    at emit (node:internal/child_process:938:14),    at processTicksAndRejections (node:internal/process/task_queues:84:21)]
+rejected promise not handled within 1 second: CodeExpectedError: Could not find pty on pty host
+stack trace: CodeExpectedError: Could not find pty on pty host,    at a._throwIfNoPty (/home/ubuntu/.vscode-server/bin/64bbfbf67ada9953918d72e1df2f4d8e537d340e/out/vs/platform/terminal/node/ptyHostMain.js:27:7252),    at a.updateTitle (/home/ubuntu/.vscode-server/bin/64bbfbf67ada9953918d72e1df2f4d8e537d340e/out/vs/platform/terminal/node/ptyHostMain.js:27:2984),    at Object.call (/home/ubuntu/.vscode-server/bin/64bbfbf67ada9953918d72e1df2f4d8e537d340e/out/vs/platform/terminal/node/ptyHostMain.js:16:8386),    at c.onPromise (/home/ubuntu/.vscode-server/bin/64bbfbf67ada9953918d72e1df2f4d8e537d340e/out/vs/platform/terminal/node/ptyHostMain.js:15:5833),    at c.onRawMessage (/home/ubuntu/.vscode-server/bin/64bbfbf67ada9953918d72e1df2f4d8e537d340e/out/vs/platform/terminal/node/ptyHostMain.js:15:5216),    at /home/ubuntu/.vscode-server/bin/64bbfbf67ada9953918d72e1df2f4d8e537d340e/out/vs/platform/terminal/node/ptyHostMain.js:15:4502,    at m.invoke (/home/ubuntu/.vscode-server/bin/64bbfbf67ada9953918d72e1df2f4d8e537d340e/out/vs/platform/terminal/node/ptyHostMain.js:11:145),    at D.deliver (/home/ubuntu/.vscode-server/bin/64bbfbf67ada9953918d72e1df2f4d8e537d340e/out/vs/platform/terminal/node/ptyHostMain.js:11:2275),    at O.fire (/home/ubuntu/.vscode-server/bin/64bbfbf67ada9953918d72e1df2f4d8e537d340e/out/vs/platform/terminal/node/ptyHostMain.js:11:1853),    at process.X (/home/ubuntu/.vscode-server/bin/64bbfbf67ada9953918d72e1df2f4d8e537d340e/out/vs/platform/terminal/node/ptyHostMain.js:9:20837),    at process.emit (node:events:526:28),    at emit (node:internal/child_process:938:14),    at processTicksAndRejections (node:internal/process/task_queues:84:21)
+[23:16:23] [Error [CodeExpectedError]: Could not find pty on pty host,    at a._throwIfNoPty (/home/ubuntu/.vscode-server/bin/64bbfbf67ada9953918d72e1df2f4d8e537d340e/out/vs/platform/terminal/node/ptyHostMain.js:27:7252),    at a.updateTitle (/home/ubuntu/.vscode-server/bin/64bbfbf67ada9953918d72e1df2f4d8e537d340e/out/vs/platform/terminal/node/ptyHostMain.js:27:2984),    at Object.call (/home/ubuntu/.vscode-server/bin/64bbfbf67ada9953918d72e1df2f4d8e537d340e/out/vs/platform/terminal/node/ptyHostMain.js:16:8386),    at c.onPromise (/home/ubuntu/.vscode-server/bin/64bbfbf67ada9953918d72e1df2f4d8e537d340e/out/vs/platform/terminal/node/ptyHostMain.js:15:5833),    at c.onRawMessage (/home/ubuntu/.vscode-server/bin/64bbfbf67ada9953918d72e1df2f4d8e537d340e/out/vs/platform/terminal/node/ptyHostMain.js:15:5216),    at /home/ubuntu/.vscode-server/bin/64bbfbf67ada9953918d72e1df2f4d8e537d340e/out/vs/platform/terminal/node/ptyHostMain.js:15:4502,    at m.invoke (/home/ubuntu/.vscode-server/bin/64bbfbf67ada9953918d72e1df2f4d8e537d340e/out/vs/platform/terminal/node/ptyHostMain.js:11:145),    at D.deliver (/home/ubuntu/.vscode-server/bin/64bbfbf67ada9953918d72e1df2f4d8e537d340e/out/vs/platform/terminal/node/ptyHostMain.js:11:2275),    at O.fire (/home/ubuntu/.vscode-server/bin/64bbfbf67ada9953918d72e1df2f4d8e537d340e/out/vs/platform/terminal/node/ptyHostMain.js:11:1853),    at process.X (/home/ubuntu/.vscode-server/bin/64bbfbf67ada9953918d72e1df2f4d8e537d340e/out/vs/platform/terminal/node/ptyHostMain.js:9:20837),    at process.emit (node:events:526:28),    at emit (node:internal/child_process:938:14),    at processTicksAndRejections (node:internal/process/task_queues:84:21)]
+[23:16:26] Downloaded extension: ms-toolsai.jupyter /home/ubuntu/.vscode-server/data/CachedExtensionVSIXs/ms-toolsai.jupyter-2022.9.1100000000
+[23:16:34] Extracted extension to /home/ubuntu/.vscode-server/extensions/.20119d56-20e1-4dbf-9778-65d658b7dcc8: ms-toolsai.jupyter
+[23:16:34] Renamed to /home/ubuntu/.vscode-server/extensions/ms-toolsai.jupyter-2022.9.1100000000
+[23:16:34] Extracting completed. ms-toolsai.jupyter
+[23:16:34] Extension installed successfully: ms-toolsai.jupyter
+[23:17:52] [127.0.0.1][46bcdf58][ManagementConnection] The client has disconnected gracefully, so the connection will be disposed.
+[23:17:52] [127.0.0.1][72108934][ExtensionHostConnection] <884847> Extension Host Process exited with code: 0, signal: null.
+Last EH closed, waiting before shutting down
+[23:17:52] Last EH closed, waiting before shutting down
+Last EH closed, shutting down
+[23:22:52] Last EH closed, shutting down

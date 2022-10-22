@@ -1,0 +1,54 @@
+[2022-10-13 01:40:33.137] [exthost] [info] Extension host with pid 903507 started
+[2022-10-13 01:40:33.247] [exthost] [info] Lock '/home/ubuntu/.vscode-server/data/User/workspaceStorage/33db89fc36b95e274c7f9ccda8cc4b3f/vscode.lock': Lock acquired.
+[2022-10-13 01:40:33.757] [exthost] [info] ExtensionService#_doActivateExtension vscode.css-language-features, startup: false, activationEvent: 'onLanguage:css'
+[2022-10-13 01:40:33.759] [exthost] [info] ExtensionService#_doActivateExtension vscode.debug-auto-launch, startup: true, activationEvent: '*'
+[2022-10-13 01:40:33.760] [exthost] [info] ExtensionService#_doActivateExtension vscode.git-base, startup: true, activationEvent: '*', root cause: vscode.git
+[2022-10-13 01:40:33.760] [exthost] [info] ExtensionService#_doActivateExtension vscode.ipynb, startup: true, activationEvent: '*'
+[2022-10-13 01:40:34.036] [exthost] [info] ExtensionService#_doActivateExtension ms-python.python, startup: true, activationEvent: 'workspaceContains:manage.py'
+[2022-10-13 01:40:36.264] [exthost] [info] ExtensionService#_doActivateExtension vscode.git, startup: true, activationEvent: '*'
+[2022-10-13 01:40:36.264] [exthost] [info] ExtensionService#_doActivateExtension vscode.github, startup: true, activationEvent: '*'
+[2022-10-13 01:40:37.663] [exthost] [info] ExtensionService#_doActivateExtension vscode.emmet, startup: false, activationEvent: 'onStartupFinished'
+[2022-10-13 01:40:37.664] [exthost] [info] ExtensionService#_doActivateExtension vscode.merge-conflict, startup: false, activationEvent: 'onStartupFinished'
+[2022-10-13 01:40:37.664] [exthost] [info] ExtensionService#_doActivateExtension ritwickdey.LiveServer, startup: false, activationEvent: 'onStartupFinished'
+[2022-10-13 01:40:37.664] [exthost] [info] Eager extensions activated
+[2022-10-13 01:40:50.808] [exthost] [info] ExtensionService#_doActivateExtension ms-toolsai.jupyter, startup: false, activationEvent: 'onLanguage:python'
+[2022-10-13 01:40:57.231] [exthost] [info] ExtensionService#_doActivateExtension ms-toolsai.jupyter-renderers, startup: false, activationEvent: 'api', root cause: ms-toolsai.jupyter
+[2022-10-13 01:45:25.133] [exthost] [error] [ms-python.python] provider FAILED
+[2022-10-13 01:45:25.133] [exthost] [error] Error: ValueError: `column` parameter (1) is not in a valid range (0-0) for line 42 ('\n').
+	at /home/ubuntu/.vscode-server/extensions/ms-python.python-2022.16.0/out/client/extension.js:2:2152599
+	at /home/ubuntu/.vscode-server/extensions/ms-python.python-2022.16.0/out/client/extension.js:2:2152893
+	at Immediate.<anonymous> (/home/ubuntu/.vscode-server/extensions/ms-python.python-2022.16.0/out/client/extension.js:2:2153255)
+	at processImmediate (node:internal/timers:466:21)
+[2022-10-13 02:07:10.758] [exthost] [error] [ms-python.python] provider FAILED
+[2022-10-13 02:07:10.760] [exthost] [error] Error: AttributeError: 'Newline' object has no attribute 'children'
+	at /home/ubuntu/.vscode-server/extensions/ms-python.python-2022.16.0/out/client/extension.js:2:2152599
+	at /home/ubuntu/.vscode-server/extensions/ms-python.python-2022.16.0/out/client/extension.js:2:2152893
+	at Immediate.<anonymous> (/home/ubuntu/.vscode-server/extensions/ms-python.python-2022.16.0/out/client/extension.js:2:2153255)
+	at processImmediate (node:internal/timers:466:21)
+[2022-10-13 03:22:40.304] [exthost] [error] [ms-python.python] provider FAILED
+[2022-10-13 03:22:40.305] [exthost] [error] Error: ValueError: PythonNode(trailer, [<Operator: (>, PythonNode(atom, [<Operator: [>, <String: 'GET'>, <Operator: ]>]), <Operator: )>]) is not in list
+	at /home/ubuntu/.vscode-server/extensions/ms-python.python-2022.16.0/out/client/extension.js:2:2152599
+	at /home/ubuntu/.vscode-server/extensions/ms-python.python-2022.16.0/out/client/extension.js:2:2152893
+	at Immediate.<anonymous> (/home/ubuntu/.vscode-server/extensions/ms-python.python-2022.16.0/out/client/extension.js:2:2153255)
+	at processImmediate (node:internal/timers:466:21)
+[2022-10-13 03:41:20.807] [exthost] [error] [ms-python.python] provider FAILED
+[2022-10-13 03:41:20.809] [exthost] [error] Error: ValueError: PythonNode(trailer, [<Operator: (>, PythonNode(atom, [<Operator: [>, <String: 'GET'>, <Operator: ]>]), <Operator: )>]) is not in list
+	at /home/ubuntu/.vscode-server/extensions/ms-python.python-2022.16.0/out/client/extension.js:2:2152599
+	at /home/ubuntu/.vscode-server/extensions/ms-python.python-2022.16.0/out/client/extension.js:2:2152893
+	at Immediate.<anonymous> (/home/ubuntu/.vscode-server/extensions/ms-python.python-2022.16.0/out/client/extension.js:2:2153255)
+	at processImmediate (node:internal/timers:466:21)
+[2022-10-13 03:42:34.863] [exthost] [error] [ms-python.python] provider FAILED
+[2022-10-13 03:42:34.863] [exthost] [error] Error: ValueError: PythonNode(trailer, [<Operator: (>, PythonNode(atom, [<Operator: [>, <String: 'GET'>, <Operator: ]>]), <Operator: )>]) is not in list
+	at /home/ubuntu/.vscode-server/extensions/ms-python.python-2022.16.0/out/client/extension.js:2:2152599
+	at /home/ubuntu/.vscode-server/extensions/ms-python.python-2022.16.0/out/client/extension.js:2:2152893
+	at Immediate.<anonymous> (/home/ubuntu/.vscode-server/extensions/ms-python.python-2022.16.0/out/client/extension.js:2:2153255)
+	at processImmediate (node:internal/timers:466:21)
+[2022-10-13 04:04:12.257] [exthost] [error] [ms-python.python] provider FAILED
+[2022-10-13 04:04:12.258] [exthost] [error] Error: UnboundLocalError: local variable 'end_index' referenced before assignment
+	at /home/ubuntu/.vscode-server/extensions/ms-python.python-2022.16.0/out/client/extension.js:2:2152599
+	at /home/ubuntu/.vscode-server/extensions/ms-python.python-2022.16.0/out/client/extension.js:2:2152893
+	at Immediate.<anonymous> (/home/ubuntu/.vscode-server/extensions/ms-python.python-2022.16.0/out/client/extension.js:2:2153255)
+	at processImmediate (node:internal/timers:466:21)
+[2022-10-13 04:26:38.526] [exthost] [info] Extension host terminating: received terminate message from renderer
+[2022-10-13 04:26:38.531] [exthost] [info] Lock '/home/ubuntu/.vscode-server/data/User/workspaceStorage/33db89fc36b95e274c7f9ccda8cc4b3f/vscode.lock': Marking the lockfile as scheduled to be released in 6000 ms.
+[2022-10-13 04:26:38.637] [exthost] [info] Extension host with pid 903507 exiting with code 0

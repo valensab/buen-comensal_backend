@@ -1,0 +1,17 @@
+[Info  - 9:23:43 PM] (946901) Pylance language server 2022.10.20 (pyright e2d13ab1) starting
+[Info  - 9:23:43 PM] (946901) Server root directory: /home/ubuntu/.vscode-server/extensions/ms-python.vscode-pylance-2022.10.20/dist
+[Info  - 9:23:43 PM] (946901) Starting service instance "buenComensalProject"
+[Info  - 9:23:43 PM] (946901) Notebook support: LSP
+[Info  - 9:23:43 PM] (946901) Interactive window support: LSP
+[Info  - 9:23:43 PM] (946901) No configuration file found.
+[Info  - 9:23:43 PM] (946901) No pyproject.toml file found.
+[Info  - 9:23:43 PM] (946901) Setting pythonPath for service "buenComensalProject": "C:/Users/krodriguez/AppData/Local/Programs/Python/Python310/python.exe"
+[Warn  - 9:23:43 PM] (946901) stubPath /home/ubuntu/buenComensalProject/typings is not a valid directory.
+[Info  - 9:23:43 PM] (946901) Unable to get Python version from interpreter
+[Info  - 9:23:43 PM] (946901) Assuming Python platform Linux
+[Info  - 9:23:45 PM] (946901) Searching for source files
+[Info  - 9:23:45 PM] (946901) Found 36 source files
+[Info  - 9:23:45 PM] (946901) Background analysis(1) root directory: /home/ubuntu/.vscode-server/extensions/ms-python.vscode-pylance-2022.10.20/dist
+[Info  - 9:23:45 PM] (946901) Background analysis(1) started
+[Info  - 9:24:03 PM] (946901) [BG(1)] Long operation: checking: /home/ubuntu/buenComensalProject/restaurants/views.py (6314ms)
+[Info  - 9:24:03 PM] (946901) [BG(1)] Long operation: analyzing: /home/ubuntu/buenComensalProject/restaurants/views.py (8693ms)

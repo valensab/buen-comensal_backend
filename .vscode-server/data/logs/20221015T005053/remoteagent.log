@@ -1,0 +1,9 @@
+[2022-10-15 00:50:53.242] [remoteagent] [info] Extension host agent started.
+[2022-10-15 00:50:54.528] [remoteagent] [info] [127.0.0.1][d4ec6088][ManagementConnection] New connection established.
+[2022-10-15 00:50:54.640] [remoteagent] [info] [127.0.0.1][bf89b748][ExtensionHostConnection] New connection established.
+[2022-10-15 00:50:54.646] [remoteagent] [info] [127.0.0.1][bf89b748][ExtensionHostConnection] <926856> Launched Extension Host Process.
+[2022-10-15 00:50:59.854] [remoteagent] [info] Deleted from disk ms-python.python /home/ubuntu/.vscode-server/extensions/ms-python.python-2022.16.0
+[2022-10-15 00:52:55.905] [remoteagent] [info] [127.0.0.1][d4ec6088][ManagementConnection] The client has disconnected gracefully, so the connection will be disposed.
+[2022-10-15 00:52:55.941] [remoteagent] [info] [127.0.0.1][bf89b748][ExtensionHostConnection] <926856> Extension Host Process exited with code: 0, signal: null.
+[2022-10-15 00:52:55.941] [remoteagent] [info] Last EH closed, waiting before shutting down
+[2022-10-15 00:57:55.943] [remoteagent] [info] Last EH closed, shutting down

@@ -1,0 +1,11 @@
+{
+    "workbench.colorTheme": "Monokai",
+    "workbench.iconTheme": "material-icon-theme",
+    "dart.flutterSdkPath": "C:\\flutter",
+    "[javascript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "remote.SSH.remotePlatform": {
+        "ubuntu-comensal": "linux"
+    }
+}

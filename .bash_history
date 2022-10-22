@@ -575,3 +575,473 @@ source env/bin/a
 source env/bin/activate
 cd buenComensalProject/
 python manage.py runserver 0.0.0.0:8000
+ls
+git add .
+git status
+git commit -m "20-05-2002"
+git config --global user.email "paula-sabogal@upc.edu.co"
+git config --global user.name "valensab"
+git commit -m "20-05-2022"
+git branch -M master
+git remote add origin https://github.com/valensab/buen-comensal_backend.git
+git push origin master
+git config --global user.email paula-sabogal@upc.edu.co
+git config --global user.name valensab
+git push origin master
+git config -l
+git push origin master
+cd
+source env/bin/a
+source env/bin/activate
+ls buenComensalProject/
+cd buenComensalProject/
+python manage.py flush
+pip install pyodbc
+sudo pip install pyodbc
+pip install django-cors-headers
+pip install mssql-django
+sudo apt-get update
+sudo apt-get install freetds-dev freetds-bin
+sudo pip pymssql
+sudo pip install  pymssql
+pip install pyodbc
+pip install django-pyodbc-azure
+pip freeze
+django --version
+django --ver
+django -version
+pip install django
+pip install django == 4.0.4
+pip install django=='4.0.4'
+pip install django-pyodbc-azure
+python manage.py mgirate
+python manage.py migrate
+cd
+deactivate
+ls
+cd env/
+ls
+cd bin/
+ls
+WSGIPythonPath /opt/django/checklist/checklist
+pip install django-pyodbc-azure
+cd
+source env/bin/a
+source env/bin/activate
+ls
+cd buenComensalProject/
+python manage.py collectstatic
+pip freeze
+deactivate
+pip install Django=='4.0.4' --upgrade
+pip install django-pyodbc-azure
+cd /home/ubuntu/
+ls
+cd /home/ubuntu/.local/
+ls
+cd bin/
+ls
+cat django-admin 
+
+ls
+
+pip install django-pyodbc-azure
+source env/bin/a
+source env/bin/activate
+ls
+cd buenComensalProject/
+ls
+pip install django-restframework
+pip install djangorestframework
+python -c "import django; print(django.get_version())"
+python3 -m pip install --upgrade pip
+django-admin -v
+django-admin -version
+
+pip install django-pyodbc-azure
+pip install pyodbc
+sudo apt install unixodbc-dev
+ls
+pip install pyodbc
+pip itall mssql-django
+pip install pyodbc
+pip install mssql-django
+python manage.py makemigrations
+pip install django-pyodbc-azure
+pip install django=="4.0.4"
+pip install azure
+pip install pyodbc
+pip install mssql-django
+python manage.py checklist
+python manage.py migrate
+apt-get install unixodbc-dev
+sudo apt install unixodbc-dev
+python manage.py migrate
+sudo pip pymssql
+pip install django-mssql-backend
+sudo pip pymssql
+python manage.py migrate
+sudo ufw allow 1433/tcp
+python manage.py migrate
+#Download the desired package(s)
+curl -O https://download.microsoft.com/download/b/9/f/b9f3cce4-3925-46d4-9f46-da08869c6486/msodbcsql18_18.0.1.1-1_amd64.apk
+curl -O https://download.microsoft.com/download/b/9/f/b9f3cce4-3925-46d4-9f46-da08869c6486/mssql-tools18_18.0.1.1-1_amd64.apk
+#(Optional) Verify signature, if 'gpg' is missing install it using 'apk add gnupg':
+curl -O https://download.microsoft.com/download/b/9/f/b9f3cce4-3925-46d4-9f46-da08869c6486/msodbcsql18_18.0.1.1-1_amd64.sig
+curl -O https://download.microsoft.com/download/b/9/f/b9f3cce4-3925-46d4-9f46-da08869c6486/mssql-tools18_18.0.1.1-1_amd64.sig
+curl https://packages.microsoft.com/keys/microsoft.asc  | gpg --import -
+gpg --verify msodbcsql18_18.0.1.1-1_amd64.sig msodbcsql18_18.0.1.1-1_amd64.apk
+gpg --verify mssql-tools18_18.0.1.1-1_amd64.sig mssql-tools18_18.0.1.1-1_amd64.apk
+#Install the package(s)
+sudo apk add --allow-untrusted msodbcsql18_18.0.1.1-1_amd64.apk
+sudo apk add --allow-untrusted mssql-tools18_18.0.1.1-1_amd64.apk
+clear
+curl https://packages.microsoft.com/keys/microsoft.asc | apt-key add -
+bash script.sh
+sudo ACCEPT_EULA=Y apt-get install -y msodbcsql17
+curl https://packages.microsoft.com/keys/microsoft.asc | apt-key add -
+sudo curl https://packages.microsoft.com/keys/microsoft.asc | apt-key add -
+sudo curl https://packages.microsoft.com/keys/microsoft.asc | apt-key add - |  grep -qs foo
+sudo su
+ls
+python manage.py migrate
+.local/share/Trash/files
+cd ~/.local/share/Trash/files
+/home/ubuntu/env/bin/python /home/ubuntu/buenComensalProject/users/api/urls.py
+source /home/ubuntu/env/bin/activate
+/home/ubuntu/env/bin/python /home/ubuntu/buenComensalProject/users/api/urls.py
+ls
+python manage.py migrate
+python manage.py flush
+python manage.py migrate
+python manage.py makemigrations
+python manage.py makemigrations restaurants
+python manage.py makemigrations users
+python manage.py migrate
+python manage.py igrate flush
+python manage.py migrate flush
+ls
+
+python manage.py makemigrations
+sudo su
+ls
+python manage.py migrate
+pypython manage.py makemigratios users
+pypython manage.py makemigrations users
+pyphon manage.py makemigrations users
+python manage.py makemigrations users
+python manage.py makemigrations restaraunts
+python manage.py makemigrations restaurants
+python manage.py makemigrations 
+python manage.py migrate
+pip freeze > requirements.txt
+ls
+python manage.py migrate
+clear
+ls
+sudo rm requirements.txt
+ls
+cd
+pip freeze > requirements.txt
+ls
+sudo rm my_env
+sudo rmkdir  my_env
+sudo rmdir  my_env
+ls
+cd prueba/
+ls
+cd
+cd buenComensalProject/
+python manage.py createsuperuser
+ls
+python manage.py runserver 0.0.0.0:8000
+python manage.py migrate
+/home/ubuntu/env/bin/python /home/ubuntu/buenComensalProject/buenComensalProject/recommender.py
+cls
+sudo apt install git-all
+ls
+cd
+ls
+la
+ls
+git init
+git add .
+cd
+env/bin/autopep8 
+source env/bin/activate
+ls
+cd buenComensalProject/
+ls
+python manage.py runserver
+source /home/ubuntu/env/bin/activate
+ls
+python manage.py runserver 0.0.0.0:8000
+python manage.py makemigrations
+python manage.py migrate
+python manage.py runserver 0.0.0.0:8000
+cd
+source env/bin/a
+source env/bin/activate
+ls
+cd buenComensalProject/
+python manage.py makemigrations
+python manage.py migrate
+python manage.
+python manage.py runserver 0.0.0.0:8000
+python manage.py makemigrations
+python manage.py migrate
+python manage.py runserver 0.0.0.0:8000
+cd
+source env/bin/activate
+cd buenComensalProject/
+python manage.py runserver 0.0.0.0:8000
+python manage.py makemigrations
+python manage.py migrate
+python manage.py runserver 0.0.0.0:8000
+cd
+source env/bin/ac
+source env/bin/activate
+cd buenComensalProject/
+python manage.py runserver 0.0.0.0:8000
+source /home/ubuntu/env/bin/activate
+ls
+cd
+ls
+cd
+ls
+cd
+source env/bin/a
+source env/bin/activate
+ls
+cd buenComensalProject/
+ls
+python manage.py runserver 0.0.0.0:8000
+python manage.py makemigrations
+python manage.py migrate
+python manage.py runserver 0.0.0.0:8000
+python manage.py makemigrations
+pip install django-utils
+pip3 install django-utils
+python -m pip install --upgrade pip
+
+python manage.py makemigrations
+python manage.py migrate
+python manage.py makemigrations
+python manage.py migrate
+python manage.py runserver 0.0.0.0:8000
+python manage.py makemigrations
+python manage.py migrate
+python manage.py makemigrations
+python manage.py migrate
+python manage.py runserver 0.0.0.0:8000
+cd
+source env/bin/ac
+source env/bin/activate
+cd buenComensalProject/
+python manage.py runserver 0.0.0.0:8000
+ls
+source env/bin/activate
+cd buenComensalProject/
+ls 
+source /home/ubuntu/env/bin/activate
+ls
+python manage.py runserver 0.0.0.0:8000
+ifconfig
+ssudo apt install net-tools
+ssudo apt-get install net-tools
+sudo apt-get install net-tools
+ifconfig
+python manage.py runserver 0.0.0.0:8000
+source /home/ubuntu/env/bin/activate
+python manage.py runserver 0.0.0.0:8000
+source /home/ubuntu/env/bin/activate
+python manage.py runserver 0.0.0.0:8000
+cd
+source env/bin/activate
+python manage.py runserver 0.0.0.0:8000
+ls
+cd buenComensalProject/
+cd
+cd buenComensalProject/
+cd ..
+python manage.py runserver 0.0.0.0:8000
+source /home/ubuntu/env/bin/activate
+source /home/ubuntu/env/bin/activate
+/home/ubuntu/env/bin/python
+cls
+clear
+source /home/ubuntu/env/bin/activate
+python manage.py runserver 0.0.0.0:8000
+clear
+python manage.py runserver 0.0.0.0:8000
+source /home/ubuntu/env/bin/activate
+python manage.py runserver 0.0.0.0:8000
+ls
+source /home/ubuntu/env/bin/activate
+python manage.py runserver 0.0.0.0:8000
+cd buenComensalProject/
+python manage.py runserver 0.0.0.0:8000
+cd buenComensalProject/
+source /home/ubuntu/env/bin/activate
+python manage.py runserver 0.0.0.0:8000
+cd buenComensalProject/
+source /home/ubuntu/env/bin/activate
+python manage.py runserver 0.0.0.0:8000
+cd buenComensalProject/
+ls
+cd ..
+ls
+python manage.py runserver 0.0.0.0:8000
+cd buenComensalProject/
+source /home/ubuntu/env/bin/activate
+python manage.py runserver 0.0.0.0:8000
+cd buenComensalProject/
+source /home/ubuntu/env/bin/activate
+python manage.py runserver 0.0.0.0:8000
+cd ..
+source env/bin/a
+source env/bin/activate
+cd buenComensalProject/
+python manage.py runserver 0.0.0.0:8000
+python manage.py startapp qualification
+python manage.py makemigration
+python manage.py makemigrations
+python manage.py makemigrations qualification
+python manage.py makemigrations qualifications
+python manage.py makemigrations
+python manage.py startapp qualifications
+ls
+python manage.py startapp qualifications
+python manage.py makemigrations qualifications
+python manage.py makemigrations migrate
+python manage.py migrate
+python manage.py makemigrations migrate
+python manage.py makemigrations qualifications
+python manage.py migrate
+python manage.py makemigrations qualifications
+python manage.py migrate
+python manage.py runserver 0.0.0.0:8000
+python manage.py makemigrations qualifications
+python manage.py runserver 0.0.0.0:8000
+python manage.py makemigrations qualifications
+python manage.py migrate
+python manage.py runserver 0.0.0.0:8000
+python manage.py makemigrations qualifications
+python manage.py makemigrations 
+python manage.py migrate
+python manage.py runserver 0.0.0.0:8000
+python manage.py startapp qualifications
+python manage.py makemigrations qualifications
+python manage.py migrate
+python manage.py migrate qualifications
+python manage.py startapp ratings
+python manage.py makemigrations ratings
+python manage.py startapp ratings
+python manage.py makemigrations ratings
+python manage.py makemigrations
+python manage.py startapp ratings
+python manage.py migrate
+python manage.py startapp ratings
+python manage.py migrate
+python manage.py makemigrations
+python manage.py startapp qualifications
+python manage.py makemigrations
+python manage.py migrate
+python manage.py runserver 0.0.0.0:8000
+sudo lsof -t -i tcp:8000 | xargs kill -9
+python manage.py runserver 0.0.0.0:8000
+python manage.py makemigrations
+python manage.py makemigrations qualifications
+python manage.py migrate qualifications
+python manage.py startapp ratings
+sudo lsof -t -i tcp:8000 | xargs kill -9
+python manage.py makemigrations
+python manage.py startapp suggestions
+
+python manage.py makemigrations suggestions
+python manage.py startapp suggestions
+python manage.py makemigrations suggestions
+python manage.py migrate suggestions
+python manage.py makemigrations suggestions
+python manage.py migrate suggestions
+python manage.py runserver 0.0.0.0:8000
+python manage.py makemigrations suggestions
+python manage.py migrate suggestions
+python manage.py makemigrations suggestions
+python manage.py migrate suggestions
+python manage.py makemigrations suggestions
+python manage.py migrate suggestions
+python manage.py makemigrations suggestions
+python manage.py migrate suggestions
+python manage.py runserver 0.0.0.0:9000
+cd
+source env/bin/activate
+ls
+cd buenComensalProject/
+python manage.py runserver 0.0.0.0:9000
+python manage.py runserver 0.0.0.0:8000
+python manage.py makemigrations suggestions
+python manage.py migrate suggestions
+python manage.py runserver 0.0.0.0:8000
+python manage.py makemigrations suggestions
+python manage.py migrate suggestions
+python manage.py runserver 0.0.0.0:8000
+python manage.py makemigrations suggestions
+python manage.py migrate suggestions
+python manage.py runserver 0.0.0.0:8000
+python manage.py makemigrations suggestions
+python manage.py migrate suggestions
+python manage.py runserver 0.0.0.0:8000
+python manage.py makemigrations suggestions
+python manage.py migrate suggestions
+python manage.py runserver 0.0.0.0:8000
+python manage.py makemigrations suggestions
+python manage.py migrate suggestions
+python manage.py runserver 0.0.0.0:8000
+ls
+cd buenComensalProject/
+ls
+cd ..
+cd env/
+ls
+cd ..
+ls my_env/
+cd ,,
+source env/bin/activate
+cd buenComensalProject/
+python manage.py runserver 0.0.0.0:9000
+cd buenComensalProject/
+source env/bin/activate
+cd ,,
+cd ..
+source env/bin/activate
+cd buenComensalProject/
+python manage.py runserver 0.0.0.0:9000
+source env/bin/activate
+cd buenComensalProject/
+python manage.py runserver 0.0.0.0:9000
+python manage.py runserver 0.0.0.0:8000
+cd
+source env/bin/activate
+cd buenComensalProject/
+pip freeze > requeriments.txt
+cd
+source/bin/activate
+ls
+source env/bin/activate
+cls
+clear
+python manage.py runserver 0.0.0.0:8000
+cd buenComensalProject/
+python manage.py runserver 0.0.0.0:8000
+python manage.py makemigrations suggestions
+python manage.py migrate
+python manage.py runserver 0.0.0.0:8000
+python manage.py makemigrations suggestions
+python manage.py migrate
+python manage.py runserver 0.0.0.0:8000
+cd
+source env/bin/activate
+cd buenComensalProject/
+python manage.py runserver 0.0.0.0:8000
+deactivate

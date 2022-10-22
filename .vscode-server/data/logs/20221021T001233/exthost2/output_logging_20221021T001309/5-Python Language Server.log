@@ -1,0 +1,25 @@
+[Info  - 12:13:24 AM] (5512) Pylance language server 2022.10.30 (pyright 50e12b4b) starting
+[Info  - 12:13:25 AM] (5512) Server root directory: /home/ubuntu/.vscode-server/extensions/ms-python.vscode-pylance-2022.10.30/dist
+[Info  - 12:13:25 AM] (5512) Starting service instance "buenComensalProject"
+[Info  - 12:13:25 AM] (5512) Notebook support: LSP
+[Info  - 12:13:25 AM] (5512) Interactive window support: LSP
+[Info  - 12:13:25 AM] (5512) No configuration file found.
+[Info  - 12:13:25 AM] (5512) No pyproject.toml file found.
+[Info  - 12:13:25 AM] (5512) Setting pythonPath for service "buenComensalProject": "/bin/python3"
+[Warn  - 12:13:25 AM] (5512) stubPath /home/ubuntu/buenComensalProject/typings is not a valid directory.
+[Info  - 12:13:25 AM] (5512) Assuming Python version 3.8
+[Info  - 12:13:25 AM] (5512) Assuming Python platform Linux
+[Info  - 12:13:27 AM] (5512) Searching for source files
+[Info  - 12:13:28 AM] (5512) Found 52 source files
+[Info  - 12:13:28 AM] (5512) Background analysis(1) root directory: /home/ubuntu/.vscode-server/extensions/ms-python.vscode-pylance-2022.10.30/dist
+[Info  - 12:13:28 AM] (5512) Background analysis(1) started
+[Info  - 12:13:41 AM] (5512) [BG(1)] Long operation: checking: /home/ubuntu/buenComensalProject/restaurants/api/api.py (9288ms)
+[Info  - 12:13:41 AM] (5512) [BG(1)] Long operation: analyzing: /home/ubuntu/buenComensalProject/restaurants/api/api.py (11304ms)
+[Info  - 12:19:36 AM] (5512) Searching for source files
+[Info  - 12:19:36 AM] (5512) Found 53 source files
+[Info  - 12:19:43 AM] (5512) [BG(1)] Long operation: checking: /home/ubuntu/buenComensalProject/restaurants/api/api.py (4986ms)
+[Info  - 12:19:43 AM] (5512) [BG(1)] Long operation: analyzing: /home/ubuntu/buenComensalProject/restaurants/api/api.py (6389ms)
+[Info  - 12:36:23 AM] (5512) Searching for source files
+[Info  - 12:36:23 AM] (5512) Found 54 source files
+[Info  - 12:36:29 AM] (5512) [BG(1)] Long operation: checking: /home/ubuntu/buenComensalProject/restaurants/api/api.py (5199ms)
+[Info  - 12:36:29 AM] (5512) [BG(1)] Long operation: analyzing: /home/ubuntu/buenComensalProject/restaurants/api/api.py (6285ms)

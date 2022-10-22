@@ -1,0 +1,339 @@
+WARNING:pygls.protocol:Cancel notification for unknown message id "2"
+WARNING:pygls.protocol:Cancel notification for unknown message id "3"
+WARNING:pygls.protocol:Cancel notification for unknown message id "20"
+WARNING:pygls.protocol:Cancel notification for unknown message id "36"
+WARNING:pygls.protocol:Cancel notification for unknown message id "38"
+WARNING:pygls.protocol:Cancel notification for unknown message id "39"
+WARNING:pygls.protocol:Cancel notification for unknown message id "40"
+WARNING:pygls.protocol:Cancel notification for unknown message id "49"
+WARNING:pygls.protocol:Cancel notification for unknown message id "71"
+WARNING:pygls.protocol:Cancel notification for unknown message id "72"
+WARNING:pygls.protocol:Cancel notification for unknown message id "90"
+WARNING:pygls.protocol:Cancel notification for unknown message id "94"
+WARNING:pygls.protocol:Cancel notification for unknown message id "92"
+WARNING:pygls.protocol:Cancel notification for unknown message id "100"
+WARNING:pygls.protocol:Cancel notification for unknown message id "101"
+WARNING:pygls.protocol:Cancel notification for unknown message id "110"
+WARNING:pygls.protocol:Cancel notification for unknown message id "149"
+WARNING:pygls.protocol:Cancel notification for unknown message id "190"
+WARNING:pygls.protocol:Cancel notification for unknown message id "215"
+WARNING:pygls.protocol:Cancel notification for unknown message id "213"
+WARNING:pygls.protocol:Cancel notification for unknown message id "214"
+WARNING:pygls.protocol:Cancel notification for unknown message id "216"
+WARNING:pygls.protocol:Cancel notification for unknown message id "244"
+WARNING:pygls.protocol:Cancel notification for unknown message id "245"
+WARNING:pygls.protocol:Cancel notification for unknown message id "246"
+WARNING:pygls.protocol:Cancel notification for unknown message id "247"
+WARNING:pygls.protocol:Cancel notification for unknown message id "290"
+WARNING:pygls.protocol:Cancel notification for unknown message id "372"
+WARNING:pygls.protocol:Cancel notification for unknown message id "391"
+WARNING:pygls.protocol:Cancel notification for unknown message id "392"
+WARNING:pygls.protocol:Cancel notification for unknown message id "393"
+WARNING:pygls.protocol:Cancel notification for unknown message id "394"
+WARNING:pygls.protocol:Cancel notification for unknown message id "395"
+WARNING:pygls.protocol:Cancel notification for unknown message id "432"
+WARNING:pygls.protocol:Cancel notification for unknown message id "490"
+WARNING:pygls.protocol:Cancel notification for unknown message id "495"
+WARNING:pygls.protocol:Cancel notification for unknown message id "496"
+WARNING:pygls.protocol:Cancel notification for unknown message id "497"
+WARNING:pygls.protocol:Cancel notification for unknown message id "498"
+WARNING:pygls.protocol:Cancel notification for unknown message id "500"
+WARNING:pygls.protocol:Cancel notification for unknown message id "501"
+WARNING:pygls.protocol:Cancel notification for unknown message id "502"
+WARNING:pygls.protocol:Cancel notification for unknown message id "510"
+WARNING:pygls.protocol:Cancel notification for unknown message id "511"
+WARNING:pygls.protocol:Cancel notification for unknown message id "509"
+WARNING:pygls.protocol:Cancel notification for unknown message id "512"
+WARNING:pygls.protocol:Cancel notification for unknown message id "513"
+WARNING:pygls.protocol:Cancel notification for unknown message id "516"
+WARNING:pygls.protocol:Cancel notification for unknown message id "517"
+WARNING:pygls.protocol:Cancel notification for unknown message id "544"
+WARNING:pygls.protocol:Cancel notification for unknown message id "549"
+WARNING:pygls.protocol:Cancel notification for unknown message id "700"
+WARNING:pygls.protocol:Cancel notification for unknown message id "721"
+WARNING:pygls.protocol:Cancel notification for unknown message id "742"
+WARNING:pygls.protocol:Cancel notification for unknown message id "744"
+WARNING:pygls.protocol:Cancel notification for unknown message id "781"
+WARNING:pygls.protocol:Cancel notification for unknown message id "789"
+WARNING:pygls.protocol:Cancel notification for unknown message id "792"
+WARNING:pygls.protocol:Cancel notification for unknown message id "796"
+WARNING:pygls.protocol:Cancel notification for unknown message id "797"
+WARNING:pygls.protocol:Cancel notification for unknown message id "798"
+WARNING:pygls.protocol:Cancel notification for unknown message id "799"
+WARNING:pygls.protocol:Cancel notification for unknown message id "816"
+WARNING:pygls.protocol:Cancel notification for unknown message id "819"
+WARNING:pygls.protocol:Cancel notification for unknown message id "818"
+WARNING:pygls.protocol:Cancel notification for unknown message id "820"
+WARNING:pygls.protocol:Cancel notification for unknown message id "833"
+WARNING:pygls.protocol:Cancel notification for unknown message id "837"
+WARNING:pygls.protocol:Cancel notification for unknown message id "856"
+WARNING:pygls.protocol:Cancel notification for unknown message id "857"
+WARNING:pygls.protocol:Cancel notification for unknown message id "858"
+WARNING:pygls.protocol:Cancel notification for unknown message id "975"
+WARNING:pygls.protocol:Cancel notification for unknown message id "1029"
+WARNING:pygls.protocol:Cancel notification for unknown message id "1038"
+WARNING:pygls.protocol:Cancel notification for unknown message id "1051"
+WARNING:pygls.protocol:Cancel notification for unknown message id "1069"
+WARNING:pygls.protocol:Cancel notification for unknown message id "1134"
+WARNING:pygls.protocol:Cancel notification for unknown message id "1196"
+WARNING:pygls.protocol:Cancel notification for unknown message id "1371"
+WARNING:pygls.protocol:Cancel notification for unknown message id "1377"
+ERROR:pygls.protocol:Failed to handle request 1590 textDocument/hover work_done_token=None text_document=TextDocumentIdentifier(uri='file:///home/ubuntu/buenComensalProject/users/api/urls.py') position=2:12
+Traceback (most recent call last):
+  File "/home/ubuntu/.vscode-server/extensions/ms-python.python-2022.16.1/pythonFiles/lib/jedilsp/pygls/protocol.py", line 331, in _handle_request
+    self._execute_request(msg_id, handler, params)
+  File "/home/ubuntu/.vscode-server/extensions/ms-python.python-2022.16.1/pythonFiles/lib/jedilsp/pygls/protocol.py", line 260, in _execute_request
+    method_name, method_type, msg_id, handler(params))
+  File "/home/ubuntu/.vscode-server/extensions/ms-python.python-2022.16.1/pythonFiles/lib/jedilsp/jedi_language_server/server.py", line 351, in hover
+    hover_text = jedi_utils.hover_text(
+  File "/home/ubuntu/.vscode-server/extensions/ms-python.python-2022.16.1/pythonFiles/lib/jedilsp/jedi_language_server/jedi_utils.py", line 564, in hover_text
+    if _hover_ignore(name, initialization_options):
+  File "/home/ubuntu/.vscode-server/extensions/ms-python.python-2022.16.1/pythonFiles/lib/jedilsp/jedi_language_server/jedi_utils.py", line 544, in _hover_ignore
+    ignore_type: HoverDisableOptions = getattr(
+AttributeError: 'HoverDisable' object has no attribute 'namespace_'
+[Error - 12:46:32 AM] Request textDocument/hover failed.
+  Message: AttributeError: 'HoverDisable' object has no attribute 'namespace_'
+  Code: -32602 
+{'traceback': ['  File "/home/ubuntu/.vscode-server/extensions/ms-python.python-2022.16.1/pythonFiles/lib/jedilsp/pygls/protocol.py", line 331, in _handle_request\n    self._execute_request(msg_id, handler, params)\n', '  File "/home/ubuntu/.vscode-server/extensions/ms-python.python-2022.16.1/pythonFiles/lib/jedilsp/pygls/protocol.py", line 260, in _execute_request\n    method_name, method_type, msg_id, handler(params))\n', '  File "/home/ubuntu/.vscode-server/extensions/ms-python.python-2022.16.1/pythonFiles/lib/jedilsp/jedi_language_server/server.py", line 351, in hover\n    hover_text = jedi_utils.hover_text(\n', '  File "/home/ubuntu/.vscode-server/extensions/ms-python.python-2022.16.1/pythonFiles/lib/jedilsp/jedi_language_server/jedi_utils.py", line 564, in hover_text\n    if _hover_ignore(name, initialization_options):\n', '  File "/home/ubuntu/.vscode-server/extensions/ms-python.python-2022.16.1/pythonFiles/lib/jedilsp/jedi_language_server/jedi_utils.py", line 544, in _hover_ignore\n    ignore_type: HoverDisableOptions = getattr(\n']}
+WARNING:pygls.protocol:Cancel notification for unknown message id "1634"
+WARNING:pygls.protocol:Cancel notification for unknown message id "1653"
+WARNING:pygls.protocol:Cancel notification for unknown message id "1660"
+WARNING:pygls.protocol:Cancel notification for unknown message id "1666"
+WARNING:pygls.protocol:Cancel notification for unknown message id "1670"
+WARNING:pygls.protocol:Cancel notification for unknown message id "1673"
+WARNING:pygls.protocol:Cancel notification for unknown message id "1680"
+WARNING:pygls.protocol:Cancel notification for unknown message id "1711"
+WARNING:pygls.protocol:Cancel notification for unknown message id "1710"
+WARNING:pygls.protocol:Cancel notification for unknown message id "1712"
+WARNING:pygls.protocol:Cancel notification for unknown message id "1716"
+WARNING:pygls.protocol:Cancel notification for unknown message id "1726"
+WARNING:pygls.protocol:Cancel notification for unknown message id "1743"
+WARNING:pygls.protocol:Cancel notification for unknown message id "1757"
+WARNING:pygls.protocol:Cancel notification for unknown message id "1775"
+WARNING:pygls.protocol:Cancel notification for unknown message id "1788"
+WARNING:pygls.protocol:Cancel notification for unknown message id "1795"
+WARNING:pygls.protocol:Cancel notification for unknown message id "1797"
+WARNING:pygls.protocol:Cancel notification for unknown message id "1801"
+WARNING:pygls.protocol:Cancel notification for unknown message id "1813"
+WARNING:pygls.protocol:Cancel notification for unknown message id "1819"
+WARNING:pygls.protocol:Cancel notification for unknown message id "1820"
+WARNING:pygls.protocol:Cancel notification for unknown message id "1865"
+WARNING:pygls.protocol:Cancel notification for unknown message id "1867"
+WARNING:pygls.protocol:Cancel notification for unknown message id "1890"
+WARNING:pygls.protocol:Cancel notification for unknown message id "1982"
+WARNING:pygls.protocol:Cancel notification for unknown message id "1983"
+WARNING:pygls.protocol:Cancel notification for unknown message id "1984"
+WARNING:pygls.protocol:Cancel notification for unknown message id "1985"
+WARNING:pygls.protocol:Cancel notification for unknown message id "1986"
+WARNING:pygls.protocol:Cancel notification for unknown message id "1987"
+WARNING:pygls.protocol:Cancel notification for unknown message id "1988"
+WARNING:pygls.protocol:Cancel notification for unknown message id "1989"
+WARNING:pygls.protocol:Cancel notification for unknown message id "1990"
+WARNING:pygls.protocol:Cancel notification for unknown message id "1991"
+WARNING:pygls.protocol:Cancel notification for unknown message id "1992"
+WARNING:pygls.protocol:Cancel notification for unknown message id "1993"
+WARNING:pygls.protocol:Cancel notification for unknown message id "1996"
+WARNING:pygls.protocol:Cancel notification for unknown message id "1997"
+WARNING:pygls.protocol:Cancel notification for unknown message id "1999"
+WARNING:pygls.protocol:Cancel notification for unknown message id "1998"
+WARNING:pygls.protocol:Cancel notification for unknown message id "2001"
+WARNING:pygls.protocol:Cancel notification for unknown message id "2003"
+WARNING:pygls.protocol:Cancel notification for unknown message id "2004"
+WARNING:pygls.protocol:Cancel notification for unknown message id "2009"
+WARNING:pygls.protocol:Cancel notification for unknown message id "2010"
+WARNING:pygls.protocol:Cancel notification for unknown message id "2031"
+WARNING:pygls.protocol:Cancel notification for unknown message id "2032"
+WARNING:pygls.protocol:Cancel notification for unknown message id "2039"
+WARNING:pygls.protocol:Cancel notification for unknown message id "2050"
+WARNING:pygls.protocol:Cancel notification for unknown message id "2084"
+WARNING:pygls.protocol:Cancel notification for unknown message id "2103"
+WARNING:pygls.protocol:Cancel notification for unknown message id "2104"
+WARNING:pygls.protocol:Cancel notification for unknown message id "2114"
+WARNING:pygls.protocol:Cancel notification for unknown message id "2131"
+WARNING:pygls.protocol:Cancel notification for unknown message id "2132"
+WARNING:pygls.protocol:Cancel notification for unknown message id "2170"
+WARNING:pygls.protocol:Cancel notification for unknown message id "2181"
+WARNING:pygls.protocol:Cancel notification for unknown message id "2214"
+WARNING:pygls.protocol:Cancel notification for unknown message id "2224"
+WARNING:pygls.protocol:Cancel notification for unknown message id "2253"
+WARNING:pygls.protocol:Cancel notification for unknown message id "2254"
+WARNING:pygls.protocol:Cancel notification for unknown message id "2312"
+WARNING:pygls.protocol:Cancel notification for unknown message id "2317"
+WARNING:pygls.protocol:Cancel notification for unknown message id "2350"
+WARNING:pygls.protocol:Cancel notification for unknown message id "2358"
+WARNING:pygls.protocol:Cancel notification for unknown message id "2361"
+WARNING:pygls.protocol:Cancel notification for unknown message id "2421"
+WARNING:pygls.protocol:Cancel notification for unknown message id "2429"
+WARNING:pygls.protocol:Cancel notification for unknown message id "2431"
+WARNING:pygls.protocol:Cancel notification for unknown message id "2491"
+WARNING:pygls.protocol:Cancel notification for unknown message id "2494"
+WARNING:pygls.protocol:Cancel notification for unknown message id "2493"
+WARNING:pygls.protocol:Cancel notification for unknown message id "2495"
+WARNING:pygls.protocol:Cancel notification for unknown message id "2501"
+WARNING:pygls.protocol:Cancel notification for unknown message id "2516"
+WARNING:pygls.protocol:Cancel notification for unknown message id "2549"
+WARNING:pygls.protocol:Cancel notification for unknown message id "2552"
+WARNING:pygls.protocol:Cancel notification for unknown message id "2565"
+WARNING:pygls.protocol:Cancel notification for unknown message id "2563"
+WARNING:pygls.protocol:Cancel notification for unknown message id "2567"
+WARNING:pygls.protocol:Cancel notification for unknown message id "2569"
+WARNING:pygls.protocol:Cancel notification for unknown message id "2571"
+WARNING:pygls.protocol:Cancel notification for unknown message id "2574"
+WARNING:pygls.protocol:Cancel notification for unknown message id "2573"
+WARNING:pygls.protocol:Cancel notification for unknown message id "2576"
+WARNING:pygls.protocol:Cancel notification for unknown message id "2579"
+WARNING:pygls.protocol:Cancel notification for unknown message id "2580"
+WARNING:pygls.protocol:Cancel notification for unknown message id "2586"
+WARNING:pygls.protocol:Cancel notification for unknown message id "2603"
+WARNING:pygls.protocol:Cancel notification for unknown message id "2630"
+WARNING:pygls.protocol:Cancel notification for unknown message id "2631"
+WARNING:pygls.protocol:Cancel notification for unknown message id "2634"
+WARNING:pygls.protocol:Cancel notification for unknown message id "2637"
+WARNING:pygls.protocol:Cancel notification for unknown message id "2645"
+WARNING:pygls.protocol:Cancel notification for unknown message id "2644"
+WARNING:pygls.protocol:Cancel notification for unknown message id "2654"
+WARNING:pygls.protocol:Cancel notification for unknown message id "2660"
+WARNING:pygls.protocol:Cancel notification for unknown message id "2663"
+WARNING:pygls.protocol:Cancel notification for unknown message id "2665"
+WARNING:pygls.protocol:Cancel notification for unknown message id "2662"
+WARNING:pygls.protocol:Cancel notification for unknown message id "2668"
+WARNING:pygls.protocol:Cancel notification for unknown message id "2664"
+WARNING:pygls.protocol:Cancel notification for unknown message id "2667"
+WARNING:pygls.protocol:Cancel notification for unknown message id "2669"
+WARNING:pygls.protocol:Cancel notification for unknown message id "2676"
+WARNING:pygls.protocol:Cancel notification for unknown message id "2687"
+WARNING:pygls.protocol:Cancel notification for unknown message id "2696"
+ERROR:pygls.protocol:Failed to handle request 2698 textDocument/hover work_done_token=None text_document=TextDocumentIdentifier(uri='file:///home/ubuntu/buenComensalProject/restaurants/views.py') position=11:14
+Traceback (most recent call last):
+  File "/home/ubuntu/.vscode-server/extensions/ms-python.python-2022.16.1/pythonFiles/lib/jedilsp/pygls/protocol.py", line 331, in _handle_request
+    self._execute_request(msg_id, handler, params)
+  File "/home/ubuntu/.vscode-server/extensions/ms-python.python-2022.16.1/pythonFiles/lib/jedilsp/pygls/protocol.py", line 260, in _execute_request
+    method_name, method_type, msg_id, handler(params))
+  File "/home/ubuntu/.vscode-server/extensions/ms-python.python-2022.16.1/pythonFiles/lib/jedilsp/jedi_language_server/server.py", line 351, in hover
+    hover_text = jedi_utils.hover_text(
+  File "/home/ubuntu/.vscode-server/extensions/ms-python.python-2022.16.1/pythonFiles/lib/jedilsp/jedi_language_server/jedi_utils.py", line 564, in hover_text
+    if _hover_ignore(name, initialization_options):
+  File "/home/ubuntu/.vscode-server/extensions/ms-python.python-2022.16.1/pythonFiles/lib/jedilsp/jedi_language_server/jedi_utils.py", line 544, in _hover_ignore
+    ignore_type: HoverDisableOptions = getattr(
+AttributeError: 'HoverDisable' object has no attribute 'namespace_'
+[Error - 1:15:12 AM] Request textDocument/hover failed.
+  Message: AttributeError: 'HoverDisable' object has no attribute 'namespace_'
+  Code: -32602 
+{'traceback': ['  File "/home/ubuntu/.vscode-server/extensions/ms-python.python-2022.16.1/pythonFiles/lib/jedilsp/pygls/protocol.py", line 331, in _handle_request\n    self._execute_request(msg_id, handler, params)\n', '  File "/home/ubuntu/.vscode-server/extensions/ms-python.python-2022.16.1/pythonFiles/lib/jedilsp/pygls/protocol.py", line 260, in _execute_request\n    method_name, method_type, msg_id, handler(params))\n', '  File "/home/ubuntu/.vscode-server/extensions/ms-python.python-2022.16.1/pythonFiles/lib/jedilsp/jedi_language_server/server.py", line 351, in hover\n    hover_text = jedi_utils.hover_text(\n', '  File "/home/ubuntu/.vscode-server/extensions/ms-python.python-2022.16.1/pythonFiles/lib/jedilsp/jedi_language_server/jedi_utils.py", line 564, in hover_text\n    if _hover_ignore(name, initialization_options):\n', '  File "/home/ubuntu/.vscode-server/extensions/ms-python.python-2022.16.1/pythonFiles/lib/jedilsp/jedi_language_server/jedi_utils.py", line 544, in _hover_ignore\n    ignore_type: HoverDisableOptions = getattr(\n']}
+WARNING:pygls.protocol:Cancel notification for unknown message id "2698"
+WARNING:pygls.protocol:Cancel notification for unknown message id "2702"
+WARNING:pygls.protocol:Cancel notification for unknown message id "2730"
+WARNING:pygls.protocol:Cancel notification for unknown message id "2732"
+WARNING:pygls.protocol:Cancel notification for unknown message id "2736"
+WARNING:pygls.protocol:Cancel notification for unknown message id "2738"
+ERROR:pygls.protocol:Failed to handle request 2743 textDocument/hover work_done_token=None text_document=TextDocumentIdentifier(uri='file:///home/ubuntu/buenComensalProject/restaurants/views.py') position=10:14
+Traceback (most recent call last):
+  File "/home/ubuntu/.vscode-server/extensions/ms-python.python-2022.16.1/pythonFiles/lib/jedilsp/pygls/protocol.py", line 331, in _handle_request
+    self._execute_request(msg_id, handler, params)
+  File "/home/ubuntu/.vscode-server/extensions/ms-python.python-2022.16.1/pythonFiles/lib/jedilsp/pygls/protocol.py", line 260, in _execute_request
+    method_name, method_type, msg_id, handler(params))
+  File "/home/ubuntu/.vscode-server/extensions/ms-python.python-2022.16.1/pythonFiles/lib/jedilsp/jedi_language_server/server.py", line 351, in hover
+    hover_text = jedi_utils.hover_text(
+  File "/home/ubuntu/.vscode-server/extensions/ms-python.python-2022.16.1/pythonFiles/lib/jedilsp/jedi_language_server/jedi_utils.py", line 564, in hover_text
+    if _hover_ignore(name, initialization_options):
+  File "/home/ubuntu/.vscode-server/extensions/ms-python.python-2022.16.1/pythonFiles/lib/jedilsp/jedi_language_server/jedi_utils.py", line 544, in _hover_ignore
+    ignore_type: HoverDisableOptions = getattr(
+AttributeError: 'HoverDisable' object has no attribute 'namespace_'
+[Error - 1:15:46 AM] Request textDocument/hover failed.
+  Message: AttributeError: 'HoverDisable' object has no attribute 'namespace_'
+  Code: -32602 
+{'traceback': ['  File "/home/ubuntu/.vscode-server/extensions/ms-python.python-2022.16.1/pythonFiles/lib/jedilsp/pygls/protocol.py", line 331, in _handle_request\n    self._execute_request(msg_id, handler, params)\n', '  File "/home/ubuntu/.vscode-server/extensions/ms-python.python-2022.16.1/pythonFiles/lib/jedilsp/pygls/protocol.py", line 260, in _execute_request\n    method_name, method_type, msg_id, handler(params))\n', '  File "/home/ubuntu/.vscode-server/extensions/ms-python.python-2022.16.1/pythonFiles/lib/jedilsp/jedi_language_server/server.py", line 351, in hover\n    hover_text = jedi_utils.hover_text(\n', '  File "/home/ubuntu/.vscode-server/extensions/ms-python.python-2022.16.1/pythonFiles/lib/jedilsp/jedi_language_server/jedi_utils.py", line 564, in hover_text\n    if _hover_ignore(name, initialization_options):\n', '  File "/home/ubuntu/.vscode-server/extensions/ms-python.python-2022.16.1/pythonFiles/lib/jedilsp/jedi_language_server/jedi_utils.py", line 544, in _hover_ignore\n    ignore_type: HoverDisableOptions = getattr(\n']}
+WARNING:pygls.protocol:Cancel notification for unknown message id "2766"
+WARNING:pygls.protocol:Cancel notification for unknown message id "2765"
+WARNING:pygls.protocol:Cancel notification for unknown message id "2794"
+WARNING:pygls.protocol:Cancel notification for unknown message id "2810"
+WARNING:pygls.protocol:Cancel notification for unknown message id "2822"
+WARNING:pygls.protocol:Cancel notification for unknown message id "2823"
+WARNING:pygls.protocol:Cancel notification for unknown message id "2825"
+WARNING:pygls.protocol:Cancel notification for unknown message id "2843"
+WARNING:pygls.protocol:Cancel notification for unknown message id "2844"
+WARNING:pygls.protocol:Cancel notification for unknown message id "2845"
+WARNING:pygls.protocol:Cancel notification for unknown message id "2846"
+WARNING:pygls.protocol:Cancel notification for unknown message id "2848"
+WARNING:pygls.protocol:Cancel notification for unknown message id "2847"
+WARNING:pygls.protocol:Cancel notification for unknown message id "2864"
+WARNING:pygls.protocol:Cancel notification for unknown message id "2866"
+WARNING:pygls.protocol:Cancel notification for unknown message id "2869"
+WARNING:pygls.protocol:Cancel notification for unknown message id "2884"
+WARNING:pygls.protocol:Cancel notification for unknown message id "2909"
+WARNING:pygls.protocol:Cancel notification for unknown message id "2952"
+WARNING:pygls.protocol:Cancel notification for unknown message id "3029"
+WARNING:pygls.protocol:Cancel notification for unknown message id "3031"
+WARNING:pygls.protocol:Cancel notification for unknown message id "3032"
+WARNING:pygls.protocol:Cancel notification for unknown message id "3033"
+WARNING:pygls.protocol:Cancel notification for unknown message id "3035"
+WARNING:pygls.protocol:Cancel notification for unknown message id "3036"
+WARNING:pygls.protocol:Cancel notification for unknown message id "3039"
+WARNING:pygls.protocol:Cancel notification for unknown message id "3059"
+WARNING:pygls.protocol:Cancel notification for unknown message id "3087"
+WARNING:pygls.protocol:Cancel notification for unknown message id "3089"
+WARNING:pygls.protocol:Cancel notification for unknown message id "3091"
+WARNING:pygls.protocol:Cancel notification for unknown message id "3088"
+WARNING:pygls.protocol:Cancel notification for unknown message id "3099"
+WARNING:pygls.protocol:Cancel notification for unknown message id "3101"
+WARNING:pygls.protocol:Cancel notification for unknown message id "3105"
+WARNING:pygls.protocol:Cancel notification for unknown message id "3106"
+WARNING:pygls.protocol:Cancel notification for unknown message id "3110"
+WARNING:pygls.protocol:Cancel notification for unknown message id "3139"
+WARNING:pygls.protocol:Cancel notification for unknown message id "3142"
+WARNING:pygls.protocol:Cancel notification for unknown message id "3149"
+WARNING:pygls.protocol:Cancel notification for unknown message id "3152"
+WARNING:pygls.protocol:Cancel notification for unknown message id "3155"
+WARNING:pygls.protocol:Cancel notification for unknown message id "3161"
+WARNING:pygls.protocol:Cancel notification for unknown message id "3162"
+WARNING:pygls.protocol:Cancel notification for unknown message id "3163"
+WARNING:pygls.protocol:Cancel notification for unknown message id "3164"
+WARNING:pygls.protocol:Cancel notification for unknown message id "3166"
+WARNING:pygls.protocol:Cancel notification for unknown message id "3167"
+WARNING:pygls.protocol:Cancel notification for unknown message id "3165"
+WARNING:pygls.protocol:Cancel notification for unknown message id "3169"
+WARNING:pygls.protocol:Cancel notification for unknown message id "3197"
+ERROR:pygls.protocol:Failed to handle request 3209 completionItem/resolve label='api' kind=<CompletionItemKind.Text: 1> tags=None detail=None documentation=None deprecated=None preselect=None sort_text='v1' filter_text='api' insert_text='api' insert_text_format=<InsertTextFormat.PlainText: 1> insert_text_mode=None text_edit=None additional_text_edits=None commit_characters=None command=None data=None
+Traceback (most recent call last):
+  File "/home/ubuntu/.vscode-server/extensions/ms-python.python-2022.16.1/pythonFiles/lib/jedilsp/pygls/protocol.py", line 331, in _handle_request
+    self._execute_request(msg_id, handler, params)
+  File "/home/ubuntu/.vscode-server/extensions/ms-python.python-2022.16.1/pythonFiles/lib/jedilsp/pygls/protocol.py", line 260, in _execute_request
+    method_name, method_type, msg_id, handler(params))
+  File "/home/ubuntu/.vscode-server/extensions/ms-python.python-2022.16.1/pythonFiles/lib/jedilsp/jedi_language_server/server.py", line 172, in completion_item_resolve
+    return jedi_utils.lsp_completion_item_resolve(
+  File "/home/ubuntu/.vscode-server/extensions/ms-python.python-2022.16.1/pythonFiles/lib/jedilsp/jedi_language_server/jedi_utils.py", line 599, in lsp_completion_item_resolve
+    item.detail = next(get_full_signatures(completion), completion.name)
+  File "/home/ubuntu/.vscode-server/extensions/ms-python.python-2022.16.1/pythonFiles/lib/jedilsp/jedi_language_server/jedi_utils.py", line 513, in get_full_signatures
+    signatures = name.get_signatures()
+  File "/home/ubuntu/.vscode-server/extensions/ms-python.python-2022.16.1/pythonFiles/lib/jedilsp/jedi/api/classes.py", line 582, in get_signatures
+    for s in self._get_signatures()
+  File "/home/ubuntu/.vscode-server/extensions/ms-python.python-2022.16.1/pythonFiles/lib/jedilsp/jedi/api/classes.py", line 570, in _get_signatures
+    names = convert_names([self._name], prefer_stubs=True)
+  File "/home/ubuntu/.vscode-server/extensions/ms-python.python-2022.16.1/pythonFiles/lib/jedilsp/jedi/inference/gradual/conversion.py", line 152, in convert_names
+    return _python_to_stub_names(names, fallback_to_python=prefer_stubs)
+  File "/home/ubuntu/.vscode-server/extensions/ms-python.python-2022.16.1/pythonFiles/lib/jedilsp/jedi/inference/utils.py", line 16, in wrapper
+    return list(func(*args, **kwargs))
+  File "/home/ubuntu/.vscode-server/extensions/ms-python.python-2022.16.1/pythonFiles/lib/jedilsp/jedi/inference/gradual/conversion.py", line 126, in _python_to_stub_names
+    for x in _python_to_stub_names([n], fallback_to_python=fallback_to_python):
+  File "/home/ubuntu/.vscode-server/extensions/ms-python.python-2022.16.1/pythonFiles/lib/jedilsp/jedi/inference/utils.py", line 16, in wrapper
+    return list(func(*args, **kwargs))
+  File "/home/ubuntu/.vscode-server/extensions/ms-python.python-2022.16.1/pythonFiles/lib/jedilsp/jedi/inference/gradual/conversion.py", line 132, in _python_to_stub_names
+    v = name.get_defining_qualified_value()
+  File "/home/ubuntu/.vscode-server/extensions/ms-python.python-2022.16.1/pythonFiles/lib/jedilsp/jedi/inference/names.py", line 251, in get_defining_qualified_value
+    if context.is_module() or context.is_class():
+AttributeError: 'NoneType' object has no attribute 'is_module'
+[Error - 1:22:48 AM] Request completionItem/resolve failed.
+  Message: AttributeError: 'NoneType' object has no attribute 'is_module'
+  Code: -32602 
+{'traceback': ['  File "/home/ubuntu/.vscode-server/extensions/ms-python.python-2022.16.1/pythonFiles/lib/jedilsp/pygls/protocol.py", line 331, in _handle_request\n    self._execute_request(msg_id, handler, params)\n', '  File "/home/ubuntu/.vscode-server/extensions/ms-python.python-2022.16.1/pythonFiles/lib/jedilsp/pygls/protocol.py", line 260, in _execute_request\n    method_name, method_type, msg_id, handler(params))\n', '  File "/home/ubuntu/.vscode-server/extensions/ms-python.python-2022.16.1/pythonFiles/lib/jedilsp/jedi_language_server/server.py", line 172, in completion_item_resolve\n    return jedi_utils.lsp_completion_item_resolve(\n', '  File "/home/ubuntu/.vscode-server/extensions/ms-python.python-2022.16.1/pythonFiles/lib/jedilsp/jedi_language_server/jedi_utils.py", line 599, in lsp_completion_item_resolve\n    item.detail = next(get_full_signatures(completion), completion.name)\n', '  File "/home/ubuntu/.vscode-server/extensions/ms-python.python-2022.16.1/pythonFiles/lib/jedilsp/jedi_language_server/jedi_utils.py", line 513, in get_full_signatures\n    signatures = name.get_signatures()\n', '  File "/home/ubuntu/.vscode-server/extensions/ms-python.python-2022.16.1/pythonFiles/lib/jedilsp/jedi/api/classes.py", line 582, in get_signatures\n    for s in self._get_signatures()\n', '  File "/home/ubuntu/.vscode-server/extensions/ms-python.python-2022.16.1/pythonFiles/lib/jedilsp/jedi/api/classes.py", line 570, in _get_signatures\n    names = convert_names([self._name], prefer_stubs=True)\n', '  File "/home/ubuntu/.vscode-server/extensions/ms-python.python-2022.16.1/pythonFiles/lib/jedilsp/jedi/inference/gradual/conversion.py", line 152, in convert_names\n    return _python_to_stub_names(names, fallback_to_python=prefer_stubs)\n', '  File "/home/ubuntu/.vscode-server/extensions/ms-python.python-2022.16.1/pythonFiles/lib/jedilsp/jedi/inference/utils.py", line 16, in wrapper\n    return list(func(*args, **kwargs))\n', '  File "/home/ubuntu/.vscode-server/extensions/ms-python.python-2022.16.1/pythonFiles/lib/jedilsp/jedi/inference/gradual/conversion.py", line 126, in _python_to_stub_names\n    for x in _python_to_stub_names([n], fallback_to_python=fallback_to_python):\n', '  File "/home/ubuntu/.vscode-server/extensions/ms-python.python-2022.16.1/pythonFiles/lib/jedilsp/jedi/inference/utils.py", line 16, in wrapper\n    return list(func(*args, **kwargs))\n', '  File "/home/ubuntu/.vscode-server/extensions/ms-python.python-2022.16.1/pythonFiles/lib/jedilsp/jedi/inference/gradual/conversion.py", line 132, in _python_to_stub_names\n    v = name.get_defining_qualified_value()\n', '  File "/home/ubuntu/.vscode-server/extensions/ms-python.python-2022.16.1/pythonFiles/lib/jedilsp/jedi/inference/names.py", line 251, in get_defining_qualified_value\n    if context.is_module() or context.is_class():\n']}
+WARNING:pygls.protocol:Cancel notification for unknown message id "3285"
+WARNING:pygls.protocol:Cancel notification for unknown message id "3320"
+WARNING:pygls.protocol:Cancel notification for unknown message id "3324"
+WARNING:pygls.protocol:Cancel notification for unknown message id "3325"
+WARNING:pygls.protocol:Cancel notification for unknown message id "3333"
+WARNING:pygls.protocol:Cancel notification for unknown message id "3349"
+WARNING:pygls.protocol:Cancel notification for unknown message id "3359"
+WARNING:pygls.protocol:Cancel notification for unknown message id "3371"
+WARNING:pygls.protocol:Cancel notification for unknown message id "3421"
+WARNING:pygls.protocol:Cancel notification for unknown message id "3422"
+WARNING:pygls.protocol:Cancel notification for unknown message id "3425"

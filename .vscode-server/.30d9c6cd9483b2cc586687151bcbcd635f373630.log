@@ -1,0 +1,103 @@
+*
+* Visual Studio Code Server
+*
+* By using the software, you agree to
+* the Visual Studio Code Server License Terms (https://aka.ms/vscode-server-license) and
+* the Microsoft Privacy Statement (https://privacy.microsoft.com/en-US/privacystatement).
+*
+Server bound to 127.0.0.1:39741 (IPv4)
+Extension host agent listening on 39741
+
+[13:46:02] Extension host agent started.
+[15:36:55] [/home/ubuntu/.vscode-server/extensions/ms-toolsai.jupyter-2022.8.1002431955]: Extension is not compatible with Code 1.68.1. Extension requires: ^1.71.0.
+[15:37:15] [/home/ubuntu/.vscode-server/extensions/ms-toolsai.jupyter-2022.8.1002431955]: Extension is not compatible with Code 1.68.1. Extension requires: ^1.71.0.
+[15:37:27] [/home/ubuntu/.vscode-server/extensions/ms-toolsai.jupyter-2022.8.1002431955]: Extension is not compatible with Code 1.68.1. Extension requires: ^1.71.0.
+[15:37:34] [/home/ubuntu/.vscode-server/extensions/ms-toolsai.jupyter-2022.8.1002431955]: Extension is not compatible with Code 1.68.1. Extension requires: ^1.71.0.
+[15:51:42] [/home/ubuntu/.vscode-server/extensions/ms-toolsai.jupyter-2022.8.1002431955]: Extension is not compatible with Code 1.68.1. Extension requires: ^1.71.0.
+[15:51:44] [/home/ubuntu/.vscode-server/extensions/ms-toolsai.jupyter-2022.8.1002431955]: Extension is not compatible with Code 1.68.1. Extension requires: ^1.71.0.
+[15:51:46] [/home/ubuntu/.vscode-server/extensions/ms-toolsai.jupyter-2022.8.1002431955]: Extension is not compatible with Code 1.68.1. Extension requires: ^1.71.0.
+[15:51:48] [/home/ubuntu/.vscode-server/extensions/ms-toolsai.jupyter-2022.8.1002431955]: Extension is not compatible with Code 1.68.1. Extension requires: ^1.71.0.
+[15:51:50] [/home/ubuntu/.vscode-server/extensions/ms-toolsai.jupyter-2022.8.1002431955]: Extension is not compatible with Code 1.68.1. Extension requires: ^1.71.0.
+[15:52:02] [/home/ubuntu/.vscode-server/extensions/ms-toolsai.vscode-jupyter-slideshow-0.1.5]: Extension is not compatible with Code 1.68.1. Extension requires: ^1.71.0.
+[15:52:02] [/home/ubuntu/.vscode-server/extensions/ms-toolsai.jupyter-2022.8.1002431955]: Extension is not compatible with Code 1.68.1. Extension requires: ^1.71.0.
+[15:52:02] Detected extension installed from another source ms-toolsai.vscode-jupyter-slideshow
+[15:52:03] [/home/ubuntu/.vscode-server/extensions/ms-toolsai.vscode-jupyter-cell-tags-0.1.6]: Extension is not compatible with Code 1.68.1. Extension requires: ^1.71.0.
+[15:52:03] [/home/ubuntu/.vscode-server/extensions/ms-toolsai.vscode-jupyter-slideshow-0.1.5]: Extension is not compatible with Code 1.68.1. Extension requires: ^1.71.0.
+[15:52:03] [/home/ubuntu/.vscode-server/extensions/ms-toolsai.jupyter-2022.8.1002431955]: Extension is not compatible with Code 1.68.1. Extension requires: ^1.71.0.
+[15:52:03] Detected extension installed from another source ms-toolsai.vscode-jupyter-cell-tags
+[15:52:11] [/home/ubuntu/.vscode-server/extensions/ms-toolsai.jupyter-renderers-1.0.10]: Extension is not compatible with Code 1.68.1. Extension requires: ^1.72.0-insider.
+[15:52:11] [/home/ubuntu/.vscode-server/extensions/ms-toolsai.vscode-jupyter-cell-tags-0.1.6]: Extension is not compatible with Code 1.68.1. Extension requires: ^1.71.0.
+[15:52:11] [/home/ubuntu/.vscode-server/extensions/ms-toolsai.vscode-jupyter-slideshow-0.1.5]: Extension is not compatible with Code 1.68.1. Extension requires: ^1.71.0.
+[15:52:11] [/home/ubuntu/.vscode-server/extensions/ms-toolsai.jupyter-2022.8.1002431955]: Extension is not compatible with Code 1.68.1. Extension requires: ^1.71.0.
+[15:52:19] [/home/ubuntu/.vscode-server/extensions/ms-toolsai.jupyter-renderers-1.0.10]: Extension is not compatible with Code 1.68.1. Extension requires: ^1.72.0-insider.
+[15:52:19] [/home/ubuntu/.vscode-server/extensions/ms-toolsai.vscode-jupyter-cell-tags-0.1.6]: Extension is not compatible with Code 1.68.1. Extension requires: ^1.71.0.
+[15:52:19] [/home/ubuntu/.vscode-server/extensions/ms-toolsai.vscode-jupyter-slideshow-0.1.5]: Extension is not compatible with Code 1.68.1. Extension requires: ^1.71.0.
+[15:52:19] [/home/ubuntu/.vscode-server/extensions/ms-toolsai.jupyter-2022.8.1002431955]: Extension is not compatible with Code 1.68.1. Extension requires: ^1.71.0.
+[15:52:19] [/home/ubuntu/.vscode-server/extensions/ms-toolsai.jupyter-2022.9.1002791758]: Extension is not compatible with Code 1.68.1. Extension requires: ^1.72.0.
+[23:16:13] [/home/ubuntu/.vscode-server/extensions/ms-toolsai.jupyter-renderers-1.0.10]: Extension is not compatible with Code 1.68.1. Extension requires: ^1.72.0-insider.
+[23:16:13] [/home/ubuntu/.vscode-server/extensions/ms-toolsai.vscode-jupyter-cell-tags-0.1.6]: Extension is not compatible with Code 1.68.1. Extension requires: ^1.71.0.
+[23:16:13] [/home/ubuntu/.vscode-server/extensions/ms-toolsai.vscode-jupyter-slideshow-0.1.5]: Extension is not compatible with Code 1.68.1. Extension requires: ^1.71.0.
+[23:16:13] [/home/ubuntu/.vscode-server/extensions/ms-toolsai.jupyter-2022.9.1002791758]: Extension is not compatible with Code 1.68.1. Extension requires: ^1.72.0.
+[23:16:35] [/home/ubuntu/.vscode-server/extensions/ms-toolsai.jupyter-renderers-1.0.10]: Extension is not compatible with Code 1.68.1. Extension requires: ^1.72.0-insider.
+[23:16:35] [/home/ubuntu/.vscode-server/extensions/ms-toolsai.vscode-jupyter-cell-tags-0.1.6]: Extension is not compatible with Code 1.68.1. Extension requires: ^1.71.0.
+[23:16:35] [/home/ubuntu/.vscode-server/extensions/ms-toolsai.vscode-jupyter-slideshow-0.1.5]: Extension is not compatible with Code 1.68.1. Extension requires: ^1.71.0.
+[23:16:35] [/home/ubuntu/.vscode-server/extensions/ms-toolsai.jupyter-2022.9.1002791758]: Extension is not compatible with Code 1.68.1. Extension requires: ^1.72.0.
+[23:16:35] [/home/ubuntu/.vscode-server/extensions/ms-toolsai.jupyter-2022.9.1100000000]: Extension is not compatible with Code 1.68.1. Extension requires: ^1.72.0.
+[23:18:21] [/home/ubuntu/.vscode-server/extensions/ms-toolsai.jupyter-renderers-1.0.10]: Extension is not compatible with Code 1.68.1. Extension requires: ^1.72.0-insider.
+[23:18:22] [/home/ubuntu/.vscode-server/extensions/ms-toolsai.vscode-jupyter-cell-tags-0.1.6]: Extension is not compatible with Code 1.68.1. Extension requires: ^1.71.0.
+[23:18:22] [/home/ubuntu/.vscode-server/extensions/ms-toolsai.vscode-jupyter-slideshow-0.1.5]: Extension is not compatible with Code 1.68.1. Extension requires: ^1.71.0.
+[23:18:22] [/home/ubuntu/.vscode-server/extensions/ms-toolsai.jupyter-2022.9.1100000000]: Extension is not compatible with Code 1.68.1. Extension requires: ^1.72.0.
+[22:48:21] [/home/ubuntu/.vscode-server/extensions/ms-toolsai.jupyter-renderers-1.0.10]: Extension is not compatible with Code 1.68.1. Extension requires: ^1.72.0-insider.
+[22:48:21] [/home/ubuntu/.vscode-server/extensions/ms-toolsai.vscode-jupyter-cell-tags-0.1.6]: Extension is not compatible with Code 1.68.1. Extension requires: ^1.71.0.
+[22:48:21] [/home/ubuntu/.vscode-server/extensions/ms-toolsai.vscode-jupyter-slideshow-0.1.5]: Extension is not compatible with Code 1.68.1. Extension requires: ^1.71.0.
+[22:48:21] [/home/ubuntu/.vscode-server/extensions/ms-toolsai.jupyter-2022.9.1100000000]: Extension is not compatible with Code 1.68.1. Extension requires: ^1.72.0.
+[22:48:21] [/home/ubuntu/.vscode-server/extensions/ms-toolsai.jupyter-2022.9.1202862440]: Extension is not compatible with Code 1.68.1. Extension requires: ^1.72.0.
+[22:48:48] [/home/ubuntu/.vscode-server/extensions/ms-toolsai.jupyter-renderers-1.0.10]: Extension is not compatible with Code 1.68.1. Extension requires: ^1.72.0-insider.
+[22:48:48] [/home/ubuntu/.vscode-server/extensions/ms-toolsai.vscode-jupyter-cell-tags-0.1.6]: Extension is not compatible with Code 1.68.1. Extension requires: ^1.71.0.
+[22:48:48] [/home/ubuntu/.vscode-server/extensions/ms-toolsai.vscode-jupyter-slideshow-0.1.5]: Extension is not compatible with Code 1.68.1. Extension requires: ^1.71.0.
+[22:48:48] [/home/ubuntu/.vscode-server/extensions/ms-toolsai.jupyter-2022.9.1100000000]: Extension is not compatible with Code 1.68.1. Extension requires: ^1.72.0.
+[22:48:49] [/home/ubuntu/.vscode-server/extensions/ms-toolsai.jupyter-2022.9.1202862440]: Extension is not compatible with Code 1.68.1. Extension requires: ^1.72.0.
+[23:28:47] [/home/ubuntu/.vscode-server/extensions/ms-toolsai.jupyter-renderers-1.0.10]: Extension is not compatible with Code 1.68.1. Extension requires: ^1.72.0-insider.
+[23:28:47] [/home/ubuntu/.vscode-server/extensions/ms-toolsai.vscode-jupyter-cell-tags-0.1.6]: Extension is not compatible with Code 1.68.1. Extension requires: ^1.71.0.
+[23:28:47] [/home/ubuntu/.vscode-server/extensions/ms-toolsai.vscode-jupyter-slideshow-0.1.5]: Extension is not compatible with Code 1.68.1. Extension requires: ^1.71.0.
+[23:28:47] [/home/ubuntu/.vscode-server/extensions/ms-toolsai.jupyter-2022.9.1202862440]: Extension is not compatible with Code 1.68.1. Extension requires: ^1.72.0.
+[23:28:48] [/home/ubuntu/.vscode-server/extensions/ms-toolsai.jupyter-renderers-1.0.10]: Extension is not compatible with Code 1.68.1. Extension requires: ^1.72.0-insider.
+[23:28:48] [/home/ubuntu/.vscode-server/extensions/ms-toolsai.vscode-jupyter-cell-tags-0.1.6]: Extension is not compatible with Code 1.68.1. Extension requires: ^1.71.0.
+[23:28:48] [/home/ubuntu/.vscode-server/extensions/ms-toolsai.vscode-jupyter-slideshow-0.1.5]: Extension is not compatible with Code 1.68.1. Extension requires: ^1.71.0.
+[23:28:48] [/home/ubuntu/.vscode-server/extensions/ms-toolsai.jupyter-2022.9.1202862440]: Extension is not compatible with Code 1.68.1. Extension requires: ^1.72.0.
+[23:29:26] [/home/ubuntu/.vscode-server/extensions/ms-toolsai.jupyter-renderers-1.0.10]: Extension is not compatible with Code 1.68.1. Extension requires: ^1.72.0-insider.
+[23:29:26] [/home/ubuntu/.vscode-server/extensions/ms-toolsai.vscode-jupyter-cell-tags-0.1.6]: Extension is not compatible with Code 1.68.1. Extension requires: ^1.71.0.
+[23:29:26] [/home/ubuntu/.vscode-server/extensions/ms-toolsai.vscode-jupyter-slideshow-0.1.5]: Extension is not compatible with Code 1.68.1. Extension requires: ^1.71.0.
+[23:29:26] [/home/ubuntu/.vscode-server/extensions/ms-toolsai.jupyter-2022.9.1202862440]: Extension is not compatible with Code 1.68.1. Extension requires: ^1.72.0.
+[00:51:01] [/home/ubuntu/.vscode-server/extensions/ms-toolsai.vscode-jupyter-cell-tags-0.1.6]: Extension is not compatible with Code 1.68.1. Extension requires: ^1.71.0.
+[00:51:01] [/home/ubuntu/.vscode-server/extensions/ms-toolsai.jupyter-renderers-1.0.10]: Extension is not compatible with Code 1.68.1. Extension requires: ^1.72.0-insider.
+[00:51:01] [/home/ubuntu/.vscode-server/extensions/ms-toolsai.vscode-jupyter-slideshow-0.1.5]: Extension is not compatible with Code 1.68.1. Extension requires: ^1.71.0.
+[00:51:02] [/home/ubuntu/.vscode-server/extensions/ms-toolsai.jupyter-2022.9.1202862440]: Extension is not compatible with Code 1.68.1. Extension requires: ^1.72.0.
+[23:12:09] [/home/ubuntu/.vscode-server/extensions/ms-toolsai.jupyter-renderers-1.0.10]: Extension is not compatible with Code 1.68.1. Extension requires: ^1.72.0-insider.
+[23:12:09] [/home/ubuntu/.vscode-server/extensions/ms-toolsai.vscode-jupyter-cell-tags-0.1.6]: Extension is not compatible with Code 1.68.1. Extension requires: ^1.71.0.
+[23:12:09] [/home/ubuntu/.vscode-server/extensions/ms-toolsai.vscode-jupyter-slideshow-0.1.5]: Extension is not compatible with Code 1.68.1. Extension requires: ^1.71.0.
+[23:12:09] [/home/ubuntu/.vscode-server/extensions/ms-toolsai.jupyter-2022.9.1202862440]: Extension is not compatible with Code 1.68.1. Extension requires: ^1.72.0.
+[01:30:14] No ptyHost heartbeat after 6 seconds
+[01:32:27] No ptyHost heartbeat after 6 seconds
+[01:35:53] No ptyHost heartbeat after 6 seconds
+[01:40:28] No ptyHost heartbeat after 6 seconds
+[01:44:39] No ptyHost heartbeat after 6 seconds
+[01:48:23] No ptyHost heartbeat after 6 seconds
+[01:52:46] No ptyHost heartbeat after 6 seconds
+[01:55:52] No ptyHost heartbeat after 6 seconds
+[02:02:10] No ptyHost heartbeat after 6 seconds
+[15:19:04] [/home/ubuntu/.vscode-server/extensions/ms-toolsai.jupyter-renderers-1.0.10]: Extension is not compatible with Code 1.68.1. Extension requires: ^1.72.0-insider.
+[15:19:04] [/home/ubuntu/.vscode-server/extensions/ms-toolsai.vscode-jupyter-cell-tags-0.1.6]: Extension is not compatible with Code 1.68.1. Extension requires: ^1.71.0.
+[15:19:04] [/home/ubuntu/.vscode-server/extensions/ms-toolsai.vscode-jupyter-slideshow-0.1.5]: Extension is not compatible with Code 1.68.1. Extension requires: ^1.71.0.
+[15:19:04] [/home/ubuntu/.vscode-server/extensions/ms-toolsai.jupyter-2022.9.1202862440]: Extension is not compatible with Code 1.68.1. Extension requires: ^1.72.0.
+[16:51:02] No ptyHost heartbeat after 6 seconds
+[16:51:22] No ptyHost heartbeat after 6 seconds
+[16:54:12] No ptyHost heartbeat after 6 seconds
+[17:04:56] No ptyHost heartbeat after 6 seconds
+[17:09:50] No ptyHost heartbeat after 6 seconds
+[17:11:07] No ptyHost heartbeat after 6 seconds
+[17:13:02] No ptyHost heartbeat after 6 seconds
+[17:14:19] No ptyHost heartbeat after 6 seconds
+[17:17:29] No ptyHost heartbeat after 6 seconds
+[17:19:16] No ptyHost heartbeat after 6 seconds
+[17:20:45] No ptyHost heartbeat after 6 seconds
