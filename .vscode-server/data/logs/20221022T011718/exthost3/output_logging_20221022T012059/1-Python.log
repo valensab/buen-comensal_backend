@@ -1,0 +1,6 @@
+Experiment 'pythonSurveyNotificationcf' is active
+LSP Notebooks experiment is disabled -- not using Pylance
+LSP Notebooks interactive window support is disabled -- not in LSP Notebooks experiment
+> ./env/bin/python ~/.vscode-server/extensions/ms-python.python-2022.16.1/pythonFiles/get_output_via_markers.py ~/.vscode-server/extensions/ms-python.python-2022.16.1/pythonFiles/interpreterInfo.py
+Python interpreter path: ./env/bin/python
+Starting Jedi language server for backup.

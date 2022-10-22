@@ -1045,3 +1045,4 @@ source env/bin/activate
 cd buenComensalProject/
 python manage.py runserver 0.0.0.0:8000
 deactivate
+source /home/ubuntu/env/bin/activate

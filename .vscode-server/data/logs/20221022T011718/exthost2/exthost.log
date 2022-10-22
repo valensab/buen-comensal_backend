@@ -1,0 +1,19 @@
+[2022-10-22 01:17:44.852] [exthost] [info] Extension host with pid 1704 started
+[2022-10-22 01:17:44.934] [exthost] [error] Error: EEXIST: file already exists, open '/home/ubuntu/.vscode-server/data/User/workspaceStorage/5db2ef121f9736909b26d7d8319a145f/vscode.lock'
+[2022-10-22 01:17:44.943] [exthost] [info] Lock '/home/ubuntu/.vscode-server/data/User/workspaceStorage/5db2ef121f9736909b26d7d8319a145f/vscode.lock': Could not acquire lock, checking if the file is stale.
+[2022-10-22 01:17:44.945] [exthost] [info] Lock '/home/ubuntu/.vscode-server/data/User/workspaceStorage/5db2ef121f9736909b26d7d8319a145f/vscode.lock': The pid 16015 appears to be gone.
+[2022-10-22 01:17:44.945] [exthost] [info] Lock '/home/ubuntu/.vscode-server/data/User/workspaceStorage/5db2ef121f9736909b26d7d8319a145f/vscode.lock': Deleting a stale lock.
+[2022-10-22 01:17:44.954] [exthost] [info] Lock '/home/ubuntu/.vscode-server/data/User/workspaceStorage/5db2ef121f9736909b26d7d8319a145f/vscode.lock': Lock acquired.
+[2022-10-22 01:17:46.003] [exthost] [info] ExtensionService#_doActivateExtension vscode.debug-auto-launch, startup: true, activationEvent: '*'
+[2022-10-22 01:17:46.023] [exthost] [info] ExtensionService#_doActivateExtension vscode.git-base, startup: true, activationEvent: '*', root cause: vscode.git
+[2022-10-22 01:17:46.024] [exthost] [info] ExtensionService#_doActivateExtension vscode.ipynb, startup: true, activationEvent: '*'
+[2022-10-22 01:17:46.131] [exthost] [info] ExtensionService#_doActivateExtension ms-python.python, startup: true, activationEvent: 'workspaceContains:requirements.txt'
+[2022-10-22 01:17:48.469] [exthost] [info] ExtensionService#_doActivateExtension vscode.git, startup: true, activationEvent: '*'
+[2022-10-22 01:17:48.469] [exthost] [info] ExtensionService#_doActivateExtension vscode.github, startup: true, activationEvent: '*'
+[2022-10-22 01:17:50.348] [exthost] [info] ExtensionService#_doActivateExtension vscode.emmet, startup: false, activationEvent: 'onStartupFinished'
+[2022-10-22 01:17:50.349] [exthost] [info] ExtensionService#_doActivateExtension vscode.merge-conflict, startup: false, activationEvent: 'onStartupFinished'
+[2022-10-22 01:17:50.349] [exthost] [info] ExtensionService#_doActivateExtension ritwickdey.LiveServer, startup: false, activationEvent: 'onStartupFinished'
+[2022-10-22 01:17:50.350] [exthost] [info] Eager extensions activated
+[2022-10-22 01:20:45.429] [exthost] [info] Extension host terminating: received terminate message from renderer
+[2022-10-22 01:20:45.431] [exthost] [info] Lock '/home/ubuntu/.vscode-server/data/User/workspaceStorage/5db2ef121f9736909b26d7d8319a145f/vscode.lock': Marking the lockfile as scheduled to be released in 6000 ms.
+[2022-10-22 01:20:45.459] [exthost] [info] Extension host with pid 1704 exiting with code 0
