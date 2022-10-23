@@ -39,12 +39,8 @@ def imagen_list(request, pk=None):
 def imagen_list_10(pk):
 
     images = GalleryRestaurant.objects.filter(restaurant=pk)
-    imagen_count = GalleryRestaurant.objects.filter(restaurant=pk).count()
     imagen_serializer = ImagenListSerializer(images, many=True)
-    if imagen_count == 0:
-        return {'message': 'No hay imágenes en este restaurante '}
-    else:
-        return imagen_serializer.data
+    return imagen_serializer.data
 
 
 @api_view(['GET'])
@@ -52,8 +48,7 @@ def restaurants_list_10(request):
     list = []
     if request.method == 'GET':
         restaurant = Restaurant.objects.all().order_by('-id_restaurant')[:10]
-        restaurants_serializer = RestaurantInfoSerializer(
-            restaurant, many=True)
+        restaurants_serializer = RestaurantInfoSerializer(restaurant, many=True)
         for restaurant in restaurants_serializer.data:
             images = imagen_list_10(restaurant.get('id_restaurant'))
             # imagen_serializer = ImagenListSerializer(images, many=True)
