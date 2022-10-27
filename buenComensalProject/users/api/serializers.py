@@ -22,6 +22,7 @@ class UserSerializer(serializers.ModelSerializer):
     
     def update(self,instance,validated_data):
         updated_user = super().update(instance,validated_data)
+        updated_user.id = validated_data['id']
         updated_user.set_password(validated_data['password'])
         updated_user.save()
         return updated_user
@@ -141,3 +142,15 @@ class UpdateInfoCommensalSerializer(serializers.ModelSerializer):
     class Meta:
             model = Commensal
             fields = [ 'id_commensal', 'vegetarian', 'environment', 'interest']
+
+
+class ChangePasswordSerializer(serializers.ModelSerializer):
+    def update(self,instance,validated_data):
+        updated_user = super().update(instance,validated_data)
+        updated_user.set_password(validated_data['password'])
+        updated_user.save()
+        return updated_user
+
+    class Meta:
+            model = User
+            fields = [ 'id', 'password']

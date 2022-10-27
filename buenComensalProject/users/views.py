@@ -5,9 +5,10 @@ from rest_framework.response import Response
 from rest_framework import status
 from users.models import Commensal, User
 from django.contrib.auth import authenticate
-from users.api.serializers import CommensalSerializer, UserCommensalSerializer, UserTokenSerializer, UserFieldSerializer, UpdateInfoCommensalSerializer
+from users.api.serializers import CommensalSerializer, UserCommensalSerializer, UserTokenSerializer, UserFieldSerializer, UpdateInfoCommensalSerializer, ChangePasswordSerializer
 from rest_framework.authtoken.models import Token
 from rest_framework.authtoken.views import ObtainAuthToken
+from django.contrib.auth.hashers import make_password, check_password
 
 
 # Create your views here.
@@ -19,6 +20,7 @@ class RegisterCommensal(APIView):
             serializer_commensal.save()
             return Response({"code": 1}, status=status.HTTP_201_CREATED)
         else:
+            # return Response(serializer_commensal.errors, status=status.HTTP_400_BAD_REQUEST)
             return Response({"code": 2}, status=status.HTTP_400_BAD_REQUEST)
 
 
@@ -86,7 +88,8 @@ class UserToken(APIView):
             user_id = request.data['user_id']
             token = request.data['token']
             print(user_id)
-            token_filter = Token.objects.filter(user_id=user_id, key = token).first()
+            token_filter = Token.objects.filter(
+                user_id=user_id, key=token).first()
             print(token_filter)
             if token_filter:
                 commensal = Commensal.objects.filter(user_id=user_id).first()
@@ -110,31 +113,52 @@ class UserToken(APIView):
         except:
             return Response({'code': 2}, status=status.HTTP_400_BAD_REQUEST)
 
+
 class Logout(APIView):
-    
-    def post(self,request,*args,**kwargs):
+
+    def post(self, request, *args, **kwargs):
         try:
             user_id = request.data['user_id']
-            token = Token.objects.filter(user_id = user_id).first()
+            token = Token.objects.filter(user_id=user_id).first()
             if token:
                 user = token.user
-                token.delete() 
-                return Response({'code':1}, status = status.HTTP_200_OK)
-            
-            return Response({'code':2},
-                    status = status.HTTP_400_BAD_REQUEST)
+                token.delete()
+                return Response({'code': 1}, status=status.HTTP_200_OK)
+
+            return Response({'code': 2},
+                            status=status.HTTP_400_BAD_REQUEST)
         except:
-            return Response({'code':2}, 
-                                    status = status.HTTP_409_CONFLICT)
+            return Response({'code': 2},
+                            status=status.HTTP_409_CONFLICT)
 
 
-class CommensalUpdateInfoAPIView(APIView):      
+class CommensalUpdateInfoAPIView(APIView):
     def put(self, request, format=None):
         user = request.data['user_id']
-        commensal = Commensal.objects.filter(user_id = user).first()        
-        serializer_commensal = UpdateInfoCommensalSerializer(commensal, data=request.data)
+        commensal = Commensal.objects.filter(user_id=user).first()
+        serializer_commensal = UpdateInfoCommensalSerializer(
+            commensal, data=request.data)
         print(request.data)
         if serializer_commensal.is_valid():
             serializer_commensal.save()
             return Response({"code": 1}, status=status.HTTP_201_CREATED)
         return Response({"code": 2}, status=status.HTTP_400_BAD_REQUEST)
+
+
+class ChangePasswordAPIView(APIView):
+    def put(self, request, format=None):
+        user = User.objects.filter(id=request.data["id_user"]).first()
+        if user:
+                if check_password(request.data["password"], user.password):
+                    # return Response({'message': "Ingrese una contraseña distinta a la actual"}, status=status.HTTP_400_BAD_REQUEST)
+                    return Response({'code': 2}, status=status.HTTP_400_BAD_REQUEST)
+                else:
+                    serializer = ChangePasswordSerializer(user, data=request.data)
+                    if serializer.is_valid():
+                        serializer.save()
+                        # return Response({'message': "La contraseña se ha cambiado"}, status=status.HTTP_201_CREATED)
+                        return Response({'code': 1}, status=status.HTTP_200_OK)
+                    else:
+                        return Response({'code': 3}, status=status.HTTP_400_BAD_REQUEST)
+        else:
+            return Response({'code': 3}, status=status.HTTP_400_BAD_REQUEST)

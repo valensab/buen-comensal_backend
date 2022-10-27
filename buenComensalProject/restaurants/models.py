@@ -1,3 +1,4 @@
+from tabnanny import verbose
 from django.db import models
 from users.models import User
 from taggit.managers import TaggableManager
@@ -10,8 +11,8 @@ class Restaurant(models.Model):
     def nameFile(instance, filename):
      return '/'.join(['menus/', str(instance.user_id), filename])
 
-    user = models.OneToOneField(User,related_name="restaurant",on_delete=models.CASCADE)
-    id_restaurant = models.AutoField(primary_key=True, unique = True)
+    user = models.OneToOneField(User,related_name="restaurant",verbose_name= 'ID Usuario',on_delete=models.CASCADE)
+    id_restaurant = models.AutoField(primary_key=True, verbose_name= 'ID Restaurante', unique = True)
     name_representative = models.CharField('Nombre del representante', max_length = 50, blank = True, null = True)
     last_name_representative = models.CharField('Apellido del representante', max_length = 50, blank = True, null = True)
     phone_number= models.CharField("Número de teléfono del restaurante", max_length=10, null = True)
@@ -34,15 +35,18 @@ class Restaurant(models.Model):
         verbose_name = 'Restaurante'
         verbose_name_plural = 'Restaurantes'
 
+    def __str__(self):
+        return f'{self.user}'
+
 
 class GalleryRestaurant(models.Model):
 
     def nameImage(instance, filename):
      return '/'.join(['gallery/', str(instance.restaurant_id), filename])
 
-    id_imagen = models.AutoField(primary_key=True, unique = True)
-    restaurant = models.ForeignKey(Restaurant,on_delete=models.CASCADE,related_name="gallery")
-    imagen = models.ImageField(upload_to=nameImage,blank=True,  null = True)
+    id_imagen = models.AutoField('ID Imagen',primary_key=True, unique = True)
+    restaurant = models.ForeignKey(Restaurant, verbose_name='ID Restaurante',  on_delete=models.CASCADE, null=True,blank=True)
+    imagen = models.ImageField('Imagen',upload_to=nameImage,blank=True,  null = True)
 
     class Meta:
         verbose_name = 'Galería'
@@ -59,8 +63,8 @@ class GalleryRestaurant(models.Model):
 
 class TagsRestaurant(models.Model):
     restaurant = models.ForeignKey(Restaurant,on_delete=models.CASCADE,related_name="tags")
-    id_tags =  models.AutoField(primary_key=True, unique = True)
-    tags = models.CharField("Tag", max_length=254, null = True, blank=True)
+    id_tags =  models.AutoField('ID Etiqueta', primary_key=True, unique = True)
+    tags = models.CharField("Etiqueta", max_length=254, null = True, blank=True)
     
     def save(self, *args, **kwargs):
         self.tags = (self.tags).lower()

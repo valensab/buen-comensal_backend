@@ -8,8 +8,18 @@ class UserAdmin(admin.ModelAdmin):
     list_filter = ['is_commensal', 'is_restaurant','is_staff','is_active']
 
 class CommensalAdmin(admin.ModelAdmin):
-     list_display = ('id_commensal','user')
-
+    list_display = ('id','commensal','new','interest','environment','vegetarian')
+    
+    def commensal(self, obj):
+        return obj.user
+     
+    commensal.short_description = "COMENSAL"
+    
+    def id(self, obj):
+        return obj.id_commensal
+     
+    id.short_description = "ID COMENSAL"
+    
 admin.site.register(User, UserAdmin)
 admin.site.register(Commensal, CommensalAdmin)
 

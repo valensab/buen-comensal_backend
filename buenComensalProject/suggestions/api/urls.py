@@ -1,6 +1,11 @@
 from django.urls import path
 from suggestions.views import ScoreRegister, CommentsRegister
+from suggestions.api.api import score_list, score_list_restaurant,comments_list_restaurant
 
 urlpatterns = [
     path('score/',ScoreRegister.as_view(), name = 'register_score_api'),
-    path('comments/',CommentsRegister.as_view(), name = 'register_comments_api')]
+    path('comments/',CommentsRegister.as_view(), name ='register_comments_api'),
+    path('score_list_restaurant/',score_list_restaurant, name ='score_list_restaurant_api'),
+    path('score_list/',score_list, name = 'score_list_api'),
+    path('comments_list_restaurant/',comments_list_restaurant, name = 'comments_list_restaurant_api')
+    ]
