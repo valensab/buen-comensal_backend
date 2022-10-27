@@ -210,11 +210,11 @@ class TagsListSerializer(serializers.ModelSerializer):
         fields = ['restaurant']
 
 
-# class TagsSerializer(TaggitSerializer, serializers.ModelSerializer):
+class TagsSerializer(TaggitSerializer, serializers.ModelSerializer):
 
-#     class Meta:
-#         model = TagsRestaurant
-#         fields = "__all__"
+    class Meta:
+        model = TagsRestaurant
+        fields = "__all__"
 
 class TagsSerializer(serializers.ModelSerializer):
     tags = serializers.CharField()
