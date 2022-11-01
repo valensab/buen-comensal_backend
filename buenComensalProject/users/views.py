@@ -5,7 +5,7 @@ from rest_framework.response import Response
 from rest_framework import status
 from users.models import Commensal, User
 from django.contrib.auth import authenticate
-from users.api.serializers import CommensalSerializer, UserCommensalSerializer, UserTokenSerializer, UserFieldSerializer, UpdateInfoCommensalSerializer, ChangePasswordSerializer
+from users.api.serializers import CommensalSerializer, CommensalSerializerManually, UserCommensalSerializer, UserTokenSerializer, UserFieldSerializer, UpdateInfoCommensalSerializer, ChangePasswordSerializer
 from rest_framework.authtoken.models import Token
 from rest_framework.authtoken.views import ObtainAuthToken
 from django.contrib.auth.hashers import make_password, check_password
@@ -22,6 +22,17 @@ class RegisterCommensal(APIView):
         else:
             # return Response(serializer_commensal.errors, status=status.HTTP_400_BAD_REQUEST)
             return Response({"code": 2}, status=status.HTTP_400_BAD_REQUEST)
+
+class RegisterCommensalManually(APIView):
+
+    def post(self, request, *args, **kwargs):
+        serializer_commensal = CommensalSerializerManually(data=request.data)
+        if serializer_commensal.is_valid():
+            serializer_commensal.save()
+            return Response({"code": 1}, status=status.HTTP_201_CREATED)
+        else:
+            # return Response(serializer_commensal.errors, status=status.HTTP_400_BAD_REQUEST)
+            return Response(serializer_commensal.errors, status=status.HTTP_400_BAD_REQUEST)
 
 
 class LoginCommensal(ObtainAuthToken):

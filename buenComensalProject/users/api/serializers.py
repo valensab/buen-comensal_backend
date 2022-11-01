@@ -154,3 +154,31 @@ class ChangePasswordSerializer(serializers.ModelSerializer):
     class Meta:
             model = User
             fields = [ 'id', 'password']
+
+class CommensalSerializerManually(serializers.ModelSerializer):
+    name = serializers.CharField()
+    last_name = serializers.CharField()
+    email = serializers.EmailField()
+    phone_number= serializers.CharField(max_length=10)
+    age = serializers.IntegerField()
+    interest = serializers.CharField()
+    vegetarian = serializers.BooleanField()
+    environment = serializers.CharField()
+    def create(self, validated_data):
+        user = User.objects.create(email = validated_data['email'], name = validated_data['name'], is_commensal = True, is_active = True, 
+                                    last_login = timezone.now(), last_name = validated_data['last_name'])
+        user.set_password(validated_data['password'])
+        commensal = Commensal(user=user, phone_number = validated_data['phone_number'], age = validated_data['age'], new = False, vegetarian = validated_data['vegetarian'], interest =  validated_data['interest'], environment =validated_data['environment'] )
+        commensal.save()
+        user.save()
+        return validated_data
+
+    def validate_email(self, value):
+        lower_email = value.lower()
+        if User.objects.filter(email__iexact=lower_email).exists():
+            raise serializers.ValidationError("Ya existe un usuario con este correo electrónico")
+        return lower_email
+
+    class Meta:
+        model = User
+        fields = ['name', 'email', 'password', 'is_commensal','is_active','phone_number', 'last_name', 'age','vegetarian', 'interest','environment']

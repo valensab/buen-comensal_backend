@@ -24,3 +24,14 @@ class Comments(models.Model):
     class Meta:
         verbose_name = 'Comentario'
         verbose_name_plural = 'Comentarios'
+
+class Favorites(models.Model):
+    
+    id_restaurant = models.ForeignKey(Restaurant,on_delete=models.CASCADE,related_name='favorite_restaurant', verbose_name='Restaurante')
+    id_user = models.ForeignKey(User,on_delete=models.CASCADE,related_name='favorite_user', verbose_name='Comensal')
+    favorite = models.BooleanField('Favorito', default = False, editable=True)
+    date = models.DateField("Fecha",auto_now_add=True, auto_now=False)
+
+    class Meta:
+        verbose_name = 'Favorito'
+        verbose_name_plural = 'Favoritos'

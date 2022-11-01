@@ -3,8 +3,9 @@ from rest_framework.response import Response
 from rest_framework.views import APIView
 from rest_framework.decorators import api_view
 from restaurants.models import Restaurant, GalleryRestaurant, TagsRestaurant
-from restaurants.api.serializers import RestaurantFieldSerializer, ImagenListSerializer, TagsSerializer,TagsListSerializer, RestaurantInfoSerializer
-
+from restaurants.api.serializers import RestaurantFieldSerializer, ImagenListSerializer, TagsSerializer, TagsListSerializer, RestaurantInfoSerializer, SearchSerializer
+from django.db.models import Q
+from iteration_utilities import unique_everseen
 
 @api_view(['GET'])
 def restaurant_list(request):
@@ -47,22 +48,22 @@ def imagen_list_10(pk):
 def restaurants_list_10(request):
     list = []
     if request.method == 'GET':
-        restaurant = Restaurant.objects.all().order_by('-id_restaurant')[:10]
+        restaurant = Restaurant.objects.filter(new = False).order_by('-id_restaurant')[:10]
         restaurants_serializer = RestaurantInfoSerializer(restaurant, many=True)
         for restaurant in restaurants_serializer.data:
             images = imagen_list_10(restaurant.get('id_restaurant'))
             list.append({'id_restaurant': restaurant.get('id_restaurant'),
-                         'name': restaurant.get('name'), 
-                         'menu': restaurant.get('menu'), 
-                         'address': restaurant.get('address'),  
-                         'prices': restaurant.get('prices'), 
-                         'type_food': restaurant.get('type_food'), 
-                         'punctuation': restaurant.get('punctuation'), 
+                         'name': restaurant.get('name'),
+                         'menu': restaurant.get('menu'),
+                         'address': restaurant.get('address'),
+                         'prices': restaurant.get('prices'),
+                         'type_food': restaurant.get('type_food'),
+                         'punctuation': restaurant.get('punctuation'),
                          'schedule': restaurant.get('schedule'),
-                         'description' : restaurant.get('description'),
+                         'description': restaurant.get('description'),
                          'images': images})
-        
-        restaurants = {"restaurants" : list}
+
+        restaurants = {"restaurants": list}
         return Response(restaurants, status=status.HTTP_200_OK)
 
     else:
@@ -116,19 +117,22 @@ def imagen_delete(request, pk=None):
 
 
 @api_view(['GET'])
-def restaurants_list(request):
+def restaurants_search(request,pk=None):
     if request.method == 'GET':
-        restaurants = Restaurant.objects.filter(id_restaurant__in= request.data['restaurants'], user__is_active=True)
-        restaurants_serializer = RestaurantFieldSerializer(restaurants, many=True)
-        return Response(restaurants_serializer.data, status=status.HTTP_200_OK)
+        restaurants = Restaurant.objects.filter(id_restaurant__in=pk, user__is_active=True)
+        restaurants_serializer = RestaurantFieldSerializer( restaurants, many=True)
+        return Response({'restaurants': restaurants_serializer.data}, status=status.HTTP_200_OK)
     else:
         return Response({'No se encontraron restaurantes'}, status=status.HTTP_400_BAD_REQUEST)
+
 
 @api_view(['GET'])
 def restaurant_recommender(request):
     if request.method == 'GET':
-        restaurants = Restaurant.objects.filter(id_restaurant__in= request.data['restaurants'], user__is_active=True)
-        restaurants_serializer = RestaurantFieldSerializer(restaurants, many=True)
+        restaurants = Restaurant.objects.filter(
+            id_restaurant__in=request.data['restaurants'], user__is_active=True)
+        restaurants_serializer = RestaurantFieldSerializer(
+            restaurants, many=True)
         return Response(restaurants_serializer.data, status=status.HTTP_200_OK)
     else:
         return Response({'No se encontraron restaurantes'}, status=status.HTTP_400_BAD_REQUEST)
@@ -137,10 +141,12 @@ def restaurant_recommender(request):
 @api_view(['GET'])
 def search(request, pk=None):
     if request.method == 'GET':
-        tags = TagsRestaurant.objects.filter(restaurant__user_name=request.data['restaurant'])
-        tags_serializer = TagsSerializer(tags, many=True)
-        return Response(tags_serializer.data, status=status.HTTP_200_OK)
-
+        result = {} 
+        tags = TagsRestaurant.objects.filter( Q(restaurant__user__name__icontains=pk,restaurant__new = False ) | Q(tags=pk))
+        if search != 'None':
+            tags_serializer = SearchSerializer(tags, many=True)
+            return Response({'search':list(unique_everseen(tags_serializer.data))}, status=status.HTTP_200_OK)
+        else:
+            return Response({'code': 2}, status=status.HTTP_400_BAD_REQUEST)
     else:
-        return Response({'Método \"GET\" no permitido.'}, status=status.HTTP_400_BAD_REQUEST)
-
+        return Response({'code': 2}, status=status.HTTP_400_BAD_REQUEST)

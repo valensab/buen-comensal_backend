@@ -11,20 +11,32 @@ class TagsRestaurantAdmin(admin.TabularInline):
     model = TagsRestaurant
 
 class TagsAdmin(admin.ModelAdmin):
-    list_display = ('restaurant','id_tags', 'tags')
+    list_display = ('id_tags', 'tags','restaurant_tags_id','restaurant_tags',)
 
-    def restaurant(self, obj):
-        return obj.id_restaurant.user.name
+    def restaurant_tags_id(self, obj):
+        return obj.restaurant_id
+    
+    restaurant_tags_id.short_description = "ID RESTAURANTE"
 
-    restaurant.short_description = "RESTAURANTE"
+    def restaurant_tags(self, obj):
+        return obj.restaurant
+    
+    restaurant_tags.short_description = "RESTAURANTE"
 
+    
 
 class ImagenAdmin(admin.ModelAdmin):
-    list_display = ('id_imagen', 'restaurant','imagen')
+    list_display = ('id_imagen', 'imagen','restaurant_imagen_id','restaurant_imagen')
 
-    def restaurant(self, obj):
+    def restaurant_imagen_id(self, obj):
         return obj.restaurant_id
-    restaurant.short_description = "RESTAURANTE"
+    
+    restaurant_imagen_id.short_description = "ID RESTAURANTE"
+
+    def restaurant_imagen(self, obj):
+        return obj.restaurant
+    
+    restaurant_imagen.short_description = "RESTAURANTE"
 
 class RestaurantAdmin(admin.ModelAdmin):
     list_display = ('id_restaurant','user', 'phone_number', 'address', 'neighborhood','date')

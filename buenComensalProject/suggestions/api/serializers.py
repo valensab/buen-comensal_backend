@@ -5,7 +5,7 @@ from users.models import User, Commensal
 from users.api.serializers import UserAllSerializer
 from restaurants.api.serializers import RestaurantInfoSerializer
 from restaurants.models import Restaurant
-from suggestions.models import Score, Comments
+from suggestions.models import Score, Comments, Favorites
 
 
 class ScoreSerializer(serializers.ModelSerializer):
@@ -39,6 +39,19 @@ class CommentsSerializer(serializers.ModelSerializer):
         model = Comments
         fields = '__all__'
 
+class FavoriteSerializer(serializers.ModelSerializer):
+    def create(self, validated_data):
+        favorite = Favorites(**validated_data)
+        favorite.id_restaurant = validated_data['id_restaurant']
+        favorite.id_user = validated_data['id_user']
+        favorite.favorite = True
+        favorite.save()
+        return validated_data
+
+    class Meta:
+        model = Favorites
+        fields = ['id_user', 'id_restaurant', 'favorite']
+
 class ScoreAllSerializer(serializers.ModelSerializer):
     user = UserAllSerializer()
     class Meta:
@@ -64,13 +77,7 @@ class CommentsAllSerializer(serializers.ModelSerializer):
         return{
                     'id_restaurant': instance.id_restaurant.id_restaurant,
                     'name': instance.id_restaurant.user.name,
-                    'address': instance.id_restaurant.address,
-                    'prices': instance.id_restaurant.prices,
-                    'type_food': instance.id_restaurant.type_food,
-                    'menu': instance.id_restaurant.menu.url if instance.id_restaurant.menu != '' else '',
                     'punctuation': instance.id_restaurant.punctuation,
-                    'schedule': instance.id_restaurant.schedule,
-                    'description' : instance.id_restaurant.description,
                     'comment': instance.comment,
                     'date' : instance.date
                 }
