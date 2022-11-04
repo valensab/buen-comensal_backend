@@ -11,8 +11,7 @@ from django.contrib.auth import authenticate
 from users.api.serializers import UserTokenSerializer, UserFieldSerializer, UserUpdateEmailSerializer, UserUpdateNameSerializer
 from users.api.serializers import UserFieldSerializer
 from restaurants.models import Restaurant, GalleryRestaurant, TagsRestaurant
-from restaurants.api.serializers import RestaurantSerializer,  RestaurantFieldSerializer, ImagenRestaurantSerializer, ImagenListSerializer, UpdateContactSerializer, UpdateRestaurantSerializer, UpdateMenuRestaurantSerializer, UpdateInfoSerializer, UpdateDescriptionRestaurantSerializer, TagsSerializer, SearchTagsSerializer, UpdateInfoRestaurantSerializer, TagsListSerializer
-
+from restaurants.api.serializers import RestaurantSerializer, RestaurantSerializerManually,  RestaurantFieldSerializer, ImagenRestaurantSerializer, ImagenListSerializer, UpdateContactSerializer, UpdateRestaurantSerializer, UpdateMenuRestaurantSerializer, UpdateInfoSerializer, UpdateDescriptionRestaurantSerializer, TagsSerializer, SearchTagsSerializer, UpdateInfoRestaurantSerializer, TagsListSerializer, SearchSerializer, SearchSerializerRestaurant
 
 
 # Create your views here.
@@ -20,6 +19,16 @@ class RegisterRestaurant(APIView):
 
     def post(self, request,*args,**kwargs):
         serializer = RestaurantSerializer(data= request.data)
+        if serializer.is_valid():
+            serializer.save()
+            return Response({"code":1}, status=status.HTTP_201_CREATED)
+        else:
+            return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)   
+
+class RegisterRestaurantManually(APIView):
+
+    def post(self, request,*args,**kwargs):
+        serializer = RestaurantSerializerManually(data= request.data)
         if serializer.is_valid():
             serializer.save()
             return Response({"code":1}, status=status.HTTP_201_CREATED)
@@ -285,3 +294,10 @@ class TagsFilterListAPIView(generics.ListAPIView):
     serializer_class = SearchTagsSerializer
     filter_backends = [filters.SearchFilter]
     search_fields = ['tags']
+
+
+class SearchListView(generics.ListAPIView):
+    queryset = Restaurant.objects.all()
+    serializer_class = SearchSerializerRestaurant
+    filter_backends = [filters.SearchFilter]
+    search_fields = ['user__name']

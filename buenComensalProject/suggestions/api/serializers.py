@@ -39,6 +39,7 @@ class CommentsSerializer(serializers.ModelSerializer):
         model = Comments
         fields = '__all__'
 
+
 class FavoriteSerializer(serializers.ModelSerializer):
     def create(self, validated_data):
         favorite = Favorites(**validated_data)
@@ -50,35 +51,78 @@ class FavoriteSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Favorites
-        fields = ['id_user', 'id_restaurant', 'favorite']
+        fields = '__all__'
+
 
 class ScoreAllSerializer(serializers.ModelSerializer):
     user = UserAllSerializer()
+
     class Meta:
         model = Score
         fields = ['id_user']
 
     def to_representation(self, instance):
         return{
-                    'commensal': instance.id_user.name,
-                    'last_name': instance.id_user.last_name,
-                    'punctuation': instance.punctuation,
-                    'comment': instance.comment,
-                    'date' : instance.date
-                }
+            'commensal': instance.id_user.name,
+            'last_name': instance.id_user.last_name,
+            'punctuation': instance.punctuation,
+            'comment': instance.comment,
+            'date': instance.date
+        }
+
 
 class CommentsAllSerializer(serializers.ModelSerializer):
     id_restaurant = RestaurantInfoSerializer()
+
     class Meta:
-        model = Score
+        model = Comments
         fields = ['id_restaurant']
 
     def to_representation(self, instance):
         return{
-                    'id_restaurant': instance.id_restaurant.id_restaurant,
-                    'name': instance.id_restaurant.user.name,
-                    'punctuation': instance.id_restaurant.punctuation,
-                    'comment': instance.comment,
-                    'date' : instance.date
-                }
+            'id_restaurant': instance.id_restaurant.id_restaurant,
+            'name': instance.id_restaurant.user.name,
+            'punctuation': instance.id_restaurant.punctuation,
+            'comment': instance.comment,
+            'date': instance.date
+        }
 
+class CommentsForRestaurantSerializer(serializers.ModelSerializer):
+    id_restaurant = RestaurantInfoSerializer()
+    user = UserAllSerializer()
+    class Meta:
+        model = Comments
+        fields = ['id_restaurant', 'id_user']
+
+    def to_representation(self, instance):
+        return{
+            'commensal': instance.id_user.name,
+            'last_name': instance.id_user.last_name,
+            'id_restaurant': instance.id_restaurant.id_restaurant,
+            'name': instance.id_restaurant.user.name,
+            'punctuation': instance.id_restaurant.punctuation,
+            'comment': instance.comment,
+            'date': instance.date
+        }
+
+
+class FavoritesAllSerializer(serializers.ModelSerializer):
+    id_restaurant = RestaurantInfoSerializer()
+
+    class Meta:
+        model = Favorites
+        fields = ['id_restaurant']
+
+    def to_representation(self, instance):
+        return{
+            'id_restaurant': instance.id_restaurant.id_restaurant,
+            'name': instance.id_restaurant.user.name,
+            'address': instance.id_restaurant.address,
+            'prices': instance.id_restaurant.prices,
+            'type_food': instance.id_restaurant.type_food,
+            'menu': instance.id_restaurant.menu.url if instance.id_restaurant.menu != '' else '',
+            'punctuation': instance.id_restaurant.punctuation,
+            'schedule': instance.id_restaurant.schedule,
+            'description': instance.id_restaurant.description,
+            'id_favorite': instance.id
+        }

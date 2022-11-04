@@ -77,6 +77,65 @@ class RestaurantSerializer(serializers.ModelSerializer):
         fields = ['name', 'email', 'password', 'is_restaurant', 'is_active', 'name_representative', 'last_name_representative', 'phone_number',
                   'phone_number_representative', 'address', 'neighborhood', 'description', 'prices', 'menu']
 
+class RestaurantSerializerManually(serializers.ModelSerializer):
+    name = serializers.CharField()
+    name_representative = serializers.CharField()
+    last_name_representative = serializers.CharField()
+    phone_number = serializers.CharField(max_length=10)
+    phone_number_representative = serializers.CharField(max_length=10)
+    address = serializers.CharField()
+    neighborhood = serializers.CharField()
+    description = serializers.CharField(max_length=255)
+    menu = serializers.FileField()
+    prices = serializers.DecimalField(max_digits=10, decimal_places=3)
+    email = serializers.EmailField()
+    type_food = serializers.CharField()
+    schedule = serializers.CharField()
+    vegetarian = serializers.BooleanField()
+    environment = serializers.CharField()
+    punctuation = serializers.IntegerField()
+
+    def create(self, validated_data):
+        user = User.objects.create(email=validated_data['email'], name=validated_data['name'], is_restaurant=True, is_active=True,
+                                   last_login=timezone.now(), last_name="")
+        user.set_password(validated_data['password'])
+        print(user.check())
+        restaurant = Restaurant(user=user, name_representative=validated_data['name_representative'],
+                                last_name_representative=validated_data['last_name_representative'],
+                                phone_number=validated_data['phone_number'],
+                                phone_number_representative=validated_data['phone_number_representative'],
+                                address=validated_data['address'],
+                                neighborhood=validated_data['neighborhood'],
+                                description=validated_data['description'],
+                                prices=validated_data['prices'],
+                                menu=validated_data['menu'],
+                                new=False,
+                                environment = validated_data['environment'],
+                                type_food = validated_data['type_food'],
+                                vegetarian = validated_data['vegetarian'],
+                                punctuation = validated_data['punctuation'],
+                                schedule = validated_data['schedule'])
+        restaurant.save()
+        return validated_data
+
+    def validate_email(self, value):
+        lower_email = value.lower()
+        if User.objects.filter(email__iexact=lower_email).exists():
+            raise serializers.ValidationError(
+                "Ya existe un usuario con este correo electrónico")
+        return lower_email
+
+    def update(self, instance, validated_data):
+        updated_user = super().update(instance, validated_data)
+        updated_user.set_password(validated_data['password'])
+        updated_user.save()
+        return updated_user
+
+    class Meta:
+        model = User
+        fields = ['name', 'email', 'password', 'is_restaurant', 'is_active', 'name_representative', 'last_name_representative', 'phone_number', 'punctuation',
+                  'phone_number_representative', 'address', 'neighborhood', 'description', 'prices', 'menu', 'environment','type_food','vegetarian','schedule']
+
 
 class UpdateContactSerializer(serializers.ModelSerializer):
 
@@ -306,6 +365,28 @@ class RestaurantInfoSerializer(serializers.ModelSerializer):
             'description': instance.description
         }
 
+class SearchSerializerRestaurant(serializers.ModelSerializer):
+
+    class Meta:
+        model = Restaurant
+        fields = ['id_restaurant']
+
+    def to_representation(self, instance):
+        return{
+
+            'restaurant_id': instance.id_restaurant,
+            'name': instance.user.name,
+            'address': instance.address,
+            'prices': instance.prices,
+            'type_food': instance.type_food,
+            'menu': instance.menu.url if instance.menu != '' else '',
+            'punctuation': instance.punctuation,
+            'schedule': instance.schedule,
+            'description': instance.description
+
+        }
+
+
 class SearchSerializer(serializers.ModelSerializer):
     restaurant = RestaurantInfoSerializer()
 
@@ -325,7 +406,8 @@ class SearchSerializer(serializers.ModelSerializer):
             'menu': instance.restaurant.menu.url if instance.restaurant.menu != '' else '',
             'punctuation': instance.restaurant.punctuation,
             'schedule': instance.restaurant.schedule,
-            'description': instance.restaurant.description
+            'description': instance.restaurant.description,
+            'vegetarian':  instance.restaurant.vegetarian
 
         }
 
