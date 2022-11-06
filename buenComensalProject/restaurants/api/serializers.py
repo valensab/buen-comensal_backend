@@ -274,6 +274,11 @@ class ImagenListSerializer(serializers.ModelSerializer):
         model = GalleryRestaurant
         fields = ['imagen']
 
+class ImagenSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = GalleryRestaurant
+        fields = ['__all__']
+
 
 class TagsListSerializer(serializers.ModelSerializer):
     class Meta:

@@ -28,7 +28,7 @@ class Restaurant(models.Model):
     vegetarian = models.BooleanField('Vegetariano', default = False)
     environment = models.CharField('Ambiente', max_length=254, null = True, blank = True)
     new = models.BooleanField('Nuevo', default = False, editable=True)
-    punctuation = models.IntegerField('Puntuación',null = True, blank = True)
+    punctuation = models.IntegerField('Puntuación',null = True, blank = True, default = 0)
     date = models.DateField("Fecha de creación",auto_now_add=True, auto_now=False)
 
     class Meta:

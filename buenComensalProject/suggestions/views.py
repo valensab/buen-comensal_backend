@@ -9,9 +9,8 @@ from suggestions.api.serializers import ScoreSerializer, CommentsSerializer, Fav
 from users.models import Commensal
 from restaurants.models import Restaurant, TagsRestaurant
 from suggestions.models import Comments, Score, Favorites
-# Create your views here.
 
-
+# Ingresar calificaciones para restaurante
 class ScoreRegister(APIView):
     def post(self, request, *args, **kwargs):
         sum = 0
@@ -43,7 +42,7 @@ class ScoreRegister(APIView):
         else:
             return Response({"code": 2}, status=status.HTTP_400_BAD_REQUEST)
 
-
+# Ingresar comentarios
 class CommentsRegister(APIView):
     def post(self, request, *args, **kwargs):
         serializer = CommentsSerializer(data=request.data)
@@ -67,7 +66,7 @@ class CommentsRegister(APIView):
         else:
             return Response({"code": 2}, status=status.HTTP_400_BAD_REQUEST)
 
-
+# Seleccionar como favorito
 class FavoriteRegister(APIView):
     def post(self, request, *args, **kwargs):
         serializer = FavoriteSerializer(data=request.data)

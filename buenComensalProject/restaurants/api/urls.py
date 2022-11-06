@@ -1,4 +1,4 @@
-from restaurants.views import RegisterRestaurant, LoginRestaurant, ImagenRestaurant, UserToken, Logout, RestaurantUpdateAPIView, UpdateContanctAPIView, RestaurantUpdateMenuAPIView, RestaurantUpdateDescriptionAPIView, TagsRestaurantAPIView, TagsFilterListAPIView, RestaurantUpdateInfoAPIView, RestaurantUpdateInfoAllAPIView, SearchListView, RegisterRestaurantManually
+from restaurants.views import RegisterRestaurant, LoginRestaurant, ImagenRestaurant, UserToken, Logout, RestaurantUpdateAPIView, UpdateContanctAPIView, TagsRestaurantAPIView, TagsFilterListAPIView, RestaurantUpdateInfoAPIView, SearchListView, RegisterRestaurantManually, RestaurantUpdateMenuAPIView, RestaurantUpdateDescriptionAPIView
 from django.urls import path
 from restaurants.api.api import restaurant_list, imagen_list, imagen_delete, restaurant_list, tags_list_user, tags_user_delete, restaurant_recommender, restaurants_list_10, restaurants_search,search, restaurants_list_punctuation, restaurants_list_prices
 urlpatterns = [

@@ -1,3 +1,4 @@
+import os
 from rest_framework.views import APIView
 from rest_framework.response import Response
 from rest_framework import status
@@ -11,10 +12,9 @@ from django.contrib.auth import authenticate
 from users.api.serializers import UserTokenSerializer, UserFieldSerializer, UserUpdateEmailSerializer, UserUpdateNameSerializer
 from users.api.serializers import UserFieldSerializer
 from restaurants.models import Restaurant, GalleryRestaurant, TagsRestaurant
-from restaurants.api.serializers import RestaurantSerializer, RestaurantSerializerManually,  RestaurantFieldSerializer, ImagenRestaurantSerializer, ImagenListSerializer, UpdateContactSerializer, UpdateRestaurantSerializer, UpdateMenuRestaurantSerializer, UpdateInfoSerializer, UpdateDescriptionRestaurantSerializer, TagsSerializer, SearchTagsSerializer, UpdateInfoRestaurantSerializer, TagsListSerializer, SearchSerializer, SearchSerializerRestaurant
+from restaurants.api.serializers import RestaurantSerializer, RestaurantSerializerManually,  RestaurantFieldSerializer, ImagenRestaurantSerializer, ImagenListSerializer, UpdateContactSerializer, UpdateRestaurantSerializer, UpdateMenuRestaurantSerializer, UpdateInfoSerializer, UpdateDescriptionRestaurantSerializer, TagsSerializer, SearchTagsSerializer, UpdateInfoRestaurantSerializer, TagsListSerializer, SearchSerializer, SearchSerializerRestaurant, ImagenSerializer
 
-
-# Create your views here.
+# Registrar a un restaurante
 class RegisterRestaurant(APIView):
 
     def post(self, request,*args,**kwargs):
@@ -25,6 +25,7 @@ class RegisterRestaurant(APIView):
         else:
             return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)   
 
+# Registra a un restaurante manualmente
 class RegisterRestaurantManually(APIView):
 
     def post(self, request,*args,**kwargs):
@@ -35,6 +36,7 @@ class RegisterRestaurantManually(APIView):
         else:
             return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)   
 
+# Ingreso de sesión registro
 class LoginRestaurant(ObtainAuthToken):
     serializer_class = UserTokenSerializer
     def post(self,request,*args,**kwargs):
@@ -111,14 +113,14 @@ class LoginRestaurant(ObtainAuthToken):
             return Response({'error':'Este usuario no puede iniciar sesión.'}, 
                                     status = status.HTTP_401_UNAUTHORIZED)
 
+# Salir de sesión
 class Logout(APIView):
     
     def get(self,request,*args,**kwargs):
         try:
             token = request.GET.get('token')
             token = Token.objects.filter(key = token).first()
-
-            if token:
+            if token is not None:
                 user = token.user
                 token.delete() 
                 token_message = 'Token eliminado.'
@@ -130,7 +132,7 @@ class Logout(APIView):
             return Response({'error': 'No se ha encontrado token en la petición.'}, 
                                     status = status.HTTP_409_CONFLICT)
         
-        
+# Crear token
 class UserToken(APIView):
 
     def post(self,request, *args,**kwargs):    
@@ -147,6 +149,7 @@ class UserToken(APIView):
         except:
             return Response({'Peticion inválida'}, status = status.HTTP_400_BAD_REQUEST)
 
+# Actualizar el contacto/representante del restaurante
 class UpdateContanctAPIView(APIView):      
     def put(self, request, pk, format=None):
         restaurant = Restaurant.objects.filter(id_restaurant = pk).first()
@@ -176,6 +179,7 @@ class UpdateContanctAPIView(APIView):
             else:
                 return Response({"code": 2}, status=status.HTTP_400_BAD_REQUEST)
 
+# Actualizar información del restaurante
 class RestaurantUpdateAPIView(APIView):      
     def put(self, request, pk, format=None):
         restaurant = Restaurant.objects.filter(id_restaurant = pk).first()
@@ -192,6 +196,7 @@ class RestaurantUpdateAPIView(APIView):
         else:
             return Response(serializer_user.errors, status=status.HTTP_400_BAD_REQUEST)
 
+# Actualizar menu del restaurante
 class RestaurantUpdateMenuAPIView(APIView):      
     def put(self, request, pk, format=None):
         restaurant = Restaurant.objects.filter(id_restaurant = pk).first()        
@@ -201,6 +206,7 @@ class RestaurantUpdateMenuAPIView(APIView):
             return Response({"code": 1}, status=status.HTTP_201_CREATED)
         return Response({"code":2}, status=status.HTTP_400_BAD_REQUEST)
 
+# Actualizar la descripción del restaurante
 class RestaurantUpdateDescriptionAPIView(APIView):      
     def put(self, request, pk, format=None):
         restaurant = Restaurant.objects.filter(id_restaurant = pk).first()        
@@ -210,6 +216,7 @@ class RestaurantUpdateDescriptionAPIView(APIView):
             return Response({"code": 1}, status=status.HTTP_201_CREATED)
         return Response(serializer_restaurant.errors, status=status.HTTP_400_BAD_REQUEST)
 
+# Actualizar información del restaurante
 class RestaurantUpdateInfoAPIView(APIView):      
     def put(self, request, pk, format=None):
         restaurant = Restaurant.objects.filter(id_restaurant = pk).first()        
@@ -220,6 +227,7 @@ class RestaurantUpdateInfoAPIView(APIView):
             return Response({"code": 1}, status=status.HTTP_201_CREATED)
         return Response(serializer_restaurant.errors, status=status.HTTP_400_BAD_REQUEST)
 
+# Prueba para actualizar imagenes
 class RestaurantUpdateInfoAllAPIView(APIView):      
     def put(self, request):
         id_restaurant = request.data['restaurant']
@@ -240,20 +248,37 @@ class RestaurantUpdateInfoAllAPIView(APIView):
         return Response({"code": 3}, status=status.HTTP_400_BAD_REQUEST)
 
 
-
+# Subir y actualizar imagen
 class ImagenRestaurant(APIView):
 
     def post(self, request,*args,**kwargs):
             serializer = ImagenRestaurantSerializer(data= request.data)
             restaurant = request.data['restaurant']
-            if serializer.is_valid():
-                print(request.FILES.getlist('imagen'))
-                for image in request.FILES.getlist('imagen'):
-                    print(image)
-                    GalleryRestaurant.objects.create(imagen = image, restaurant_id = restaurant)
-                    
-                return Response({"code": 1}, status=status.HTTP_201_CREATED)
-            return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)   
+            restaurant_filter = Restaurant.objects.filter(id_restaurant = restaurant).first()
+            if restaurant_filter:
+                print(restaurant_filter.id_restaurant)
+                images = GalleryRestaurant.objects.filter(restaurant =restaurant_filter.id_restaurant)
+                if images is not None:
+                    for imagen in images:
+                        imagen.delete()
+                        os.remove('/home/ubuntu/application/buenComensalProject/media/'+ str(imagen.imagen))
+                    if serializer.is_valid():
+                        for image in request.FILES.getlist('imagen'):
+                            print(image)
+                            GalleryRestaurant.objects.create(imagen = image, restaurant_id = restaurant)
+                            
+                        return Response({"code": 1}, status=status.HTTP_201_CREATED)
+                    else:
+                        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+                else:
+                    if serializer.is_valid():
+                        for image in request.FILES.getlist('imagen'):
+                            print(image)
+                            GalleryRestaurant.objects.create(imagen = image, restaurant_id = restaurant)
+                    else:
+                        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+            else:
+                return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)  
 
 # class TagsRestaurantAPIView(APIView):
 
@@ -264,14 +289,15 @@ class ImagenRestaurant(APIView):
 #             serializer.save()
 #             return Response({"message": "Etiquetas agregadas con éxito"}, status=status.HTTP_201_CREATED)
 #         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)   
+
+# Ingresar etiqueta del restaurante
 class TagsRestaurantAPIView(APIView):
 
     def post(self, request,*args,**kwargs):
         serializer = TagsSerializer(data= request.data)
-        
         if serializer.is_valid():
             tags = TagsRestaurant.objects.filter(tags = request.data['tags'].lower(), restaurant= request.data['restaurant']).first()
-            if tags:
+            if tags is not None:
                 return Response({"code": 2},status=status.HTTP_400_BAD_REQUEST)
             else: 
                 serializer.save()
@@ -289,13 +315,14 @@ class TagsRestaurantAPIView(APIView):
 #     filter_backends = [filters.SearchFilter]
 #     search_fields = ['tags__name']
 
+# Filtrar tags
 class TagsFilterListAPIView(generics.ListAPIView):
     queryset = TagsRestaurant.objects.all()
     serializer_class = SearchTagsSerializer
     filter_backends = [filters.SearchFilter]
     search_fields = ['tags']
 
-
+# Búsqueda de restaurante
 class SearchListView(generics.ListAPIView):
     queryset = Restaurant.objects.all()
     serializer_class = SearchSerializerRestaurant

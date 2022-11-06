@@ -39,7 +39,7 @@ class ImagenAdmin(admin.ModelAdmin):
     restaurant_imagen.short_description = "RESTAURANTE"
 
 class RestaurantAdmin(admin.ModelAdmin):
-    list_display = ('id_restaurant','user', 'new','environment','type_food','vegetarian','neighborhood','schedule')
+    list_display = ('id_restaurant','user', 'new','environment','type_food','vegetarian','neighborhood', 'punctuation','schedule')
     inlines = [
         ImagenRestaurantAdmin, TagsRestaurantAdmin
     ]

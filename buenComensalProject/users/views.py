@@ -11,7 +11,7 @@ from rest_framework.authtoken.views import ObtainAuthToken
 from django.contrib.auth.hashers import make_password, check_password
 
 
-# Create your views here.
+# Registrar comensal
 class RegisterCommensal(APIView):
 
     def post(self, request, *args, **kwargs):
@@ -23,6 +23,7 @@ class RegisterCommensal(APIView):
             # return Response(serializer_commensal.errors, status=status.HTTP_400_BAD_REQUEST)
             return Response({"code": 2}, status=status.HTTP_400_BAD_REQUEST)
 
+# Registrar comensal manualmente
 class RegisterCommensalManually(APIView):
 
     def post(self, request, *args, **kwargs):
@@ -34,7 +35,7 @@ class RegisterCommensalManually(APIView):
             # return Response(serializer_commensal.errors, status=status.HTTP_400_BAD_REQUEST)
             return Response(serializer_commensal.errors, status=status.HTTP_400_BAD_REQUEST)
 
-
+# Ingreso de sesión
 class LoginCommensal(ObtainAuthToken):
     serializer_class = UserTokenSerializer
 
@@ -92,7 +93,7 @@ class LoginCommensal(ObtainAuthToken):
             return Response({'code': 3},
                             status=status.HTTP_401_UNAUTHORIZED)
 
-
+# Registrar toekn
 class UserToken(APIView):
     def post(self, request, *args, **kwargs):
         try:
@@ -124,7 +125,7 @@ class UserToken(APIView):
         except:
             return Response({'code': 2}, status=status.HTTP_400_BAD_REQUEST)
 
-
+# Salir sesión
 class Logout(APIView):
 
     def post(self, request, *args, **kwargs):
@@ -142,7 +143,7 @@ class Logout(APIView):
             return Response({'code': 2},
                             status=status.HTTP_409_CONFLICT)
 
-
+# Actualizar información comensal
 class CommensalUpdateInfoAPIView(APIView):
     def put(self, request, format=None):
         user = request.data['user_id']
@@ -155,7 +156,7 @@ class CommensalUpdateInfoAPIView(APIView):
             return Response({"code": 1}, status=status.HTTP_201_CREATED)
         return Response({"code": 2}, status=status.HTTP_400_BAD_REQUEST)
 
-
+# Cambiar contraseña
 class ChangePasswordAPIView(APIView):
     def put(self, request, format=None):
         user = User.objects.filter(id=request.data["id_user"]).first()
