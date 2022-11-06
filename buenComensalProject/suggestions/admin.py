@@ -14,7 +14,7 @@ class ScroreAdmin(admin.ModelAdmin):
      def id_commensal(self, obj): 
         return obj.id_user.id
 
-     id_commensal.short_description = "ID COMENSAL"
+     id_commensal.short_description = "ID USUARIO"
 
      def restaurant(self, obj):
           return obj.id_restaurant.user.name
@@ -37,7 +37,7 @@ class CommentsAdmin(admin.ModelAdmin):
      def id_commensal(self, obj): 
         return obj.id_user.id
 
-     id_commensal.short_description = "ID COMENSAL"
+     id_commensal.short_description = "ID USUARIO"
         
 
      def restaurant_id(self, obj): 
@@ -61,7 +61,7 @@ class FavoritesAdmin(admin.ModelAdmin):
      def id_commensal(self, obj): 
         return obj.id_user.id
 
-     id_commensal.short_description = "ID COMENSAL"
+     id_commensal.short_description = "ID USUARIO"
         
 
      def restaurant_id(self, obj): 
