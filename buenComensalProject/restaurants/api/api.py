@@ -10,7 +10,7 @@ from django.db.models import Q
 from iteration_utilities import unique_everseen
 from buenComensalProject.recommender import recommender
 
-
+# Lista de restaurantes
 @api_view(['GET'])
 def restaurant_list(request):
 
@@ -22,7 +22,7 @@ def restaurant_list(request):
     else:
         return Response({'Método \"GET\" no permitido.'}, status=status.HTTP_400_BAD_REQUEST)
 
-
+# Lista de imagenes por restaurante
 @api_view(['GET'])
 def imagen_list(request, pk=None):
     if request.method == 'GET':
@@ -40,7 +40,7 @@ def imagen_list(request, pk=None):
     else:
         return Response({'Solo se soporta método GET'}, status=status.HTTP_400_BAD_REQUEST)
 
-
+# Listas para filtrar
 def imagen_list_10(pk):
 
     images = GalleryRestaurant.objects.filter(restaurant=pk)
@@ -54,7 +54,7 @@ def imagen_list(pk):
     imagen_serializer = ImagenListSerializer(images, many=True)
     return imagen_serializer.data
 
-
+# Lista de los restaurantes más recientes
 @api_view(['GET'])
 def restaurants_list_10(request):
     list = []
@@ -82,7 +82,7 @@ def restaurants_list_10(request):
     else:
         return Response({'Método \"GET\" no permitido.'}, status=status.HTTP_400_BAD_REQUEST)
 
-
+# Lista de los restaurantes por puntuación más alta
 @api_view(['GET'])
 def restaurants_list_punctuation(request):
     list = []
@@ -109,7 +109,7 @@ def restaurants_list_punctuation(request):
     else:
         return Response({'Método \"GET\" no permitido.'}, status=status.HTTP_400_BAD_REQUEST)
 
-
+# Lista de los restaurantes por precios más económicos
 @api_view(['GET'])
 def restaurants_list_prices(request):
     list = []
@@ -146,7 +146,7 @@ def restaurants_list_prices(request):
 #     else:
 #         return Response({'Método \"GET\" no permitido.'}, status=status.HTTP_400_BAD_REQUEST)
 
-
+# Lista de etiquetas de restaurante
 @api_view(['GET'])
 def tags_list_user(request, pk=None):
 
@@ -158,7 +158,7 @@ def tags_list_user(request, pk=None):
     else:
         return Response({'Método \"GET\" no permitido.'}, status=status.HTTP_400_BAD_REQUEST)
 
-
+# Eliminación de etiqueta de restaurante
 @api_view(['DELETE'])
 def tags_user_delete(request, pk=None):
 
@@ -169,7 +169,7 @@ def tags_user_delete(request, pk=None):
             return Response({"code": 1}, status=status.HTTP_200_OK)
     return Response({"code": 2}, status=status.HTTP_400_BAD_REQUEST)
 
-
+# Eliminación de imagen
 @api_view(['DELETE'])
 def imagen_delete(request, pk=None):
 
@@ -182,7 +182,7 @@ def imagen_delete(request, pk=None):
 
     return Response({'message': 'No se ha encontrado ninguna imagen con estos datos'}, status=status.HTTP_400_BAD_REQUEST)
 
-
+# Búsqueda de restaurantes
 @api_view(['GET'])
 def restaurants_search(request, pk=None):
     if request.method == 'GET':
@@ -249,7 +249,7 @@ def search(request, pk=None):
     else:
         return Response({'code': 2}, status=status.HTTP_400_BAD_REQUEST)
 
-
+# Recomendador
 @api_view(['GET'])
 def restaurant_recommender(request, pk):
     if request.method == 'GET':

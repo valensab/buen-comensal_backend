@@ -8,7 +8,7 @@ from users.api.serializers import UserAllSerializer
 from taggit.serializers import (TagListSerializerField, TaggitSerializer)
 from taggit.managers import TaggableManager
 
-
+# Serializador restaurante - GET
 class RestaurantFieldSerializer(serializers.ModelSerializer):
 
     user = UserAllSerializer()
@@ -27,7 +27,7 @@ class RestaurantFieldSerializer(serializers.ModelSerializer):
             'menu': instance.menu.url if instance.menu != '' else ''
         }
 
-
+# Serializador de registro de restaurante - POST
 class RestaurantSerializer(serializers.ModelSerializer):
     name = serializers.CharField()
     name_representative = serializers.CharField()
@@ -77,6 +77,7 @@ class RestaurantSerializer(serializers.ModelSerializer):
         fields = ['name', 'email', 'password', 'is_restaurant', 'is_active', 'name_representative', 'last_name_representative', 'phone_number',
                   'phone_number_representative', 'address', 'neighborhood', 'description', 'prices', 'menu']
 
+# Serializador de registro manual de restuarante - POST
 class RestaurantSerializerManually(serializers.ModelSerializer):
     name = serializers.CharField()
     name_representative = serializers.CharField()
@@ -136,7 +137,7 @@ class RestaurantSerializerManually(serializers.ModelSerializer):
         fields = ['name', 'email', 'password', 'is_restaurant', 'is_active', 'name_representative', 'last_name_representative', 'phone_number', 'punctuation',
                   'phone_number_representative', 'address', 'neighborhood', 'description', 'prices', 'menu', 'environment','type_food','vegetarian','schedule']
 
-
+# Serializador de actualización contacto de restaurante - PUT
 class UpdateContactSerializer(serializers.ModelSerializer):
 
     name_representative = serializers.CharField()
@@ -159,7 +160,7 @@ class UpdateContactSerializer(serializers.ModelSerializer):
         fields = ['name_representative', 'last_name_representative',
                   'phone_number_representative']
 
-
+# Serializador de actualización de restaurante - PUT
 class UpdateRestaurantSerializer(serializers.ModelSerializer):
 
     phone_number = serializers.CharField()
@@ -181,7 +182,7 @@ class UpdateRestaurantSerializer(serializers.ModelSerializer):
         model = Restaurant
         fields = ['phone_number', 'address', 'neighborhood', 'prices']
 
-
+# Serializador de actualización de restaurante - PUT
 class UpdateInfoRestaurantSerializer(serializers.ModelSerializer):
 
     type_food = serializers.CharField()
@@ -201,7 +202,7 @@ class UpdateInfoRestaurantSerializer(serializers.ModelSerializer):
         model = Restaurant
         fields = ['schedule', 'type_food', 'active']
 
-
+# Serializador de actualización de restaurante - PUT
 class UpdateInfoSerializer(serializers.ModelSerializer):
 
     type_food = serializers.CharField()
@@ -226,7 +227,7 @@ class UpdateInfoSerializer(serializers.ModelSerializer):
         fields = ['id_restaurant', 'schedule',
                   'type_food', 'vegetarian', 'environment']
 
-
+# Serializador de actualización de menu - PUT
 class UpdateMenuRestaurantSerializer(serializers.ModelSerializer):
 
     menu = serializers.FileField()
@@ -240,7 +241,7 @@ class UpdateMenuRestaurantSerializer(serializers.ModelSerializer):
         model = Restaurant
         fields = ['menu']
 
-
+# Serializador de actualización de descripción - PUT
 class UpdateDescriptionRestaurantSerializer(serializers.ModelSerializer):
 
     description = serializers.CharField()
@@ -254,7 +255,7 @@ class UpdateDescriptionRestaurantSerializer(serializers.ModelSerializer):
         model = Restaurant
         fields = ['description']
 
-
+# Serializador de manu - POST
 class ImagenRestaurantSerializer(serializers.ModelSerializer):
 
     def create(self, validated_data):
@@ -268,7 +269,7 @@ class ImagenRestaurantSerializer(serializers.ModelSerializer):
         model = GalleryRestaurant
         fields = "__all__"
 
-
+# Serializador lista de imágenes
 class ImagenListSerializer(serializers.ModelSerializer):
     class Meta:
         model = GalleryRestaurant
@@ -279,19 +280,11 @@ class ImagenSerializer(serializers.ModelSerializer):
         model = GalleryRestaurant
         fields = ['__all__']
 
-
+# Serializador lista de etiquetas
 class TagsListSerializer(serializers.ModelSerializer):
     class Meta:
         model = TagsRestaurant
         fields = ['restaurant']
-
-
-class TagsSerializer(TaggitSerializer, serializers.ModelSerializer):
-
-    class Meta:
-        model = TagsRestaurant
-        fields = "__all__"
-
 
 class TagsSerializer(serializers.ModelSerializer):
     tags = serializers.CharField()
@@ -332,6 +325,7 @@ class TagsListSerializer(serializers.ModelSerializer):
 
 #                 }
 
+# Serializador de búsqueda de tags
 class SearchTagsSerializer(serializers.ModelSerializer):
     tags = serializers.CharField()
     restaurant = RestaurantFieldSerializer
@@ -349,6 +343,7 @@ class SearchTagsSerializer(serializers.ModelSerializer):
 
         }
 
+# Serializador de información 
 class RestaurantInfoSerializer(serializers.ModelSerializer):
 
     user = UserAllSerializer()
@@ -370,6 +365,7 @@ class RestaurantInfoSerializer(serializers.ModelSerializer):
             'description': instance.description
         }
 
+# Serializador de búsqueda 
 class SearchSerializerRestaurant(serializers.ModelSerializer):
 
     class Meta:
@@ -391,7 +387,7 @@ class SearchSerializerRestaurant(serializers.ModelSerializer):
 
         }
 
-
+# Serializador de búsqueda
 class SearchSerializer(serializers.ModelSerializer):
     restaurant = RestaurantInfoSerializer()
 

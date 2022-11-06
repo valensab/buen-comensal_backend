@@ -2,13 +2,15 @@ from rest_framework import serializers
 from users.models import User, Commensal
 from django.utils import timezone
 
+# Serializador de token
 class UserTokenSerializer(serializers.ModelSerializer):
 
     email = serializers.EmailField()
     class Meta:
         model = User
         fields = ['email','password']
-    
+
+# Serializador de creación de user   
 class UserSerializer(serializers.ModelSerializer):
     class Meta:
         model = User
@@ -27,6 +29,7 @@ class UserSerializer(serializers.ModelSerializer):
         updated_user.save()
         return updated_user
 
+# Serializador traer toda la info de restaurante
 class UserAllSerializer(serializers.ModelSerializer):
     class Meta:
         model = User
@@ -37,6 +40,7 @@ class UserFieldSerializer(serializers.ModelSerializer):
         model = User
         fields = ['id', 'name', 'is_commensal', 'is_restaurant', 'email', 'last_name']
 
+# Serializador de actualizar correo
 class UserUpdateEmailSerializer(serializers.ModelSerializer):
     email = serializers.EmailField()
 
@@ -57,6 +61,7 @@ class UserUpdateEmailSerializer(serializers.ModelSerializer):
         model = User
         fields = ['id','is_active', 'is_restaurant', 'email']
 
+# Serializador de actualizar nombre
 class UserUpdateNameSerializer(serializers.ModelSerializer):
     
     name = serializers.CharField()
@@ -72,6 +77,7 @@ class UserUpdateNameSerializer(serializers.ModelSerializer):
         model = User
         fields = ['id','is_active', 'is_restaurant', 'name']
 
+# Serializador de comensal
 class UserCommensalSerializer(serializers.ModelSerializer):
 
     name = serializers.CharField()
@@ -100,6 +106,7 @@ class UserCommensalSerializer(serializers.ModelSerializer):
         model = User
         fields = ['id', 'email','name','last_name']
 
+# Serializador de comensal
 class CommensalSerializer(serializers.ModelSerializer):
     name = serializers.CharField()
     last_name = serializers.CharField()
@@ -125,6 +132,7 @@ class CommensalSerializer(serializers.ModelSerializer):
         model = User
         fields = ['name', 'email', 'password', 'is_commensal','is_active','phone_number', 'last_name', 'age']
 
+# Serializador para actualizar información de comensal
 class UpdateInfoCommensalSerializer(serializers.ModelSerializer):
     
     interest = serializers.CharField()
@@ -143,7 +151,7 @@ class UpdateInfoCommensalSerializer(serializers.ModelSerializer):
             model = Commensal
             fields = [ 'id_commensal', 'vegetarian', 'environment', 'interest']
 
-
+# Serializadorcambio de contraseña
 class ChangePasswordSerializer(serializers.ModelSerializer):
     def update(self,instance,validated_data):
         updated_user = super().update(instance,validated_data)
@@ -154,7 +162,8 @@ class ChangePasswordSerializer(serializers.ModelSerializer):
     class Meta:
             model = User
             fields = [ 'id', 'password']
-
+            
+# Serializador ingreso manual de comensal
 class CommensalSerializerManually(serializers.ModelSerializer):
     name = serializers.CharField()
     last_name = serializers.CharField()

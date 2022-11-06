@@ -4,8 +4,7 @@ from users.models import User
 from taggit.managers import TaggableManager
 from django.utils import timezone
 
-# Create your models here.
-
+# Modelo Restaurante
 class Restaurant(models.Model):
     
     def nameFile(instance, filename):
@@ -38,7 +37,7 @@ class Restaurant(models.Model):
     def __str__(self):
         return f'{self.user}'
 
-
+# Modelo Imágenes
 class GalleryRestaurant(models.Model):
 
     def nameImage(instance, filename):
@@ -61,6 +60,7 @@ class GalleryRestaurant(models.Model):
 #         verbose_name = 'Etiqueta'
 #         verbose_name_plural = 'Etiquetas'
 
+# Modelo Etiquetas
 class TagsRestaurant(models.Model):
     restaurant = models.ForeignKey(Restaurant,on_delete=models.CASCADE,related_name="tags")
     id_tags =  models.AutoField('ID Etiqueta', primary_key=True, unique = True)

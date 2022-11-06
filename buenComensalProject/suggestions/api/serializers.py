@@ -7,7 +7,7 @@ from restaurants.api.serializers import RestaurantInfoSerializer
 from restaurants.models import Restaurant
 from suggestions.models import Score, Comments, Favorites
 
-
+# Serializador de calificación
 class ScoreSerializer(serializers.ModelSerializer):
     punctuation = serializers.IntegerField()
 
@@ -24,7 +24,7 @@ class ScoreSerializer(serializers.ModelSerializer):
         model = Score
         fields = ['id_user', 'id_restaurant', 'punctuation', 'comment']
 
-
+# Serializador de comentario
 class CommentsSerializer(serializers.ModelSerializer):
 
     def create(self, validated_data):
@@ -39,7 +39,7 @@ class CommentsSerializer(serializers.ModelSerializer):
         model = Comments
         fields = '__all__'
 
-
+# Serializador de favorito
 class FavoriteSerializer(serializers.ModelSerializer):
     def create(self, validated_data):
         favorite = Favorites(**validated_data)
@@ -53,7 +53,7 @@ class FavoriteSerializer(serializers.ModelSerializer):
         model = Favorites
         fields = '__all__'
 
-
+# Serializador de calificaciones
 class ScoreAllSerializer(serializers.ModelSerializer):
     user = UserAllSerializer()
 
@@ -70,7 +70,7 @@ class ScoreAllSerializer(serializers.ModelSerializer):
             'date': instance.date
         }
 
-
+# Serializador de comentarios
 class CommentsAllSerializer(serializers.ModelSerializer):
     id_restaurant = RestaurantInfoSerializer()
 
@@ -87,6 +87,7 @@ class CommentsAllSerializer(serializers.ModelSerializer):
             'date': instance.date
         }
 
+# Serializador de comentarios para restaurante
 class CommentsForRestaurantSerializer(serializers.ModelSerializer):
     id_restaurant = RestaurantInfoSerializer()
     user = UserAllSerializer()
@@ -105,7 +106,7 @@ class CommentsForRestaurantSerializer(serializers.ModelSerializer):
             'date': instance.date
         }
 
-
+# Serializador de favoritos
 class FavoritesAllSerializer(serializers.ModelSerializer):
     id_restaurant = RestaurantInfoSerializer()
 

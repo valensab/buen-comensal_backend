@@ -3,13 +3,14 @@ from django.contrib import admin
 from restaurants.models import Restaurant, GalleryRestaurant, TagsRestaurant
 
 
-# Register your models here.
+# Tabular para Restaurante
 class ImagenRestaurantAdmin(admin.TabularInline):
     model = GalleryRestaurant
 
 class TagsRestaurantAdmin(admin.TabularInline):
     model = TagsRestaurant
 
+# Administración Etiquetas
 class TagsAdmin(admin.ModelAdmin):
     list_display = ('id_tags', 'tags','restaurant_tags_id','restaurant_tags')
 
@@ -24,7 +25,7 @@ class TagsAdmin(admin.ModelAdmin):
     restaurant_tags.short_description = "RESTAURANTE"
 
     
-
+# Administración Imágenes
 class ImagenAdmin(admin.ModelAdmin):
     list_display = ('id_imagen', 'imagen','restaurant_imagen_id','restaurant_imagen')
 
@@ -38,11 +39,14 @@ class ImagenAdmin(admin.ModelAdmin):
     
     restaurant_imagen.short_description = "RESTAURANTE"
 
+# Administración Restaurante
 class RestaurantAdmin(admin.ModelAdmin):
     list_display = ('id_restaurant','user', 'new','environment','type_food','vegetarian','neighborhood', 'punctuation','schedule')
     inlines = [
         ImagenRestaurantAdmin, TagsRestaurantAdmin
     ]
+
+# Registros de admin
 
 admin.site.register(Restaurant, RestaurantAdmin)
 

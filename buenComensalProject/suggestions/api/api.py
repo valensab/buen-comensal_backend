@@ -8,7 +8,7 @@ from restaurants.api.serializers import RestaurantFieldSerializer, RestaurantInf
 from suggestions.api.serializers import ScoreSerializer, CommentsSerializer, ScoreAllSerializer, CommentsAllSerializer, FavoritesAllSerializer, CommentsForRestaurantSerializer
 from suggestions.views import FavoriteRegister
 
-
+# Lista de calificaciones
 @api_view(['GET'])
 def score_list(request):
 
@@ -19,7 +19,7 @@ def score_list(request):
     else:
         return Response({'code': 3}, status=status.HTTP_400_BAD_REQUEST)
 
-
+# Lista de calificaciones para restaurante
 @api_view(['GET'])
 def score_list_restaurant(request, pk=None):
     if request.method == 'GET':
@@ -38,13 +38,7 @@ def score_list_restaurant(request, pk=None):
         return Response({'code': 3}, status=status.HTTP_400_BAD_REQUEST)
 
 
-def imagen_list(pk):
-
-    images = GalleryRestaurant.objects.filter(restaurant=pk).first()
-    #imagen_serializer = ImagenListSerializer(images, many=True)
-    return images
-
-
+# Lista de sugerencias para restaurante
 @api_view(['GET'])
 def comments_list_restaurant(request, pk=None):
     if request.method == 'GET':
@@ -72,13 +66,14 @@ def comments_list_restaurant(request, pk=None):
     else:
         return Response({'code': 3}, status=status.HTTP_400_BAD_REQUEST)
 
-
+# Trae las imágenes de un libro
 def imagen_list_all(pk):
 
     images = GalleryRestaurant.objects.filter(restaurant=pk)
     imagen_serializer = ImagenListSerializer(images, many=True)
     return imagen_serializer.data
 
+# Lista de comentarios para restaurante
 @api_view(['GET'])
 def comments_restaurant(request, pk=None):
     if request.method == 'GET':
@@ -102,9 +97,7 @@ def comments_restaurant(request, pk=None):
     else:
         return Response({'code': 3}, status=status.HTTP_400_BAD_REQUEST)
 
-
-
-
+# Lista de favoritos de usuario
 @api_view(['GET'])
 def favorites_list_restaurant(request, pk=None):
     if request.method == 'GET':
@@ -138,7 +131,7 @@ def favorites_list_restaurant(request, pk=None):
     else:
         return Response({'code': 3}, status=status.HTTP_400_BAD_REQUEST)
 
-
+# Eliminar restaurante favorito
 @api_view(['DELETE'])
 def favorites_delete(request):
     id_user = request.query_params.get('id_user')

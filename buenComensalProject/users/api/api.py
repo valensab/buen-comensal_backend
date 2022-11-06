@@ -6,7 +6,7 @@ from users.models import User
 from users.api.serializers import UserSerializer
 from django.contrib.auth.hashers import make_password, check_password
 
-
+# Lista de usuarios
 @api_view(['GET'])
 def user_list(request):
 
@@ -18,7 +18,7 @@ def user_list(request):
     else:
         return Response({'Método \"GET\" no permitido.'}, status=status.HTTP_400_BAD_REQUEST)
 
-
+# Eliminar usuario
 @api_view(['DELETE'])
 def user_delete(request, pk=None):
     # queryset
@@ -34,7 +34,7 @@ def user_delete(request, pk=None):
 
     return Response({'message': 'No se ha encontrado un usuario con estos datos'}, status=status.HTTP_400_BAD_REQUEST)
 
-
+# Contar usuarios
 @api_view(['GET'])
 def user_count(request):
 
@@ -48,7 +48,7 @@ def user_count(request):
     else:
         return Response({'Solo se soporta metodo GET'}, status=status.HTTP_400_BAD_REQUEST)
 
-
+# Cambiar contraseña
 @api_view(['PUT'])
 def user_change_password(request):
 
