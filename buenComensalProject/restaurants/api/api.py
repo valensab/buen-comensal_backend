@@ -254,13 +254,16 @@ def search(request, pk=None):
 def restaurant_recommender(request, pk):
     if request.method == 'GET':
         commensal = Commensal.objects.filter(user = pk, user__is_active=True).first()
-        if commensal.new is False:
-            restaurants = Restaurant.objects.filter(id_restaurant__in=recommender(str(commensal.user_id),commensal.age,commensal.environment,commensal.interest,commensal.vegetarian), user__is_active=True)
-            restaurants_serializer = RestaurantFieldSerializer(restaurants, many=True)
-            return Response({'restaurants' : restaurants_serializer.data}, status=status.HTTP_200_OK)
+        if commensal is not None:
+            if commensal.new is False:
+                restaurants = Restaurant.objects.filter(id_restaurant__in=recommender(str(commensal.user_id),commensal.age,commensal.environment,commensal.interest,commensal.vegetarian), user__is_active=True)
+                restaurants_serializer = RestaurantFieldSerializer(restaurants, many=True)
+                return Response({'restaurants' : restaurants_serializer.data}, status=status.HTTP_200_OK)
+            else:
+                restaurants = Restaurant.objects.filter(id_restaurant__in=recommender(str(commensal.user_id),"0","","","0", user__is_active=True))
+                restaurants_serializer = RestaurantFieldSerializer(restaurants, many=True)
+                return Response({'restaurants' : restaurants_serializer.data}, status=status.HTTP_200_OK)
         else:
-            restaurants = Restaurant.objects.filter(id_restaurant__in=recommender(str(commensal.user_id),"0","","","0", user__is_active=True))
-            restaurants_serializer = RestaurantFieldSerializer(restaurants, many=True)
-            return Response({'restaurants' : restaurants_serializer.data}, status=status.HTTP_200_OK)
+            return Response({'code': 2}, status=status.HTTP_400_BAD_REQUEST)
     else:
-        return Response({'No se encontraron restaurantes'}, status=status.HTTP_400_BAD_REQUEST)
+        return Response({'code': 2}, status=status.HTTP_400_BAD_REQUEST)

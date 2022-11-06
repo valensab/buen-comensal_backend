@@ -51,7 +51,7 @@ class FavoriteSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Favorites
-        fields = '__all__'
+        fields = ['id_restaurant', 'id_user', 'favorite']
 
 # Serializador de calificaciones
 class ScoreAllSerializer(serializers.ModelSerializer):

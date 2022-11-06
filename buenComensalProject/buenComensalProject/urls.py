@@ -23,6 +23,7 @@ urlpatterns = [
     path('users/', include('users.api.urls')),
     path('restaurants/',include('restaurants.api.urls')),
     path('suggestions/', include('suggestions.api.urls')),
+    path('__debug__/', include('debug_toolbar.urls')),
     
     
 ]

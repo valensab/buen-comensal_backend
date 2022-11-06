@@ -8,7 +8,7 @@ class UserAdmin(admin.ModelAdmin):
     list_filter = ['is_commensal', 'is_restaurant','is_staff','is_active']
 
 class CommensalAdmin(admin.ModelAdmin):
-    list_display = ('id','commensal','new','interest','environment','vegetarian')
+    list_display = ('id_commensal','commensal','new','interest','environment','vegetarian')
     
     def commensal(self, obj):
         return obj.user
