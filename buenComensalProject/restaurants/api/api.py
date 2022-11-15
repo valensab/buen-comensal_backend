@@ -11,6 +11,8 @@ from iteration_utilities import unique_everseen
 from buenComensalProject.recommender import recommender
 
 # Lista de restaurantes
+
+
 @api_view(['GET'])
 def restaurant_list(request):
 
@@ -23,6 +25,8 @@ def restaurant_list(request):
         return Response({'Método \"GET\" no permitido.'}, status=status.HTTP_400_BAD_REQUEST)
 
 # Lista de imagenes por restaurante
+
+
 @api_view(['GET'])
 def imagen_list(request, pk=None):
     if request.method == 'GET':
@@ -41,6 +45,8 @@ def imagen_list(request, pk=None):
         return Response({'Solo se soporta método GET'}, status=status.HTTP_400_BAD_REQUEST)
 
 # Listas para filtrar
+
+
 def imagen_list_10(pk):
 
     images = GalleryRestaurant.objects.filter(restaurant=pk)
@@ -55,6 +61,8 @@ def imagen_list(pk):
     return imagen_serializer.data
 
 # Lista de los restaurantes más recientes
+
+
 @api_view(['GET'])
 def restaurants_list_10(request):
     list = []
@@ -83,6 +91,8 @@ def restaurants_list_10(request):
         return Response({'Método \"GET\" no permitido.'}, status=status.HTTP_400_BAD_REQUEST)
 
 # Lista de los restaurantes por puntuación más alta
+
+
 @api_view(['GET'])
 def restaurants_list_punctuation(request):
     list = []
@@ -110,6 +120,8 @@ def restaurants_list_punctuation(request):
         return Response({'Método \"GET\" no permitido.'}, status=status.HTTP_400_BAD_REQUEST)
 
 # Lista de los restaurantes por precios más económicos
+
+
 @api_view(['GET'])
 def restaurants_list_prices(request):
     list = []
@@ -147,6 +159,8 @@ def restaurants_list_prices(request):
 #         return Response({'Método \"GET\" no permitido.'}, status=status.HTTP_400_BAD_REQUEST)
 
 # Lista de etiquetas de restaurante
+
+
 @api_view(['GET'])
 def tags_list_user(request, pk=None):
 
@@ -159,6 +173,8 @@ def tags_list_user(request, pk=None):
         return Response({'Método \"GET\" no permitido.'}, status=status.HTTP_400_BAD_REQUEST)
 
 # Eliminación de etiqueta de restaurante
+
+
 @api_view(['DELETE'])
 def tags_user_delete(request, pk=None):
 
@@ -170,6 +186,8 @@ def tags_user_delete(request, pk=None):
     return Response({"code": 2}, status=status.HTTP_400_BAD_REQUEST)
 
 # Eliminación de imagen
+
+
 @api_view(['DELETE'])
 def imagen_delete(request, pk=None):
 
@@ -183,6 +201,8 @@ def imagen_delete(request, pk=None):
     return Response({'message': 'No se ha encontrado ninguna imagen con estos datos'}, status=status.HTTP_400_BAD_REQUEST)
 
 # Búsqueda de restaurantes
+
+
 @api_view(['GET'])
 def restaurants_search(request, pk=None):
     if request.method == 'GET':
@@ -200,7 +220,8 @@ def search(request, pk=None):
     if request.method == 'GET':
         result = []
         list_extend = []
-        restaurant_search = Restaurant.objects.filter(Q(user__name__icontains=pk)).all()
+        restaurant_search = Restaurant.objects.filter(
+            Q(user__name__icontains=pk)).all()
         tags = TagsRestaurant.objects.filter(Q(tags=pk)).all()
 
         if restaurant_search and len(tags) == 0:
@@ -250,19 +271,48 @@ def search(request, pk=None):
         return Response({'code': 2}, status=status.HTTP_400_BAD_REQUEST)
 
 # Recomendador
+
+
 @api_view(['GET'])
 def restaurant_recommender(request, pk):
+    list = []
     if request.method == 'GET':
-        commensal = Commensal.objects.filter(user = pk, user__is_active=True).first()
+        commensal = Commensal.objects.filter(
+            user=pk, user__is_active=True).first()
         if commensal is not None:
             if commensal.new is False:
-                restaurants = Restaurant.objects.filter(id_restaurant__in=recommender(str(commensal.user_id),commensal.age,commensal.environment,commensal.interest,commensal.vegetarian), user__is_active=True)
-                restaurants_serializer = RestaurantFieldSerializer(restaurants, many=True)
-                return Response({'restaurants' : restaurants_serializer.data}, status=status.HTTP_200_OK)
+                restaurants = Restaurant.objects.filter(id_restaurant__in=recommender(str(commensal.user_id), commensal.age, commensal.environment, commensal.interest, commensal.vegetarian), user__is_active=True)
+                restaurants_serializer = RestaurantInfoSerializer(restaurants, many=True)
+                for restaurant in restaurants_serializer.data:
+                    images = imagen_list_10(restaurant.get('id_restaurant'))
+                    list.append({'id_restaurant': restaurant.get('id_restaurant'),
+                                'name': restaurant.get('name'),
+                                'menu': restaurant.get('menu'),
+                                'address': restaurant.get('address'),
+                                'prices': restaurant.get('prices'),
+                                'type_food': restaurant.get('type_food'),
+                                'punctuation': restaurant.get('punctuation'),
+                                'schedule': restaurant.get('schedule'),
+                                'description': restaurant.get('description'),
+                                'images': images})
+                return Response({"restaurants": list}, status=status.HTTP_200_OK)
             else:
-                restaurants = Restaurant.objects.filter(id_restaurant__in=recommender(str(commensal.user_id),"0","","","0", user__is_active=True))
-                restaurants_serializer = RestaurantFieldSerializer(restaurants, many=True)
-                return Response({'restaurants' : restaurants_serializer.data}, status=status.HTTP_200_OK)
+                restaurants = Restaurant.objects.filter(id_restaurant__in=recommender(str(commensal.user_id), "0", "", "", "0", user__is_active=True))
+                restaurants_serializer = RestaurantInfoSerializer(restaurants, many=True)
+                for restaurant in restaurants_serializer.data:
+                    images = imagen_list_10(restaurant.get('id_restaurant'))
+                    list.append({'id_restaurant': restaurant.get('id_restaurant'),
+                                'name': restaurant.get('name'),
+                                'menu': restaurant.get('menu'),
+                                'address': restaurant.get('address'),
+                                'prices': restaurant.get('prices'),
+                                'type_food': restaurant.get('type_food'),
+                                'punctuation': restaurant.get('punctuation'),
+                                'schedule': restaurant.get('schedule'),
+                                'description': restaurant.get('description'),
+                                'images': images})
+                return Response({"restaurants": list}, status=status.HTTP_200_OK)
+
         else:
             return Response({'code': 2}, status=status.HTTP_400_BAD_REQUEST)
     else:

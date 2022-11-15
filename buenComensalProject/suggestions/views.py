@@ -74,14 +74,11 @@ class FavoriteRegister(APIView):
         serializer_favorite = FavoriteSerializer(data=request.data)
         id_user = request.data['id_user']
         id_restaurant = request.data['id_restaurant']
-        commensal = Commensal.objects.filter(
-            user=id_user, user__is_commensal=True).first()
-        restaurant = Restaurant.objects.filter(
-            id_restaurant=id_restaurant, user__is_restaurant=True).first()
-        user_favorites = Favorites.objects.filter(
-            id_restaurant=restaurant.id_restaurant, id_user=commensal.user).first()
-        print(commensal.id_commensal, restaurant.id_restaurant)
+        commensal = Commensal.objects.filter(user=id_user, user__is_commensal=True).first()
+        restaurant = Restaurant.objects.filter(id_restaurant=id_restaurant, user__is_restaurant=True).first()
+        print(commensal)
         if commensal is not None and restaurant is not None:
+            user_favorites = Favorites.objects.filter(id_restaurant=restaurant.id_restaurant, id_user=commensal.user).first()
             if user_favorites is None:
                 if serializer_favorite.is_valid():
                     serializer_favorite.save()
@@ -89,6 +86,6 @@ class FavoriteRegister(APIView):
                 else:
                     return Response(serializer_favorite.errors, status=status.HTTP_400_BAD_REQUEST)
             else:
-                return Response({"code": 2}, status=status.HTTP_400_BAD_REQUEST)
+                return Response(serializer_favorite.errors, status=status.HTTP_400_BAD_REQUEST)
         else:
             return Response({"code": 2}, status=status.HTTP_400_BAD_REQUEST)

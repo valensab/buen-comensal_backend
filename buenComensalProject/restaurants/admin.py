@@ -41,7 +41,7 @@ class ImagenAdmin(admin.ModelAdmin):
 
 # Administración Restaurante
 class RestaurantAdmin(admin.ModelAdmin):
-    list_display = ('id_restaurant','user', 'new','environment','type_food','vegetarian','neighborhood', 'punctuation','schedule')
+    list_display = ('id_restaurant','user', 'new','environment','type_food','vegetarian','neighborhood', 'punctuation','schedule', 'prices')
     inlines = [
         ImagenRestaurantAdmin, TagsRestaurantAdmin
     ]
