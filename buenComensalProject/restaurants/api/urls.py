@@ -1,4 +1,4 @@
-from restaurants.views import RegisterRestaurant, LoginRestaurant, ImagenRestaurant, UserToken, Logout, RestaurantUpdateAPIView, UpdateContanctAPIView, TagsRestaurantAPIView, TagsFilterListAPIView, RestaurantUpdateInfoAPIView, SearchListView, RegisterRestaurantManually, RestaurantUpdateMenuAPIView, RestaurantUpdateDescriptionAPIView
+from restaurants.views import RegisterRestaurant, LoginRestaurant, ImagenRestaurant, UserToken, Logout, RestaurantUpdateAPIView, UpdateContanctAPIView, TagsRestaurantAPIView, TagsFilterListAPIView, RestaurantUpdateInfoAPIView, SearchListView, RegisterRestaurantManually, RestaurantUpdateMenuAPIView, RestaurantUpdateDescriptionAPIView, RestaurantUpdateInfoAllAPIView
 from django.urls import path
 from restaurants.api.api import restaurant_list, imagen_list, imagen_delete, restaurant_list, tags_list_user, tags_user_delete, restaurant_recommender, restaurants_list_10, restaurants_search,search, restaurants_list_punctuation, restaurants_list_prices
 urlpatterns = [
@@ -24,7 +24,7 @@ urlpatterns = [
     path('list_gallery/<int:pk>/', imagen_list, name = 'restaurant_imagen_list_api'),
     path('imagen_delete/<int:pk>/', imagen_delete, name = 'imagen_delete'),
     path('tags_delete/<int:pk>/',  tags_user_delete, name = 'tags_delete'),
-    #path('restaurant_info/',RestaurantUpdateInfoAllAPIView.as_view(), name = 'restaurant_info_api'),
+    path('restaurant_info/',RestaurantUpdateInfoAllAPIView.as_view(), name = 'restaurant_info_api'),
     path('restaurants_info/',restaurants_list_10, name = 'restaurants_info_api'),
     path('restaurants_list_punctuation/',restaurants_list_punctuation, name = 'restaurants_list_punctuation_api'),
     path('restaurants_list_prices/',restaurants_list_prices, name = 'restaurants_list_prices_api'),
